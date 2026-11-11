@@ -1,0 +1,3855 @@
+{
+  "suite": "univer",
+  "upstream": "https://github.com/dream-num/univer.git",
+  "commit": "4e6a56e45c8647d9741139af7ebf2f725945d7f3",
+  "commitDate": "2026-10-30T20:03:46+08:00",
+  "subdir": "packages/engine-formula",
+  "license": "Apache-2.0",
+  "vitest": "Tests 4 failed | 3676 passed (3680)",
+  "shape": "captured by running the engine-formula vitest specs with capture.setup.ts, which records every top-level function call as arguments and result into cases.json; one workbook per spec file, one sheet per call: array arguments stacked from A1 and referenced as ranges, scalar arguments inline, the call in Z1 as a dynamic array formula with room to spill Univer's result, Univer's own result (its top-left value, for an array) as the upstream literal in AZ1 and the function name in BZ1",
+  "skipped": {
+    "argument LambdaValueObjectObject": 31,
+    "array shape": 4,
+    "Excel removed the case formula during canonical input repair": 119
+  },
+  "importedAt": "2026-11-01T00:25:08.561Z",
+  "files": [
+    {
+      "file": "__tests__/nested-functions.spec.ts.xlsx",
+      "category": "__tests__",
+      "cases": 256,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "array/array-constrain.xlsx",
+      "category": "array",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "array/flatten.xlsx",
+      "category": "array",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "compatibility/betadist.xlsx",
+      "category": "compatibility",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "compatibility/hypgeomdist.xlsx",
+      "category": "compatibility",
+      "cases": 28,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "compatibility/lognormdist.xlsx",
+      "category": "compatibility",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "compatibility/negbinomdist.xlsx",
+      "category": "compatibility",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "compatibility/normsdist.xlsx",
+      "category": "compatibility",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7841b4f3b51a5f758cbfd0a2639122e9dd7b5eea93a0431d7b3f50996bad4224",
+      "excludedCases": [
+        {
+          "sheet": "4 Normsdist Value is null",
+          "ref": "Z1",
+          "formula": "NORMSDIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "compatibility/rank.xlsx",
+      "category": "compatibility",
+      "cases": 22,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "534abf5b3fed58e11e5f80384a54775564b5f57ae9e2665b2b047a4ca33ad4c9",
+      "excludedCases": [
+        {
+          "sheet": "12 Rank Ref value test, notRefe",
+          "ref": "Z1",
+          "formula": "RANK(A1,1,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "compatibility/tdist.xlsx",
+      "category": "compatibility",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/daverage.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dcount.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dcounta.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dget.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dmax.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dmin.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dproduct.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dstdev.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dstdevp.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dsum.xlsx",
+      "category": "database",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dvar.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "database/dvarp.xlsx",
+      "category": "database",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/date.xlsx",
+      "category": "date",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/datedif.xlsx",
+      "category": "date",
+      "cases": 38,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/datevalue.xlsx",
+      "category": "date",
+      "cases": 12,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "dda8554c0c89f7081fd6b12394bc1552511fa98aa22e2e186224329d457fc53b",
+      "excludedCases": [
+        {
+          "sheet": "11 Datevalue Date text blank",
+          "ref": "Z1",
+          "formula": "DATEVALUE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date/day.xlsx",
+      "category": "date",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/days.xlsx",
+      "category": "date",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/days360.xlsx",
+      "category": "date",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/edate.xlsx",
+      "category": "date",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/eomonth.xlsx",
+      "category": "date",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/epochtodate.xlsx",
+      "category": "date",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/hour.xlsx",
+      "category": "date",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/isoweeknum.xlsx",
+      "category": "date",
+      "cases": 11,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "4017b2804c8f01bae72b2cf59ad68e52a4cb47776f26b8c0f7880f9afe2f1021",
+      "excludedCases": [
+        {
+          "sheet": "8 Isoweeknum Value is blank cel",
+          "ref": "Z1",
+          "formula": "_xlfn.ISOWEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date/minute.xlsx",
+      "category": "date",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/month.xlsx",
+      "category": "date",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/networkdays-intl.xlsx",
+      "category": "date",
+      "cases": 41,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/networkdays.xlsx",
+      "category": "date",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/now.xlsx",
+      "category": "date",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/second.xlsx",
+      "category": "date",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/time.xlsx",
+      "category": "date",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/timevalue.xlsx",
+      "category": "date",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c83437dc081cebda69d274f1b159384e26f68b8e58f4749c4a372e4f0d172fee",
+      "excludedCases": [
+        {
+          "sheet": "6 Timevalue Time text blank",
+          "ref": "Z1",
+          "formula": "TIMEVALUE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date/to-date.xlsx",
+      "category": "date",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/today.xlsx",
+      "category": "date",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/weekday.xlsx",
+      "category": "date",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/weeknum.xlsx",
+      "category": "date",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/workday-intl.xlsx",
+      "category": "date",
+      "cases": 44,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/workday.xlsx",
+      "category": "date",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/year.xlsx",
+      "category": "date",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "date/yearfrac.xlsx",
+      "category": "date",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/besseli.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/besselj.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/besselk.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bessely.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bin2dec.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "6e2a8093f10097831b98ca3adbe5f94fee4ae4b816e1f414e3d887dc530db830",
+      "excludedCases": [
+        {
+          "sheet": "6 Bin2dec Value is blank cell",
+          "ref": "Z1",
+          "formula": "BIN2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/bin2hex.xlsx",
+      "category": "engineering",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bin2oct.xlsx",
+      "category": "engineering",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bitand.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bitlshift.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bitor.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bitrshift.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bitxor.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/complex.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/convert.xlsx",
+      "category": "engineering",
+      "cases": 38,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/dec2bin.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/dec2hex.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/dec2oct.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/delta.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/erf-precise.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e46521821c8df8a9865e6365c86f19806a1c90380b4af5eca555c6349495310f",
+      "excludedCases": [
+        {
+          "sheet": "6 ErfPrecise Value is blank cel",
+          "ref": "Z1",
+          "formula": "_xlfn.ERF.PRECISE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/erf.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "19183380b5091e83417eda28dd323965d5f63e746a4fc63619cb61d0b8d97c19",
+      "excludedCases": [
+        {
+          "sheet": "8 Erf Value is blank cell",
+          "ref": "Z1",
+          "formula": "ERF()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/erfc-precise.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "8d6605aa13de16851d64cda6cab9b4d95090fdeb85b153aefd137c2cf10e9cd1",
+      "excludedCases": [
+        {
+          "sheet": "6 ErfcPrecise Value is blank ce",
+          "ref": "Z1",
+          "formula": "_xlfn.ERFC.PRECISE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/erfc.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d910ca181c217efa08c89c60a275b628ba4728e215ee160d283ae7388fb55828",
+      "excludedCases": [
+        {
+          "sheet": "6 Erfc Value is blank cell",
+          "ref": "Z1",
+          "formula": "ERFC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/gestep.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "a30a42247db42a5b61d6401a31cd29ad5a5632115d2c4276ec7937979fe31dfc",
+      "excludedCases": [
+        {
+          "sheet": "5 Gestep Value is null",
+          "ref": "Z1",
+          "formula": "GESTEP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/hex2bin.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/hex2dec.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "44976c17f70497c46a1c5a168cafd678526f78fb2e25020be93f13f62bf0b7d1",
+      "excludedCases": [
+        {
+          "sheet": "6 Hex2dec Value is blank cell",
+          "ref": "Z1",
+          "formula": "HEX2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/hex2oct.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imabs.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imaginary.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imargument.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imconjugate.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcos.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcosh.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcot.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcoth.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcsc.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imcsch.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imdiv.xlsx",
+      "category": "engineering",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imexp.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imln.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imlog.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imlog10.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imlog2.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/impower.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/improduct.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imreal.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsec.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsech.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsin.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsinh.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsqrt.xlsx",
+      "category": "engineering",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsub.xlsx",
+      "category": "engineering",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imsum.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imtan.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/imtanh.xlsx",
+      "category": "engineering",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/oct2bin.xlsx",
+      "category": "engineering",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/oct2dec.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "e03dc3da2580eb289d053e27a1270ac208fbe813249b413ad06e749351b2e8ac",
+      "excludedCases": [
+        {
+          "sheet": "6 Oct2dec Value is blank cell",
+          "ref": "Z1",
+          "formula": "OCT2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/oct2hex.xlsx",
+      "category": "engineering",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/accrint.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/accrintm.xlsx",
+      "category": "financial",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/amorlinc.xlsx",
+      "category": "financial",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/coupdaybs.xlsx",
+      "category": "financial",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/coupdays.xlsx",
+      "category": "financial",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/coupdaysnc.xlsx",
+      "category": "financial",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/coupncd.xlsx",
+      "category": "financial",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/coupnum.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/couppcd.xlsx",
+      "category": "financial",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/cumipmt.xlsx",
+      "category": "financial",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/cumprinc.xlsx",
+      "category": "financial",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/db.xlsx",
+      "category": "financial",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/ddb.xlsx",
+      "category": "financial",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/disc.xlsx",
+      "category": "financial",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/dollarde.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/dollarfr.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/duration.xlsx",
+      "category": "financial",
+      "cases": 24,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/effect.xlsx",
+      "category": "financial",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/fv.xlsx",
+      "category": "financial",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/fvschedule.xlsx",
+      "category": "financial",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/intrate.xlsx",
+      "category": "financial",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/ipmt.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/irr.xlsx",
+      "category": "financial",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/ispmt.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/mduration.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/mirr.xlsx",
+      "category": "financial",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/nominal.xlsx",
+      "category": "financial",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/nper.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/npv.xlsx",
+      "category": "financial",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/oddfprice.xlsx",
+      "category": "financial",
+      "cases": 24,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/oddfyield.xlsx",
+      "category": "financial",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/oddlprice.xlsx",
+      "category": "financial",
+      "cases": 23,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/oddlyield.xlsx",
+      "category": "financial",
+      "cases": 23,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/pduration.xlsx",
+      "category": "financial",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/pmt.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/ppmt.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/price.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/pricedisc.xlsx",
+      "category": "financial",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/pricemat.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/pv.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/rate.xlsx",
+      "category": "financial",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/received.xlsx",
+      "category": "financial",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/rri.xlsx",
+      "category": "financial",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/sln.xlsx",
+      "category": "financial",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/syd.xlsx",
+      "category": "financial",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/tbilleq.xlsx",
+      "category": "financial",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/tbillprice.xlsx",
+      "category": "financial",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/tbillyield.xlsx",
+      "category": "financial",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/vdb.xlsx",
+      "category": "financial",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/xirr.xlsx",
+      "category": "financial",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/xnpv.xlsx",
+      "category": "financial",
+      "cases": 23,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/yield.xlsx",
+      "category": "financial",
+      "cases": 23,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/yielddisc.xlsx",
+      "category": "financial",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "financial/yieldmat.xlsx",
+      "category": "financial",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/cell.xlsx",
+      "category": "information",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/error-type.xlsx",
+      "category": "information",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "80b03237d6af7efca9dc430ac7e6c4de1cc92720dca7e154bf3f6e3eee2e0eec",
+      "excludedCases": [
+        {
+          "sheet": "2 ErrorType errorVal is error",
+          "ref": "Z1",
+          "formula": "ERROR.TYPE(#SPILL!)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 ErrorType errorVal is blank c",
+          "ref": "Z1",
+          "formula": "ERROR.TYPE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/isbetween.xlsx",
+      "category": "information",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isblank.xlsx",
+      "category": "information",
+      "cases": 36,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "6e526edcb39281a9f2736decedfc0e605a79e3408374d68362e6327cfefbb11a",
+      "excludedCases": [
+        {
+          "sheet": "30 Isblank value null",
+          "ref": "Z1",
+          "formula": "ISBLANK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/isdate.xlsx",
+      "category": "information",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isemail.xlsx",
+      "category": "information",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/iserr.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/iserror.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/iseven.xlsx",
+      "category": "information",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isformula.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "340204add191e0f1003438c317c0c771d31c64904293db418a5faa7b8d27352b",
+      "excludedCases": [
+        {
+          "sheet": "3 Isformula value is error",
+          "ref": "Z1",
+          "formula": "_xlfn.ISFORMULA(#NAME?)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 Isformula value is not refere",
+          "ref": "Z1",
+          "formula": "_xlfn.ISFORMULA(\"test\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/islogical.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isna.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isnontext.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isnumber.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isodd.xlsx",
+      "category": "information",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isref.xlsx",
+      "category": "information",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/istext.xlsx",
+      "category": "information",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/isurl.xlsx",
+      "category": "information",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/n.xlsx",
+      "category": "information",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "452338cede64d0ae3d6d5bebd62f2ff956c61f703518b106b9f4f385022f7a0e",
+      "excludedCases": [
+        {
+          "sheet": "5 N Value is blank cell",
+          "ref": "Z1",
+          "formula": "N()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/na.xlsx",
+      "category": "information",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/sheet.xlsx",
+      "category": "information",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/sheets.xlsx",
+      "category": "information",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information/type.xlsx",
+      "category": "information",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "74d06d2528b36f4e7b4c7c91d4e9c498b5d3fb02d45403c2b82ba0dee7b96d14",
+      "excludedCases": [
+        {
+          "sheet": "5 Type value is blank cell",
+          "ref": "Z1",
+          "formula": "TYPE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/and.xlsx",
+      "category": "logical",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "e4ff4dfb0f0075ecb3312ba4c470c2abdeed7529a144b3e5633392fbac3c356d",
+      "excludedCases": [
+        {
+          "sheet": "4 And logical1 null",
+          "ref": "Z1",
+          "formula": "AND()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/bycol.xlsx",
+      "category": "logical",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/byrow.xlsx",
+      "category": "logical",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/false.xlsx",
+      "category": "logical",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/if.xlsx",
+      "category": "logical",
+      "cases": 27,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/iferror.xlsx",
+      "category": "logical",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/ifna.xlsx",
+      "category": "logical",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/ifs.xlsx",
+      "category": "logical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/makearray.xlsx",
+      "category": "logical",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/map.xlsx",
+      "category": "logical",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/not.xlsx",
+      "category": "logical",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "abb7a67445c168fc0894738cf3a6a9c05e6368ee6e8dbc7690b38416a4276749",
+      "excludedCases": [
+        {
+          "sheet": "4 Not logical null",
+          "ref": "Z1",
+          "formula": "NOT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/or.xlsx",
+      "category": "logical",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "d6ffa3b443a011669f6646ebec9d47a70c83fc6bcea442f590b74d556cf4302a",
+      "excludedCases": [
+        {
+          "sheet": "4 Or logical1 null",
+          "ref": "Z1",
+          "formula": "OR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/percentof.xlsx",
+      "category": "logical",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/reduce.xlsx",
+      "category": "logical",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/scan.xlsx",
+      "category": "logical",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/switch.xlsx",
+      "category": "logical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/true.xlsx",
+      "category": "logical",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/xor.xlsx",
+      "category": "logical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "ee4e08800995d0a23530481a037da905451701c176ae7fab6f748a7246bc4d7c",
+      "excludedCases": [
+        {
+          "sheet": "4 Xor logical1 null",
+          "ref": "Z1",
+          "formula": "_xlfn.XOR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/address.xlsx",
+      "category": "lookup",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/areas.xlsx",
+      "category": "lookup",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "689562a5ab7b1225dc2ed881f92c81e06812aa7517fdf03ea2e0ebcfe2b7d7ac",
+      "excludedCases": [
+        {
+          "sheet": "2 Areas Value is not reference",
+          "ref": "Z1",
+          "formula": "AREAS(\"A1\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/choose.xlsx",
+      "category": "lookup",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/choosecols.xlsx",
+      "category": "lookup",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/chooserows.xlsx",
+      "category": "lookup",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/column.xlsx",
+      "category": "lookup",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "6daa155fb24a68c2807c041578c15b6ef0aaab64cc0086a883486b7d0f77effc",
+      "excludedCases": [
+        {
+          "sheet": "4 Column Text parameters",
+          "ref": "Z1",
+          "formula": "COLUMN(\"A5\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 Column Boolean params TRUE",
+          "ref": "Z1",
+          "formula": "COLUMN(TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 Column Boolean params FALSE",
+          "ref": "Z1",
+          "formula": "COLUMN(FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 Column Number params",
+          "ref": "Z1",
+          "formula": "COLUMN(11)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/columns.xlsx",
+      "category": "lookup",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/drop.xlsx",
+      "category": "lookup",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/expand.xlsx",
+      "category": "lookup",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/filter.xlsx",
+      "category": "lookup",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/formulatext.xlsx",
+      "category": "lookup",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "4134e5cad3e88a946ff6b4ded3d7d26be64f6bc4125ceb2e257bff944ba4761a",
+      "excludedCases": [
+        {
+          "sheet": "3 Formulatext value is error",
+          "ref": "Z1",
+          "formula": "_xlfn.FORMULATEXT(#NAME?)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 Formulatext value is not refe",
+          "ref": "Z1",
+          "formula": "_xlfn.FORMULATEXT(\"test\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/hlookup.xlsx",
+      "category": "lookup",
+      "cases": 29,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/hstack.xlsx",
+      "category": "lookup",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/image.xlsx",
+      "category": "lookup",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/index.xlsx",
+      "category": "lookup",
+      "cases": 101,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/indirect.xlsx",
+      "category": "lookup",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/lookup.xlsx",
+      "category": "lookup",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/match.xlsx",
+      "category": "lookup",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/offset.xlsx",
+      "category": "lookup",
+      "cases": 12,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "567eaf0dc810043331a6f441344f9cd039501120efb5afff5b96d12dfcb16874",
+      "excludedCases": [
+        {
+          "sheet": "12 Offset, reference is base va",
+          "ref": "Z1",
+          "formula": "OFFSET(1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "13 Offset, reference is base va",
+          "ref": "Z1",
+          "formula": "OFFSET(\"Univer\",1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "14 Offset, reference is base va",
+          "ref": "Z1",
+          "formula": "OFFSET(TRUE,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/row.xlsx",
+      "category": "lookup",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "0a9eff5d496120f549b90796eb673b7183ba1b32584112b6cf4f5ff4c07d4636",
+      "excludedCases": [
+        {
+          "sheet": "4 Row Text parameters",
+          "ref": "Z1",
+          "formula": "ROW(\"A5\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 Row Boolean params TRUE",
+          "ref": "Z1",
+          "formula": "ROW(TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 Row Boolean params FALSE",
+          "ref": "Z1",
+          "formula": "ROW(FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 Row Number params",
+          "ref": "Z1",
+          "formula": "ROW(11)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/rows.xlsx",
+      "category": "lookup",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/sort.xlsx",
+      "category": "lookup",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/sortby.xlsx",
+      "category": "lookup",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "c92d74cf1e2aaf639d2f819131abda7c543d05b0dcc3e258c1ce491c85b8990b",
+      "excludedCases": [
+        {
+          "sheet": "5 Sortby byArray and sortOrder",
+          "ref": "Z1",
+          "formula": "_xlfn.SORTBY(A1:C10,A12:A21,1,A23:A32)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup/take.xlsx",
+      "category": "lookup",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/tocol.xlsx",
+      "category": "lookup",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/torow.xlsx",
+      "category": "lookup",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/transpose.xlsx",
+      "category": "lookup",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/unique.xlsx",
+      "category": "lookup",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/vlookup.xlsx",
+      "category": "lookup",
+      "cases": 41,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/vstack.xlsx",
+      "category": "lookup",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/wrapcols.xlsx",
+      "category": "lookup",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/wraprows.xlsx",
+      "category": "lookup",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/xlookup.xlsx",
+      "category": "lookup",
+      "cases": 163,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup/xmatch.xlsx",
+      "category": "lookup",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "39eb0e0a7da63a51fd93a6a4dfa56fe96618eb0fdf2eece020ef91f02eb05f5e",
+      "excludedCases": [
+        {
+          "sheet": "1 The value of the lookup Searc",
+          "ref": "Z1",
+          "formula": "_xlfn.XLOOKUP(\"Second\",A1:A6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 The value of the lookup Searc",
+          "ref": "Z1",
+          "formula": "_xlfn.XLOOKUP(\"Second\",A1:F1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 The value of the lookup Searc",
+          "ref": "Z1",
+          "formula": "_xlfn.XLOOKUP(5,A1:A6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 The value of the lookup Searc",
+          "ref": "Z1",
+          "formula": "_xlfn.XLOOKUP(A1:A3,A5:A10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/abs.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "9c3cd47e2a5718c10f0e73099a43868e94dee2dc7ccd7704399cf5a2dd7f13c2",
+      "excludedCases": [
+        {
+          "sheet": "7 Abs Value is blank cell",
+          "ref": "Z1",
+          "formula": "ABS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/acos.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "089df27adad6e0dd890261c1a0d21cbaac83dfe4b3369a6cf63441daad12cd95",
+      "excludedCases": [
+        {
+          "sheet": "6 Acos Value is blank cell",
+          "ref": "Z1",
+          "formula": "ACOS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/acosh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "64b899524cdbfe3468e64d6247a9d5120e702a86dfb9fcba0754155fadb89d46",
+      "excludedCases": [
+        {
+          "sheet": "6 Acosh Value is blank cell",
+          "ref": "Z1",
+          "formula": "ACOSH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/acot.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "80eb40ef4398a741e0f32c9269d1e6c9d3b3ff35dcec958d0151eace38ef49f2",
+      "excludedCases": [
+        {
+          "sheet": "6 Acot Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.ACOT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/acoth.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5d1ecdb22bb2902fa2e28ea78302a1f77903c7a46b92141ecf81b7e5bb01885c",
+      "excludedCases": [
+        {
+          "sheet": "6 Acoth Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.ACOTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/aggregate.xlsx",
+      "category": "math",
+      "cases": 56,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "a7ca4f164c4c39cd08dd1239ba3a610c7324c8beb604d4d3e9554ecd613d3c19",
+      "excludedCases": [
+        {
+          "sheet": "51 Aggregate function num 14-19",
+          "ref": "Z1",
+          "formula": "_xlfn.AGGREGATE(14,,A1:B2,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/arabic.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "2d0458cdf1c6296a6522b4cff75372e9b4666e934017ce89415703cfabe4f73d",
+      "excludedCases": [
+        {
+          "sheet": "5 Arabic Value is null",
+          "ref": "Z1",
+          "formula": "_xlfn.ARABIC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/asin.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "fe3acdf207b53e60211f773131075a37d5d0c49a9d504a312ec17bd5a89c8247",
+      "excludedCases": [
+        {
+          "sheet": "6 Asin Value is blank cell",
+          "ref": "Z1",
+          "formula": "ASIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/asinh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e947e27669d980ba7b81c9119259b0ef078ae03c4676a0b9b952db8d567e9361",
+      "excludedCases": [
+        {
+          "sheet": "6 Asinh Value is blank cell",
+          "ref": "Z1",
+          "formula": "ASINH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/atan.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "ff6946bdaca5354c26c0605ccb5b5ef3722e41454623277b21c0352851515732",
+      "excludedCases": [
+        {
+          "sheet": "6 Atan Value is blank cell",
+          "ref": "Z1",
+          "formula": "ATAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/atan2.xlsx",
+      "category": "math",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/atanh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "002d8b5da1172d2b79da782488e3ac2f7bd9a32a16f17c50bfcf919785ef303c",
+      "excludedCases": [
+        {
+          "sheet": "6 Atanh Value is blank cell",
+          "ref": "Z1",
+          "formula": "ATANH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/base.xlsx",
+      "category": "math",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/ceiling-math.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/ceiling-precise.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/ceiling.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/combin.xlsx",
+      "category": "math",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/combina.xlsx",
+      "category": "math",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/cos.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d56a14bce46414ee882c38ef33d2b05b05515e9d816b45c0d7a93ebf10c08b54",
+      "excludedCases": [
+        {
+          "sheet": "6 Cos Value is blank cell",
+          "ref": "Z1",
+          "formula": "COS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/cosh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "9aa9554f409e2b2f9d9f623735c8fc9850ebadfa70737d3e6f190c36a5427830",
+      "excludedCases": [
+        {
+          "sheet": "6 Cosh Value is blank cell",
+          "ref": "Z1",
+          "formula": "COSH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/cot.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7961cc1a0a84867f1f3fb3ce9186a364dfc3787759c217288734c1ce9e047f70",
+      "excludedCases": [
+        {
+          "sheet": "7 Cot Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.COT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/coth.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "ebc0efed258647df6e8d66449f85b21ce32c1847b390d8314a42f7aee74ae96e",
+      "excludedCases": [
+        {
+          "sheet": "6 Coth Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.COTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/csc.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "283677b9c1f18245469105947229f33c3d5acb0d238463650b5586cca9fa7f31",
+      "excludedCases": [
+        {
+          "sheet": "7 Csc Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.CSC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/csch.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "48b3ed85c5624919447e894ca7903f2df8f085eb90a136b6c1c5e1fbdd50b3ba",
+      "excludedCases": [
+        {
+          "sheet": "7 Csch Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.CSCH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/decimal.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/degrees.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5191fc0a7e6ff9517c1fe1bbcfcc58160bce4c19e91bc9024caa24ef43950e22",
+      "excludedCases": [
+        {
+          "sheet": "6 Degrees Value is blank cell",
+          "ref": "Z1",
+          "formula": "DEGREES()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/even.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "1a7bbfbe0e30511785afcd40cd3c62699476df3a0e59548de7774b744a578b11",
+      "excludedCases": [
+        {
+          "sheet": "6 Even Value is blank cell",
+          "ref": "Z1",
+          "formula": "EVEN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/exp.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "038a02ed84fb9d91a2181dae4ae541c5a134c0a0ebb3fbb807977593ae239ac7",
+      "excludedCases": [
+        {
+          "sheet": "6 Exp Value is blank cell",
+          "ref": "Z1",
+          "formula": "EXP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/fact.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "91f786bf30dc9e31116b771e311664bd1f2a22b560a6949e98af887df2089718",
+      "excludedCases": [
+        {
+          "sheet": "7 Fact Value is blank cell",
+          "ref": "Z1",
+          "formula": "FACT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/factdouble.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e2490244880577d26b912e440bc89557cd16b1f9ca3365d9286e32b85af29d66",
+      "excludedCases": [
+        {
+          "sheet": "7 Factdouble Value is blank cel",
+          "ref": "Z1",
+          "formula": "FACTDOUBLE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/floor-math.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/floor-precise.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/floor.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/gcd.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/int.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "f52ef97d43e9e94fa8a72e6231dfbb534ddbdc902aa77da6e627338ffbab9ada",
+      "excludedCases": [
+        {
+          "sheet": "7 Int Value is blank cell",
+          "ref": "Z1",
+          "formula": "INT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/lcm.xlsx",
+      "category": "math",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/ln.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c0eb99a71e9eab9634368188df27ae08ce3c63e19a25ec5962f702bf43c84f0f",
+      "excludedCases": [
+        {
+          "sheet": "6 Ln Value is blank cell",
+          "ref": "Z1",
+          "formula": "LN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/log.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "850de39a236a1283c4e089b2c323494640b88d5eb38b1b6a304196f8aa36978b",
+      "excludedCases": [
+        {
+          "sheet": "6 Log Value is blank cell",
+          "ref": "Z1",
+          "formula": "LOG()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/log10.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "afbed8cda57231ef183f7d6ceb44c66de6c77f86642ba9137c3637e889411e9b",
+      "excludedCases": [
+        {
+          "sheet": "6 Log10 Value is blank cell",
+          "ref": "Z1",
+          "formula": "LOG10()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/mdeterm.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c1d370cf99b5d6df3810382037d3227baa7b571749bd3b380cdf9d24a2b47a12",
+      "excludedCases": [
+        {
+          "sheet": "7 Mdeterm Value is blank cell",
+          "ref": "Z1",
+          "formula": "MDETERM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/minverse.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "b45efccda69ec9ff5cecb5ed5acbad1560520a42ea769ccdfd484f39bbbd5f3e",
+      "excludedCases": [
+        {
+          "sheet": "8 Minverse Value is blank cell",
+          "ref": "Z1",
+          "formula": "MINVERSE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/mmult.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/mod.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/mround.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/multinomial.xlsx",
+      "category": "math",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/munit.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "2e013b1df19bed8bd92e43a0a7be4e7b0af4d0bce823a6e5934d9de84c1f0d1b",
+      "excludedCases": [
+        {
+          "sheet": "5 Munit Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.MUNIT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/odd.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "176316d97056acfa33252faa276466e3629670f0bdee6972f20904970652c45b",
+      "excludedCases": [
+        {
+          "sheet": "6 Odd Value is blank cell",
+          "ref": "Z1",
+          "formula": "ODD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/pi.xlsx",
+      "category": "math",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/power.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/product.xlsx",
+      "category": "math",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/quotient.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/radians.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5d9d312cd7beb4c260a9f4c6fb43a1d98b328342dc9e3517e7398ed1dac777be",
+      "excludedCases": [
+        {
+          "sheet": "6 Radians Value is blank cell",
+          "ref": "Z1",
+          "formula": "RADIANS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/rand.xlsx",
+      "category": "math",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/randarray.xlsx",
+      "category": "math",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/randbetween.xlsx",
+      "category": "math",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/roman.xlsx",
+      "category": "math",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/round.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/roundbank.xlsx",
+      "category": "math",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/rounddown.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/roundup.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sec.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "921edf4c179ae2a140dd46460ba7224e74585dd11625006475f2ef468626be6b",
+      "excludedCases": [
+        {
+          "sheet": "7 Sec Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.SEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sech.xlsx",
+      "category": "math",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "008fb99e2a84f92cefce6db75593f39688efb8c165609bc2d5f3a34d03f6de44",
+      "excludedCases": [
+        {
+          "sheet": "7 Sech Value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.SECH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sequence.xlsx",
+      "category": "math",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/seriessum.xlsx",
+      "category": "math",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sign.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "363c7fdec38dabe0bcbe7fac285a3df3fd30bb12c725f1d726b562c0171d7566",
+      "excludedCases": [
+        {
+          "sheet": "8 Sign Value is null",
+          "ref": "Z1",
+          "formula": "SIGN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sin.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "861c758d7573722104f7f8aee875057b41e21e97269f9d71b1578e99847b514d",
+      "excludedCases": [
+        {
+          "sheet": "6 Sin Value is blank cell",
+          "ref": "Z1",
+          "formula": "SIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sinh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "a9ea0032ab971004a74d71aa73f69c593f7eba200e9d634e16d54eda0df4d82e",
+      "excludedCases": [
+        {
+          "sheet": "6 Sinh Value is blank cell",
+          "ref": "Z1",
+          "formula": "SINH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sqrt.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "dcd8d2f197ad5c9e2139aeb5d12f8f3b7efe5b074e83d1ce10a2ed5f048d8882",
+      "excludedCases": [
+        {
+          "sheet": "6 Sqrt Value is blank cell",
+          "ref": "Z1",
+          "formula": "SQRT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sqrtpi.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f826100138a506e7903a3e26a3285e8e4ce4ed9611d34cc963a1b7777541469c",
+      "excludedCases": [
+        {
+          "sheet": "6 Sqrtpi Value is blank cell",
+          "ref": "Z1",
+          "formula": "SQRTPI()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/subtotal.xlsx",
+      "category": "math",
+      "cases": 39,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5b6fe0efacf5b8c2d56edea3ae12acc4bcbdb09268ae4c7045fa8fa3a3b909c2",
+      "excludedCases": [
+        {
+          "sheet": "1 Subtotal common FunctionNum i",
+          "ref": "Z1",
+          "formula": "SUBTOTAL(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 Subtotal common FunctionNum i",
+          "ref": "Z1",
+          "formula": "SUBTOTAL(2,\"test\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 Subtotal common FunctionNum i",
+          "ref": "Z1",
+          "formula": "SUBTOTAL(3,\"1\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 Subtotal common FunctionNum i",
+          "ref": "Z1",
+          "formula": "SUBTOTAL(4,TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 Subtotal common FunctionNum i",
+          "ref": "Z1",
+          "formula": "SUBTOTAL(5,FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sum.xlsx",
+      "category": "math",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sumif.xlsx",
+      "category": "math",
+      "cases": 23,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "b0d29ffaab60bde647443c183468492c950a3ccd39661ca2d63b846ca96fbb18",
+      "excludedCases": [
+        {
+          "sheet": "21 Sumif Includes error",
+          "ref": "Z1",
+          "formula": "SUMIF(#NAME?,A1:A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "23 Sumif Includes error",
+          "ref": "Z1",
+          "formula": "SUMIF(A1:A4,\">40\",#NAME?)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "25 Sumif Range or sumRange is n",
+          "ref": "Z1",
+          "formula": "SUMIF(1,\"test*\",A1:A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sumifs.xlsx",
+      "category": "math",
+      "cases": 13,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "855f8d07f3366eaf98bf287e4d057d1003d97f080eb7a64c5ab2ae6507097fd0",
+      "excludedCases": [
+        {
+          "sheet": "3 Sumifs Range and criteria is",
+          "ref": "Z1",
+          "formula": "SUMIFS(A1:A4,A6:A9,\">3\",A11:A14)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/sumproduct.xlsx",
+      "category": "math",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sumsq.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sumx2my2.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sumx2py2.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/sumxmy2.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "math/tan.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "a56ec920dd0a8ad5e4349482ff5cb80c80c21f74f6934cb9add56d220f54b68a",
+      "excludedCases": [
+        {
+          "sheet": "6 Tan Value is blank cell",
+          "ref": "Z1",
+          "formula": "TAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/tanh.xlsx",
+      "category": "math",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "16c475efcc447ebcea5b7cf374b2bdde8ee7b7c773380fbb498d85f1f2e26e87",
+      "excludedCases": [
+        {
+          "sheet": "6 Tanh Value is blank cell",
+          "ref": "Z1",
+          "formula": "TANH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math/trunc.xlsx",
+      "category": "math",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "meta/compare.xlsx",
+      "category": "meta",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "meta/cube.xlsx",
+      "category": "meta",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/avedev.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/average-weighted.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/average.xlsx",
+      "category": "statistical",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/averagea.xlsx",
+      "category": "statistical",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/averageif.xlsx",
+      "category": "statistical",
+      "cases": 22,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "03335733c8f4658aa82556eb45013b4d82378d405c59e57af9bcb18730318f55",
+      "excludedCases": [
+        {
+          "sheet": "21 Averageif Includes error",
+          "ref": "Z1",
+          "formula": "AVERAGEIF(#NAME?,A1:A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "23 Averageif Includes error",
+          "ref": "Z1",
+          "formula": "AVERAGEIF(A1:A4,\">40\",#NAME?)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "24 Averageif Range or averageRa",
+          "ref": "Z1",
+          "formula": "AVERAGEIF(1,\"test*\",A1:A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/averageifs.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "2ca37738b24fc2764cc41d17b86aa567431d9bb8bb784a9f3dd95bed5f409393",
+      "excludedCases": [
+        {
+          "sheet": "3 Averageifs Range and criteria",
+          "ref": "Z1",
+          "formula": "AVERAGEIFS(A1:A4,A6:A9,\">3\",A11:A14)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/beta-dist.xlsx",
+      "category": "statistical",
+      "cases": 25,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/beta-inv.xlsx",
+      "category": "statistical",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/binom-dist-range.xlsx",
+      "category": "statistical",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/binom-dist.xlsx",
+      "category": "statistical",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/binom-inv.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/chisq-dist-rt.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/chisq-dist.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/chisq-inv-rt.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/chisq-inv.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/chisq-test.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/confidence-norm.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/confidence-t.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/correl.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/count.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/counta.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/countblank.xlsx",
+      "category": "statistical",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "30e7f3663057d534fac87aa468b4185354ed5a7b436ad3a064587611c9c8498b",
+      "excludedCases": [
+        {
+          "sheet": "2 Countblank Range is number",
+          "ref": "Z1",
+          "formula": "COUNTBLANK(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 Countblank Range is string",
+          "ref": "Z1",
+          "formula": "COUNTBLANK(\"test\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 Countblank Range is string, b",
+          "ref": "Z1",
+          "formula": "COUNTBLANK(\"\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 Countblank Range is boolean",
+          "ref": "Z1",
+          "formula": "COUNTBLANK(TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 Countblank Range is null",
+          "ref": "Z1",
+          "formula": "COUNTBLANK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/countif.xlsx",
+      "category": "statistical",
+      "cases": 19,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "560d7e2a2af15c5ebf43fa5b42c14be04b275198cf21da534aa39a694d4c23b2",
+      "excludedCases": [
+        {
+          "sheet": "5 Countif Includes error",
+          "ref": "Z1",
+          "formula": "COUNTIF(#NAME?,A1:A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/countifs.xlsx",
+      "category": "statistical",
+      "cases": 41,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "a220983ac897b27ef2936654a79245f98415b6fe31337bed32b4df65c214126d",
+      "excludedCases": [
+        {
+          "sheet": "3 Countifs Range and criteria i",
+          "ref": "Z1",
+          "formula": "COUNTIFS(A1:A4,\">3\",A6:A9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/covariance-p.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/covariance-s.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/devsq.xlsx",
+      "category": "statistical",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/expon-dist.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/f-dist-rt.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/f-dist.xlsx",
+      "category": "statistical",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/f-inv-rt.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/f-inv.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/f-test.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fisher.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "419d19d9757e2ad28504865361c8ea2adfa0169885b7c421d852f6f18a1ed1d2",
+      "excludedCases": [
+        {
+          "sheet": "5 Fisher Value is null",
+          "ref": "Z1",
+          "formula": "FISHER()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fisherinv.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "4dde8824f25ff1eecd4c11f5b0bc6b4bc9ccc5f48cc6f5b74c95f9def2f74dc4",
+      "excludedCases": [
+        {
+          "sheet": "6 Fisherinv Value is null",
+          "ref": "Z1",
+          "formula": "FISHERINV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/forecast.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/frequency.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/gamma-dist.xlsx",
+      "category": "statistical",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/gamma-inv.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/gamma.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "375195190a03434e70ddae66532563af54067756d35052d3327e147cd1c18f05",
+      "excludedCases": [
+        {
+          "sheet": "8 Gamma Value is null",
+          "ref": "Z1",
+          "formula": "_xlfn.GAMMA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/gammaln.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "da10fcbc609df9ee52b88e6f80a7c08fb8a1c89156c66f1d0eb5ef1cefbe8619",
+      "excludedCases": [
+        {
+          "sheet": "7 Gammaln Value is null",
+          "ref": "Z1",
+          "formula": "GAMMALN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/gauss.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "cef6dc3a0c6042b80e2cf69970a970d74ef91971e1881cd63dfcf0833ffa7abb",
+      "excludedCases": [
+        {
+          "sheet": "7 Gauss Value is null",
+          "ref": "Z1",
+          "formula": "_xlfn.GAUSS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/geomean.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/growth.xlsx",
+      "category": "statistical",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/harmean.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/hypgeom-dist.xlsx",
+      "category": "statistical",
+      "cases": 32,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/intercept.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/kurt.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/large.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/linest.xlsx",
+      "category": "statistical",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/logest.xlsx",
+      "category": "statistical",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/lognorm-dist.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/lognorm-inv.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/marginoferror.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/max.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/maxa.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/maxifs.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "b5cb5daefff62843235b2fbaffe6effd79332bd6860dca2e5d646fa8d8bf07cb",
+      "excludedCases": [
+        {
+          "sheet": "4 Maxifs Range and criteria is",
+          "ref": "Z1",
+          "formula": "_xlfn.MAXIFS(A1:A4,A6:A9,\">3\",A11:A14)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/median.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/min.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/mina.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/minifs.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "966aec6149a3a46a4811f635b6533fa9bd97e58e55f8446b1322e72b1a6c83c7",
+      "excludedCases": [
+        {
+          "sheet": "4 Minifs Range and criteria is",
+          "ref": "Z1",
+          "formula": "_xlfn.MINIFS(A1:A4,A6:A9,\">3\",A11:A14)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/mode-mult.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/mode-sngl.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/negbinom-dist.xlsx",
+      "category": "statistical",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/norm-dist.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/norm-inv.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/norm-s-dist.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/norm-s-inv.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d57d6c1f2e303a484ed22865d4a2633ae6638c278d2c09f67f5cf6995c955e28",
+      "excludedCases": [
+        {
+          "sheet": "4 NormSInv Value is null",
+          "ref": "Z1",
+          "formula": "_xlfn.NORM.S.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/pearson.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/percentile-exc.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/percentile-inc.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/percentrank-exc.xlsx",
+      "category": "statistical",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/percentrank-inc.xlsx",
+      "category": "statistical",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/permut.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/permutationa.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/phi.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5c0f84b1cbf0e8f1225e91ffa3af2683da6142519d9077ce0947278396b94654",
+      "excludedCases": [
+        {
+          "sheet": "7 Phi Value is null",
+          "ref": "Z1",
+          "formula": "_xlfn.PHI()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/poisson-dist.xlsx",
+      "category": "statistical",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/prob.xlsx",
+      "category": "statistical",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/quartile-exc.xlsx",
+      "category": "statistical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/quartile-inc.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/rank-avg.xlsx",
+      "category": "statistical",
+      "cases": 17,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "7bd95a23bdf9d72648565c69292c3830c1e0ebc0e434a5d20a8ba92c4382c030",
+      "excludedCases": [
+        {
+          "sheet": "9 Rank Ref value test, notRefer",
+          "ref": "Z1",
+          "formula": "_xlfn.RANK.AVG(A1,1,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rank-eq.xlsx",
+      "category": "statistical",
+      "cases": 17,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "88692b157af95b4a4363ae2ad78c4eb20fce2fa9a47e4381928a4f84b7ece1f2",
+      "excludedCases": [
+        {
+          "sheet": "9 Rank Ref value test, notRefer",
+          "ref": "Z1",
+          "formula": "_xlfn.RANK.EQ(A1,1,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rsq.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/skew-p.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/skew.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/slope.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/small.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/standardize.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/stdev-p.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "70883aa139dc1ce2f6e99b8c351798de621314b1dd83119c1537e72507584cae",
+      "excludedCases": [
+        {
+          "sheet": "8 StdevP Var1 is null",
+          "ref": "Z1",
+          "formula": "_xlfn.STDEV.P()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/stdev-s.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "39eeecad5a54745889e35ca18d9aeb7b0c19665b6b7f1f57dc77fcda1fe64db1",
+      "excludedCases": [
+        {
+          "sheet": "8 Stdev.s Var1 is null",
+          "ref": "Z1",
+          "formula": "_xlfn.STDEV.S()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/stdeva.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/stdevpa.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/steyx.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-dist-2t.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-dist-rt.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-dist.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-inv-2t.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-inv.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/t-test.xlsx",
+      "category": "statistical",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/trend.xlsx",
+      "category": "statistical",
+      "cases": 23,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/trimmean.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/var-p.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/var-s.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/vara.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/varpa.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/weibull-dist.xlsx",
+      "category": "statistical",
+      "cases": 21,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/z-test.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/arraytotext.xlsx",
+      "category": "text",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/asc.xlsx",
+      "category": "text",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/bahttext.xlsx",
+      "category": "text",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/char.xlsx",
+      "category": "text",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/clean.xlsx",
+      "category": "text",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "38206d538ac6381efc9e2cd20546a0223f5a454b7c40d6e8626ca1b5b68e5791",
+      "excludedCases": [
+        {
+          "sheet": "1 Clean Value is normal",
+          "ref": "Z1",
+          "formula": "CLEAN(\"_x0001_月度报表\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/code.xlsx",
+      "category": "text",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/concat.xlsx",
+      "category": "text",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/concatenate.xlsx",
+      "category": "text",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/dbcs.xlsx",
+      "category": "text",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/dollar.xlsx",
+      "category": "text",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/exact.xlsx",
+      "category": "text",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/find.xlsx",
+      "category": "text",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/findb.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/fixed.xlsx",
+      "category": "text",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/left.xlsx",
+      "category": "text",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/leftb.xlsx",
+      "category": "text",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/len.xlsx",
+      "category": "text",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/lenb.xlsx",
+      "category": "text",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/lower.xlsx",
+      "category": "text",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/mid.xlsx",
+      "category": "text",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/midb.xlsx",
+      "category": "text",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/numberstring.xlsx",
+      "category": "text",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/numbervalue.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/proper.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/regexextract.xlsx",
+      "category": "text",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/regexmatch.xlsx",
+      "category": "text",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/regexreplace.xlsx",
+      "category": "text",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/replace.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/replaceb.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/rept.xlsx",
+      "category": "text",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/right.xlsx",
+      "category": "text",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/rightb.xlsx",
+      "category": "text",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/search.xlsx",
+      "category": "text",
+      "cases": 17,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/searchb.xlsx",
+      "category": "text",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/substitute.xlsx",
+      "category": "text",
+      "cases": 15,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/t.xlsx",
+      "category": "text",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "2b53d6a2d05b4b79e33d11d31d97c2e3129a0b565caa0077766cad2d734393ce",
+      "excludedCases": [
+        {
+          "sheet": "4 T Value is number or boolean",
+          "ref": "Z1",
+          "formula": "T()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/text.xlsx",
+      "category": "text",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/textafter.xlsx",
+      "category": "text",
+      "cases": 28,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/textbefore.xlsx",
+      "category": "text",
+      "cases": 28,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/textjoin.xlsx",
+      "category": "text",
+      "cases": 16,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/textsplit.xlsx",
+      "category": "text",
+      "cases": 26,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/trim.xlsx",
+      "category": "text",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/unichar.xlsx",
+      "category": "text",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/unicode.xlsx",
+      "category": "text",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/upper.xlsx",
+      "category": "text",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/value.xlsx",
+      "category": "text",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text/valuetotext.xlsx",
+      "category": "text",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "web/encodeurl.xlsx",
+      "category": "web",
+      "cases": 6,
+      "savedBy": "Microsoft Excel 16.0 (19127)",
+      "canonicalFromHash": "02c774ea624daae4ec466585255525b17410f9bf03b77f339fea6db21aff36bb",
+      "excludedCases": [
+        {
+          "sheet": "3 Encodeurl value is blank cell",
+          "ref": "Z1",
+          "formula": "_xlfn.ENCODEURL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "web/filterxml.xlsx",
+      "category": "web",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    }
+  ]
+}

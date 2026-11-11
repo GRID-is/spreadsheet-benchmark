@@ -1,0 +1,1062 @@
+{
+  "date.xlsx": {
+    "file": "date.xlsx",
+    "fixture": "date.xlsx",
+    "upstreamHash": "aadf58240d4a0969d32e1402a97409a7b7641f87c448391c4f8e4214983ca265",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 405,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:41.5016980+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "engineering.xlsx": {
+    "file": "engineering.xlsx",
+    "fixture": "engineering.xlsx",
+    "upstreamHash": "03b8e7f7c533dd9445e0b9c0cbaf98957b461529226ac0903959bead6e2a50d2",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 299,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:42.8659732+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "information.xlsx": {
+    "file": "information.xlsx",
+    "fixture": "information.xlsx",
+    "upstreamHash": "dfb5e5665b6773f94d2dfdb18485294c1ea2a68a4a87fb006531985bca2f5a5a",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 368,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:43.3702575+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "logical.xlsx": {
+    "file": "logical.xlsx",
+    "fixture": "logical.xlsx",
+    "upstreamHash": "62da6a4b91f3f34d77f5c4d2acd7ab40f67b3a901de908980cc5ad58689a8c6d",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 328,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:43.9404006+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "math.xlsx": {
+    "file": "math.xlsx",
+    "fixture": "math.xlsx",
+    "upstreamHash": "a15312a80ddebe4938204501b2c3b8e8218601f5e5690b69b22d27863a250dcb",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 335,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:44.4950144+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "operators.xlsx": {
+    "file": "operators.xlsx",
+    "fixture": "operators.xlsx",
+    "upstreamHash": "b541f77ffe3602d5c1f632e811c8c1b8755e8b7036d66bffff948f3268d20926",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 375,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:45.0183282+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "reference.xlsx": {
+    "file": "reference.xlsx",
+    "fixture": "reference.xlsx",
+    "upstreamHash": "780838dbb6e2cbccc7de62fa1741efcc27fc6000e3b3cbc87f4ec29204d1b800",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 439,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:45.5748906+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "statistical.xlsx": {
+    "file": "statistical.xlsx",
+    "fixture": "statistical.xlsx",
+    "upstreamHash": "0d30f96a80bcbe232759284a18c38d80b2fc86e68ddfe264fbb2463660ddedfc",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 375,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:46.2198999+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "text.xlsx": {
+    "file": "text.xlsx",
+    "fixture": "text.xlsx",
+    "upstreamHash": "f150e705cd5ffc215a4f2f7becbb95d8fc9952f074d53d5887ed2f53432f051a",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 306,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:46.8086252+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  },
+  "trigonometry.xlsx": {
+    "file": "trigonometry.xlsx",
+    "fixture": "trigonometry.xlsx",
+    "upstreamHash": "9c72e6f476487ed9d42e0af591a6cdfe6698d0cd51f34963b40769073655313c",
+    "savedBy": "Microsoft Excel 16.0 (20527)",
+    "ms": 333,
+    "restartEvery": 50,
+    "environment": {
+      "host": {
+        "observedAt": "2026-11-04T18:16:47.2707550+00:00",
+        "session": 1,
+        "culture": "en-US",
+        "uiCulture": "en-US",
+        "systemLocale": "en-US",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "currencyDecimalSeparator": ".",
+        "currencyThousandsSeparator": ",",
+        "shortDatePattern": "M/d/yyyy",
+        "dateSeparator": "/",
+        "timezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        },
+        "registeredTimezone": {
+          "id": "Greenwich Standard Time",
+          "baseUtcOffsetMinutes": 0,
+          "currentUtcOffsetMinutes": 0,
+          "supportsDaylightSavingTime": false,
+          "equivalentToUtc": true
+        }
+      },
+      "contract": {
+        "revision": 1,
+        "locale": "en-US",
+        "posixLocale": "en_US.UTF-8",
+        "timezone": "UTC",
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "listSeparator": ",",
+        "currencySymbol": "$",
+        "currencyDigits": 2,
+        "dateOrder": "MDY",
+        "dateSeparator": "/",
+        "shortDatePattern": "M/d/yyyy"
+      },
+      "verified": true,
+      "excel": {
+        "version": "16.0",
+        "build": 20527,
+        "useSystemSeparators": true,
+        "decimalSeparator": ".",
+        "thousandsSeparator": ",",
+        "international": {
+          "nonEnglishFunctions": false,
+          "currencyDigits": 2,
+          "currencySymbol": "$",
+          "dateOrder": 0,
+          "dateSeparator": "/",
+          "decimalSeparator": ".",
+          "thousandsSeparator": ",",
+          "listSeparator": ",",
+          "countrySetting": 1
+        },
+        "date1904": false,
+        "sentinels": [
+          {
+            "name": "DOLLAR",
+            "formula": "=DOLLAR(1234.5,2)",
+            "expected": "$1,234.50",
+            "actual": "$1,234.50"
+          },
+          {
+            "name": "DATEVALUE",
+            "formula": "=DATEVALUE(\"1/2/2000\")",
+            "expected": 36527,
+            "actual": 36527
+          },
+          {
+            "name": "TEXT",
+            "formula": "=TEXT(DATEVALUE(\"1/2/2000\"),\"dddd yyyy-mm-dd\")",
+            "expected": "Sunday 2000-01-02",
+            "actual": "Sunday 2000-01-02"
+          },
+          {
+            "name": "HOUR",
+            "formula": "=HOUR(\"1:30 PM\")",
+            "expected": 13,
+            "actual": 13
+          },
+          {
+            "name": "WEEKDAY",
+            "formula": "=WEEKDAY(DATEVALUE(\"1/2/2000\"))",
+            "expected": 1,
+            "actual": 1
+          }
+        ]
+      }
+    }
+  }
+}

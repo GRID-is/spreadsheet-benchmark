@@ -1,0 +1,5834 @@
+{
+  "suite": "libreoffice",
+  "upstream": "https://github.com/LibreOffice/core.git",
+  "commit": "195620c27479b88b5e4a5a90a59777298d8b6282",
+  "commitDate": "2026-10-31T22:24:39+01:00",
+  "subdir": "sc/qa/unit/data/functions",
+  "license": "MPL-2.0 (repository); fods files carry no per-file header",
+  "shape": "self-checking workbook: column A formula, column B expected literal, column C check, sheet 1 summary",
+  "converter": "LibreOffice 26.2.4.2 0229ac93fcf0d7cbc6376066c6f35021cef002dc",
+  "importedAt": "2026-11-01T00:21:04.018Z",
+  "files": [
+    {
+      "file": "addin/besseli.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 321,
+      "canonicalFromHash": "2db5826d9f9827050ddee6e0c2b85613a4db9696ca158ecb18003dc385607090",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/besselj.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 321,
+      "canonicalFromHash": "5b730ee8e3e24e11b22e0390179431654fe96dadf969c5a04f1fc64f55dc551e",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/besselk.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 321,
+      "canonicalFromHash": "9fa0847010e089358405a5ef8dc0b9321115a16745435a0d9f946bea019261ea",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/bessely.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 321,
+      "canonicalFromHash": "046d2a3a72e74e896668f837b2a7c6ba1cac48d385277213e7adb80b37140fb5",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/bin2dec.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "10130de92a32d4852bac682e395d08094939c120f96a24e9b51fa05ea57ab79a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "BIN2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/bin2hex.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "ca61f646633535d5c1231d274fe07b499a5d32efb465d4c1a2aa00ced904e90c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "BIN2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "BIN2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/bin2oct.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "aa960e962db212d627e04e1a1fbf5942f4b5ae14f701b8e3897ef2fa66a495ab",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "BIN2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "BIN2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/complex.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "94885e40c28e5969aa8335a07153b1e2cb56d63a5fcf1e98232c9b4668d09e28",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/convert.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/dec2bin.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "66163d753222a3ed28d058809c3f63670a63ee65f23a1b8f07a027a7045effc4",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "DEC2BIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/dec2hex.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 26,
+      "canonicalFromHash": "0dd2bb18b0f997135711ee4468c8cfb8ff4f32dec8a384f88e8b4bd631d00328",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "DEC2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/dec2oct.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "94d8bffd6faa5e62472e04a2e1fc4a7b45772726e878f72bf93163a72b237889",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "DEC2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/delta.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "fc1f533b2be3244295887b41d0aabbc8d812dc3459dfb6ef47c5d118e20410ff",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/erf.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/erfc.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "19944e72788aea6dd4e711f834cd51516f6adc1753eb0c4ec5d3c6045046eae1",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A26",
+          "formula": "ERFC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/factdouble.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "44f5455eead7948d8268c6dcdefaf8733ce8694ea93c3831a93e2972acdf2487",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A26",
+          "formula": "FACTDOUBLE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/gestep.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "9ab483a97a0a0c70e6c9a6518805c02b8ef268c30bf3979f8a17733d51099a25",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/hex2bin.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "0a6cc25b19bffd2a32a0d5175d0a8116d9cb1eb249cf15183116ed44860aa287",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/hex2dec.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "4406bf48ee0d1fedefbdbc068c1931b47b6b7f9508feeb3eef35d7b3207e994c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A23",
+          "formula": "HEX2DEC(H5,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "HEX2DEC(H5,-9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/hex2oct.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "864dc45e087da5f9933488986dc30f424e2f8f8128ee6ffb08cea60dcef4d172",
+      "excludedCases": []
+    },
+    {
+      "file": "addin/imabs.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "1632214977cc41609f55131ddbbf1ceedb7be1d0076afd579f0d44bc175192f6",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "IMABS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/imaginary.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "a214e3e31682d5e5462374b6847b9a876718dd9b891324777ab654236b5f6fb2",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "IMAGINARY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/imargument.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "510ddd054ba9abed9105f37fd7b9292dd108e9bb4e2552c344dac6af9864640f",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "IMARGUMENT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/imconjugate.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "533ab38f449cb555eca083583401317d29940ea41885fea6e7e5bdec29cf355e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "IMCONJUGATE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/imcos.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imcosh.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imcot.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imcsc.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imcsch.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imdiv.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imexp.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imln.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imlog10.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imlog2.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/impower.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/improduct.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imreal.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsec.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsech.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsin.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsinh.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsqrt.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsub.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imsum.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/imtan.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "addin/oct2bin.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "7fa18a0cf776b280fd907c44b3ea9514aa14b27fb7417a1b14926576b9cfbdd9",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "OCT2BIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/oct2dec.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "179fbde0c31745b65893e5dfd68afbcae9e4fb6f160f69f4acbb85b66ef06730",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "OCT2DEC(3, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "OCT2DEC(\"2\", 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "OCT2DEC(0,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "OCT2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/oct2hex.xlsx",
+      "category": "addin",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "bcbecd2e68b8a5a2490ac9ac2b0e23753e8004e4a589e18356e5ee5d1932299f",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "OCT2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "addin/rot13.xlsx",
+      "category": "addin",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/fourier.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/frequency.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/growth.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/logest.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/mdeterm.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "a9c92bb05e5839a76499223e44152574d1b66fcbc2d44fc939c196eb0ffe1f97",
+      "excludedCases": []
+    },
+    {
+      "file": "array/mmult.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "33382722ab438afc4eb1ad8af354d87b8f978ab3b6c63d1eec53d2a8a5e66edd",
+      "excludedCases": []
+    },
+    {
+      "file": "array/munit.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/sumproduct.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "array/sumx2my2.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "07a9b3cbb8b15839de9e6e4c19951a41682c0dc4b4479f1460b74d672a5e9da1",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "SUMX2MY2({2,3,9,1,8,7,5})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "array/sumx2py2.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "172fa6ea3e9ba04dfb5330fae1ea88c9db7e4eab4fb6075b463b4cf2f89f1656",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "SUMX2PY2({2,3,9,1,8,7,5})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "array/sumxmy2.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "47d6602fe9431e2bf69cae379b4d107e4b57c3632e78827a2bb13dedbf982c6c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "SUMXMY2({2,3,9,1,8,7,5})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "array/transpose.xlsx",
+      "category": "array",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "22980c262694627e74b8d4040e354617b135ff08fee0580d80124903e4150614",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "TRANSPOSE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "array/trend.xlsx",
+      "category": "array",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/daverage.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dcount.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dcounta.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dget.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dmax.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dmin.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dproduct.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dstdev.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dstdevp.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dsum.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dvar.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "database/dvarp.xlsx",
+      "category": "database",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/date.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/datedif.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/datevalue.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/day.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/days.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/days360.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/daysinmonth.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/daysinyear.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/eastersunday.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/edate.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/eomonth.xlsx",
+      "category": "date_time",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "6af78d7c1f6f491169c37e7bba89ba3497b6e80faf618665c650ac8ec70069be",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "EOMONTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "EOMONTH(years)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date_time/hour.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/isleapyear.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/isoweeknum.xlsx",
+      "category": "date_time",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "fbd3981075be6b21f6c2dc94e5b668b73c0b5f428cf37332b6d5116f6c4bd60c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "_xlfn.ISOWEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date_time/minute.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/month.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/months.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/networkdays.xlsx",
+      "category": "date_time",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "219089e26e989f3331c91ef18d33c368d891450a457c0c99b8ec9c37dc36da5a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "NETWORKDAYS(K2,K2+6,,{1;0;1;0;1;0;1})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "NETWORKDAYS(K2,K3,,{0;0;0;0;0;1;1})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "NETWORKDAYS(K2,K3,,{1;0;0;0;0;0;1})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "NETWORKDAYS(K2,K3,,M1:M7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "date_time/networkdays.intl.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/networkdays_excel2003.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/second.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/time.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/timevalue.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/weekday.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/weeknum.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/weeks.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/weeksinyear.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/workday.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/workday.intl.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/year.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/yearfrac.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "date_time/years.xlsx",
+      "category": "date_time",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/accrintm.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "a0609f150fd6014bf5cd34d7a1a62a34f5a0208138163a8cdfc8731992bd38d8",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "ACCRINTM(DATE(2012,1,1),DATE(2013,2,15),0.065,1000,3,)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/amordegrc.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "1cacb66adda4cb0d6f6a58aed8de5b626ac98fcf5207e4611f21f817fb225b1d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "AMORDEGRC(10000,DATE(2012,3,1),DATE(2012,12,31),1500,1,0,3,-4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/amorlinc.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "77a9ae7d719a5ecd8c6aee7308973992d4327dab88238de1a8478353aad5e74c",
+      "excludedCases": []
+    },
+    {
+      "file": "financial/coupdaybs.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/coupdays.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/coupdaysnc.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/coupncd.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/coupnum.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/couppcd.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/cumipmt.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/cumprinc.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/db.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/ddb.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/disc.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/dollarde.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/dollarfr.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/effect.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "1e8115c68447e0ef7c707adfeaf1d2526170da3dd8400a072a47aab98395cf33",
+      "excludedCases": []
+    },
+    {
+      "file": "financial/fv.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/fvschedule.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/intrate.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/ipmt.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "e522f9525971875208ff8fcbf2870174d12feb1db5b450b21cca094fbe5104ac",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "IPMT(0.05,5,7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/irr.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "dc565279c872e5165a033d56f47ed3751153eed24c267e242c286ea3d2de6e13",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "IRR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "IRR(G12:G13~G14)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/ispmt.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 22,
+      "canonicalFromHash": "4a0f54b8b50837c37d6d72e95e63177e2cae7690831e79c02f63de69ff80cdfd",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "ISPMT(0.06/52, 30, 4*52, 8000, 0 ,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "ISPMT(0.05,5,7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "ISPMT(0.06/52, 30, 4*52, 8000, ,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A19",
+          "formula": "ISPMT(0.06/52, 30, 4*52, 8000, 0 )",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A20",
+          "formula": "ISPMT(0.06/52, 30, 4*52, 8000, 0 ,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A21",
+          "formula": "ISPMT(0.06/52, 30, 4*52, 8000, 0 ,-2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/mduration.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/mirr.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "08b68a192501b45815c19fba642b1fecacf992df5b1ebe6e48fe3a06303a81c2",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "MIRR(H1:H4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "MIRR(H1:H4,0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/nominal.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "c8b4693e3f299a3828942fdc394023445b9218c55cc097cc52015b4a7038cd19",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "NOMINAL(4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/nper.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/npv.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/oddlprice.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/oddlyield.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/pduration.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "8832dff5a4e6af319c44449b412f89a1cd8a2922776897eddf7356beb367fb07",
+      "excludedCases": []
+    },
+    {
+      "file": "financial/pmt.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/ppmt.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/price.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/pricedisc.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/pricemat.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/pv.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/rate.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/received.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/rri.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "f113a7164cfb3896145f0f38c82e8cc03ab86071f40e6e3639c4244ef4aa0e32",
+      "excludedCases": []
+    },
+    {
+      "file": "financial/sln.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/syd.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/t.inv.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "0ae9f4e49299c6d5e3fc9c97fd0399d7369051ba980b5dfeb1dd19524de7e68a",
+      "excludedCases": []
+    },
+    {
+      "file": "financial/tbilleq.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "d3f37b7afc023ace132b65e881b8daf6e59aaa22a587ee47dfda9be536b3a4fc",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "TBILLEQ(DATE(1999,3,31),DATE(1999,6,1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/tbillprice.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "245e1b1ea2953d3d9b4046c7880dbdd034ebb0f03dbdff31bceebf50ea612086",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "TBILLPRICE(DATE(1999,3,31),DATE(1999,6,1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/tbillyield.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "6ab1302dc730ab5cbc7effe4fb0de3c09fa5cec5ba34feade784a0eb8de9db40",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "TBILLYIELD(DATE(1999,3,31),DATE(1999,6,1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/vdb.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/xirr.xlsx",
+      "category": "financial",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "180619edcb8df254050db0024cb6e723dbbe25c9780ee4654c9d2ed572d9f06e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A30",
+          "formula": "XIRR(I18:I19~J20,J18:J19~J20)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "financial/xnpv.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/yield.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "financial/yielddisc.xlsx",
+      "category": "financial",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "fods/Functions_Excel_2016.xlsx",
+      "category": "fods",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "fods/fake_test_file.xlsx",
+      "category": "fods",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "fods/gammaln.precise.xlsx",
+      "category": "fods",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "fods/own_function.xlsx",
+      "category": "fods",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "fods/reference_operators.xlsx",
+      "category": "fods",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 38,
+      "canonicalFromHash": "0c7a02b13f95e40598bebe7c6d51f29f3017ce3d4820998b4723b7087b006f54",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "SUM((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "SUM((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "SUM((C1:C5~B2:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "SUM((C1:C5~B2:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2~B4:D4))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "SUM(B1:B4~D2:D5 B2:D2~B4:D4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "SUM(B1:B4~(D2:D5 B2:D2)~B4:D4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "SUM(B1:B4~D2:D5 (B2:D2~B4:D4))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "SUM(B1:B4~D2:D5 B2:(C2:D2~B4:C4):D4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A19",
+          "formula": "SUM(((B1:B4~D2:D5) (B2:D2~B4:D4)):D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A20",
+          "formula": "SUM(((B1:B4~D2:D5) (B2:D2~B4:D4)):INDIRECT(E1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A21",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2~B4:D4):D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2~B4:D4):INDIRECT(E1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A23",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2)~(B4:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2)~(B4:D4:INDIRECT(E1)))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A25",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2~B4:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A26",
+          "formula": "SUM((B1:B4~D2:D5) (B2:D2~B4:D4:INDIRECT(E1)))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A27",
+          "formula": "SUM((B1:B4~D2:D5) B2:D2~B4:D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A28",
+          "formula": "SUM((B1:B4~D2:D5) B2:D2~B4:D4:INDIRECT(E1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A29",
+          "formula": "SUM(B1:B4~D2:D5 B2:D2~B4:D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A30",
+          "formula": "SUM(B1:B4~D2:D5 B2:D2~B4:D4:INDIRECT(E1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A31",
+          "formula": "SUM((B2:B3~D3:D4):D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A32",
+          "formula": "SUM((B2:B3~D3:D4):INDIRECT(E1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A33",
+          "formula": "SUM((B2:B3~(D3:D5)))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A34",
+          "formula": "SUM((B2:B3~(D3:D4:INDIRECT(E1))))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A35",
+          "formula": "SUM((B2:B3~D3:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A36",
+          "formula": "SUM((B2:B3~D3:D4:INDIRECT(E1)))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A44",
+          "formula": "AND((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A46",
+          "formula": "OR((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A48",
+          "formula": "ISREF((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A50",
+          "formula": "ISNUMBER((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A52",
+          "formula": "ISLOGICAL((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A54",
+          "formula": "MIN((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A56",
+          "formula": "MINA((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A58",
+          "formula": "MAX((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A60",
+          "formula": "MAXA((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A62",
+          "formula": "COUNT((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A64",
+          "formula": "COUNTA((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A66",
+          "formula": "STDEV((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A68",
+          "formula": "STDEVA((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A70",
+          "formula": "COUNTBLANK((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A72",
+          "formula": "COUNTIF((C1:C5~B1:B5~D1:D5),32)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A74",
+          "formula": "SUMIF((C1:C5~B1:B5~D1:D5),\"<>0\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A76",
+          "formula": "SUMIF((C1:C5~B1:B5~D1:D5),32,B1:D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A77",
+          "formula": "SUMIF((C1:C5~B1:B5~D1:D5):D5,32,B1:D5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A78",
+          "formula": "SUMIF((C1:C5~B1:B5~D1:D5),32)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A80",
+          "formula": "_xlfn.ORG.OPENOFFICE.ERRORTYPE((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A82",
+          "formula": "NPV(42,(C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A84",
+          "formula": "ZTEST((C1:C5~B1:B5~D1:D5),42)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A86",
+          "formula": "KURT((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A88",
+          "formula": "HARMEAN((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A90",
+          "formula": "GEOMEAN((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A92",
+          "formula": "SKEW((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A94",
+          "formula": "RANK(32,(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A96",
+          "formula": "AVEDEV((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A98",
+          "formula": "GCD((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A100",
+          "formula": "LCM((C1:C5~B1:B5~D1:D5),(C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A101",
+          "formula": "SUM(INDEX((C1:C5~B1:B5~D1:D5),0,0,0))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A102",
+          "formula": "SUM(INDEX((C1:C5~B1:B5~D1:D5),0,0,4))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A104",
+          "formula": "SUM(INDEX((C1:C5~B1:B5~D1:D5),0,0,1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A106",
+          "formula": "SUM(INDEX((C1:C5~B1:B5~D1:D5),0,0,2))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A108",
+          "formula": "SUM(INDEX((C1:C5~B1:B5~D1:D5),0,0,3))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A109",
+          "formula": "AREAS((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A110",
+          "formula": "FREQUENCY((C1:C5~B1:B5~D1:D5),{4,16,64})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A114",
+          "formula": "MEDIAN((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A115",
+          "formula": "PERCENTILE((C1:C5~B1:B5~D1:D5),0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A116",
+          "formula": "QUARTILE((C1:C5~B1:B5~D1:D5),2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A117",
+          "formula": "MODE((C1:C5~B1:B5~D1:D5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A118",
+          "formula": "LARGE((C1:C5~B1:B5~D1:D5),4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A119",
+          "formula": "SMALL((C1:C5~B1:B5~D1:D5),4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A120",
+          "formula": "TRIMMEAN((C1:C5~B1:B5~D1:D5),0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A124",
+          "formula": "PERCENTRANK((C1:C5~B1:B5~D1:D5),42)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/current.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/formula.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/info.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isblank.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/iserr.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/iserror.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/iseven.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/iseven_add.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isformula.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/islogical.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isna.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isnontext.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isnumber.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isodd.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isodd_add.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/isref.xlsx",
+      "category": "information",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "a8dc9949a866c5bf292bf2755112f4fbe522ebf17506b1ad4c1166d99a0e930e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "ISREF(c)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/istext.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/n.xlsx",
+      "category": "information",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "information/na.xlsx",
+      "category": "information",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 1,
+      "canonicalFromHash": "8c97c9b28e47c60b31d2e1c301b9ba6f6961e2d2a2ade39815ee25f70d8effc1",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A3",
+          "formula": "NA(F1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "information/type.xlsx",
+      "category": "information",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "5e401747a4533b2f3bb2f32ab29c05259204da9d1f4e64c8a951981e6da4dfa2",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "TYPE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lambda/bycol.xlsx",
+      "category": "lambda",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "046314748bad18b6280d5e68e7b9b02b47e8091c20affb86801d59b4dac45dfb",
+      "excludedCases": []
+    },
+    {
+      "file": "lambda/byrow.xlsx",
+      "category": "lambda",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "lambda/isomitted.xlsx",
+      "category": "lambda",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "lambda/lambda.xlsx",
+      "category": "lambda",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 51,
+      "canonicalFromHash": "336a04c3a1a51fa7e703e4ba761824e3649fdc3ea205c77a2b6db19ddace817a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A45",
+          "formula": "com.microsoft.lambda(x$, x$)(42)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A49",
+          "formula": "com.microsoft.lambda(aa#a, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A53",
+          "formula": "com.microsoft.lambda(x,y,z, {x,y,z}))(1, 20, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lambda/makearray.xlsx",
+      "category": "lambda",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "ca8fb39911f2d15db8d17b5d097650b97f645fec14d6dac394476606ade4a5a5",
+      "excludedCases": []
+    },
+    {
+      "file": "lambda/map.xlsx",
+      "category": "lambda",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "lambda/reduce.xlsx",
+      "category": "lambda",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "lambda/scan.xlsx",
+      "category": "lambda",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "logical/and.xlsx",
+      "category": "logical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "logical/if.xlsx",
+      "category": "logical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "logical/iferror.xlsx",
+      "category": "logical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "4ee751cd24a68e6809b221ab25aa9f1e43c8351110b58fdb2c1eee051e3e1020",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "IFERROR(J16)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "IFERROR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "IFERROR(J18)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/ifna.xlsx",
+      "category": "logical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "0ee64cb5240c9569def683b83ec8ce8491fb837ce050cdeadb46cda380a61d7f",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "_xlfn.IFNA(J16)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "_xlfn.IFNA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "_xlfn.IFNA(J18)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/ifs.xlsx",
+      "category": "logical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "logical/not.xlsx",
+      "category": "logical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "f03d090513084503d9f1962225f5dc86940bddfebc4b7fd1c8db2c3b8dba2e8d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "NOT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "NOT(0)NOT(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "NOT(0)NOT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "NOT(1)NOT(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "NOT(1)NOT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/or.xlsx",
+      "category": "logical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "91580d539991c15aa94da2fff34dfc277a4b46582ccd21e4f11f043a945fae21",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "OR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/switch.xlsx",
+      "category": "logical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "logical/xor.xlsx",
+      "category": "logical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "12486240a8daf90f1c61f1589945c42399074e8c3e1ba101ca2c461d55793bca",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.XOR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/abs.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "7af8c9e21ec9b8361ca66e07f857229f3fd3aa7756cc0c986c8f74e1f3f490bc",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "ABS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "ABS(J3,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/acos.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/acosh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/acot.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/acoth.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/add.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/aggregate.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 209,
+      "canonicalFromHash": "fee4fe69bf54accf9e8ef0eb83a7ecd2a6915b1e6fbf287c9a23de64aa7976bb",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A37",
+          "formula": "_xlfn.AGGREGATE(O2:O9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A39",
+          "formula": "_xlfn.AGGREGATE(1,2,3,OR())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/asin.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/asinh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/atan.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/atan2.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/atanh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/bitand.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "6ed1d21fa19b84c15f778343a7256b4db20cd1d1acf7b4e3809285d5d8d691ba",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "_xlfn.BITAND(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.BITAND(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/bitlshift.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "bc7c1f2e85db48faec1c9628788744afce46b17b146a71f30e5df59fab51b4df",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.BITLSHIFT(4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "_xlfn.BITLSHIFT(4,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/bitor.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "3ce58efc68f08f0b32bba5e1074d78e1b90998a02eb8c16bcfae8f41f594d416",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "_xlfn.BITOR(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.BITOR(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/bitrshift.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "07d49acf0ee936feaa26ad2ebf60ab5c9d6301751120c35e6e0a7e394951e596",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.BITRSHIFT(4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "_xlfn.BITRSHIFT(4,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/bitxor.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "f481f45a078e8ed069308b27d9fc3e1c67bae0dadc6bd5633c98d68fe909778b",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "_xlfn.BITXOR(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.BITXOR(25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/ceiling.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/ceiling.math.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/ceiling.precise.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "dc25f80c1fa05fe98700d321de2bfeba55bcbb8275607855c8e5055b2495034c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.CEILING.PRECISE(J$10,$L10,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "_xlfn.CEILING.PRECISE(J$10,$L11,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "_xlfn.CEILING.PRECISE(J$10,$L10,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "_xlfn.CEILING.PRECISE(J$10,$L11,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/ceiling.xcl.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "2f499eac3aca069c8a84e5dd720815ca6196b003f585f43cf648d5123cea9829",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "CEILING(J$10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "CEILING(J$10,$L10,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "CEILING(J$10,$L11,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "CEILING(J$10,$L10,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "CEILING(J$10,$L11,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "CEILING(K$10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A21",
+          "formula": "CEILING(6.7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A23",
+          "formula": "CEILING(4.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "CEILING(-4.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/color.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/combin.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "0a819fa75fa0d0e56be5049a61a67e3695d970409cdc1505dc5c7a4ba2643ba8",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "COMBIN(12)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/combina.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "0a812e6249295208d7c4b2e833969c1e4f9542f3d626b6207bcc6fce05ea0819",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "_xlfn.COMBINA(12)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/convert_add.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/convert_ooo.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 24,
+      "canonicalFromHash": "8084267d09abb1261d6d6ba531ff993df109c08ce878408973226ade991efa62",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/cos.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/cosh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/cot.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/coth.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/csc.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/csch.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/degrees.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/euroconvert.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/even.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "915a747439d95593f0dc77075abc044d038ef2e40ad96d58d11bd7ea16651f64",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "EVEN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/exp.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 2,
+      "canonicalFromHash": "59842c3367aa40153f70d4e206016b357e1b197c831ee93e3a4f4c14145af60d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "EXP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/fact.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "8b505d05f41490f2604a26b470ba46679024c85eff6785bc1f8d4e9582a3d3c7",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "FACT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/floor.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/floor.math.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/floor.precise.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "bccb1f792a502420427387a2690975e60d7055131612e6be95d3ee072c0db2af",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.FLOOR.PRECISE(J$10,$L10,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "_xlfn.FLOOR.PRECISE(J$10,$L11,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "_xlfn.FLOOR.PRECISE(J$10,$L10,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "_xlfn.FLOOR.PRECISE(J$10,$L11,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/floor.xcl.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "56e39d286116f59ef77eb438efbbe6734de43272dcb216d8174e7c6e891d6e90",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "FLOOR(J$10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "FLOOR(J$10,$L10,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "FLOOR(J$10,$L11,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "FLOOR(J$10,$L10,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "FLOOR(J$10,$L11,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "FLOOR(K$10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A21",
+          "formula": "FLOOR(6.7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A23",
+          "formula": "FLOOR(4.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "FLOOR(-4.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/gcd.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 38,
+      "canonicalFromHash": "b81191ec3ea972a0fa6b37d0ab3ff5a0a1be7b6a541de444132f533d20839538",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A36",
+          "formula": "GCD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/int.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "14a50b6e5c1a536d092182a02ee9878e20691094a5520151c06b9bbea768bb36",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "INT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/iso.ceiling.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "2b8f41a2f9f257a4e518ac8b662cb6284f30b19ff5533046497e0aee877c483e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "ISO.CEILING(J$10,$L10,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "ISO.CEILING(J$10,$L11,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "ISO.CEILING(J$10,$L10,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "ISO.CEILING(J$10,$L11,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/lcm.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 38,
+      "canonicalFromHash": "76b911cec0a0aa5fb1cd429233924381d636dee2e1d0bf17ba3a4e23fb8fa41f",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A36",
+          "formula": "LCM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/ln.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "57eeb92c6eee1c73179e3dd03a391174bc854834035f0f8d109d5cd7d2485c42",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "LN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/log.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "761bff18f9585adabb60ae4f82ca8f149da7e73f1ff8fe84e5fd5267f7dc17f3",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/log10.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/mod.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/mround.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "ab51d6e9057f899d9b7b1fbf242d59c1bda6799ebbbdb0ed6e256d32aaca9e49",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "MROUND(3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/multinomial.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/odd.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "396ad788c92628c870a0af6398a860c8370ef4e8930394a0d5c2bf9b958c6619",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "ODD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/pi.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 2,
+      "canonicalFromHash": "32e1a3e7ddd9811d9563c4aba6bae10551ba559d3465479a5620e1b2fc912bff",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "PI(G1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/power.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/product.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/quotient.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "457d918b305f48cbbbdb68531f4e7858427e3de622e4e73e5b09ad0850149114",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/radians.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 3,
+      "canonicalFromHash": "ba53f113d74ed85f1019543f5bd801c8dc7e29db1bf443e8773ba67fabf6fe49",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "RADIANS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/rawsubtract.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "1f68fe31fd4a359c80e291e3075b5d28a767cd70f55d3aa5668a4abfad1079e5",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/round.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/rounddown.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/roundsig.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 27,
+      "canonicalFromHash": "c3404d6c1917b702eb00972e85644113784d2f8774ced4323605ee451be714cc",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/roundup.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sec.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "cfe1be06b556518761bfcb566232468c9c4c2d67d6806ec9ae8b8a4c6fbc1add",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.SEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/sech.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "f1a406cef928da039710115addff38113e0b9115ffef96684cb54d704b399b14",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.SECH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/seriessum.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sign.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "e4be1ec0abb6faa781f8cb7651c443722195a27040e859eb078f234431db4c8d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "SIGN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/sin.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sinh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sqrt.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 2,
+      "canonicalFromHash": "eea0cbc5b836ec778f7ff507467c20b7dc6f2233ae15ef0cb80a99935bde08b7",
+      "excludedCases": []
+    },
+    {
+      "file": "mathematical/sqrtpi.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sub.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/subtotal.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sum.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sumif.xlsx",
+      "category": "mathematical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "e79d20b4633ad240d222125da0acd3c4234925921a25fbb422967aca27b0dae9",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "SUMIF(H2:H8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A31",
+          "formula": "SUMIF({-10;10;20;30},\">0\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/sumif_wildcards.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/sumsq.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/tan.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/tanh.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "mathematical/trunc.xlsx",
+      "category": "mathematical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/address.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/areas.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 3,
+      "canonicalFromHash": "6b99dd42112c96cf0addecfdc6451b911e81754120ed746b478154c08e484784",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "AREAS((A1:B3~F2~G1))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "AREAS((A1:C3~B4:B5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "AREAS(B2:D4,B2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/arraytotext.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/choose.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/choosecols.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 31,
+      "canonicalFromHash": "980d5923c3b03fd4e0d5b8318944ef9458a7fd216eb03de258682d246186d57c",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/chooserows.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 31,
+      "canonicalFromHash": "64574e153d6102c5ae10621431ec474a2f761437ffe86b41cff2e95096be0460",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/column.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/columns.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "6b3c0d5ed65556a976e710e447e84f3ac2000accbc87f85031aaa61607cf290d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "COLUMNS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A27",
+          "formula": "COLUMNS((B3~G3~I3))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/drop.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "76bb277be985cd1b2c49455df652bbbd2bec0ee40969bce2d2dfd76e0c66d83a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A53",
+          "formula": "_xlfn.DROP(J3:L8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/error.type.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "3f272a92cf176fececb10fdb8e0e991f3e8e326198e18c566d0bbc09e9b5271a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A3",
+          "formula": "ERROR.TYPE(#null)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "ERROR.TYPE(#raal)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A12",
+          "formula": "ERROR.TYPE(err:7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/errortype.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "a20d2835bb1cd3716ee8ccf44b5f026bf45e5cc40f9d65b3bdf3ba75810cd78b",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A3",
+          "formula": "_xlfn.ORG.OPENOFFICE.ERRORTYPE(#null)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "_xlfn.ORG.OPENOFFICE.ERRORTYPE(#raal)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A13",
+          "formula": "_xlfn.ORG.OPENOFFICE.ERRORTYPE(err:7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/expand.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 19,
+      "canonicalFromHash": "3ae56cbafd36cd4fc5e1b6526f429b033993cc309bd6199e1c928ec55f079683",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/filter.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "f1b46e4233acba10707a19d0ae0ebab63a104564ae020e895f44fed683fb41a2",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/getpivotdata.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/hlookup.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/hstack.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "98685ea35cf0703fb0570fc060d0dd9c4ea48093f084b2444e947cbfd4b4b049",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A49",
+          "formula": "_xlfn.HSTACK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/hyperlink.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/index.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/indirect.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/let.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel",
+      "cases": 68,
+      "canonicalFromHash": "fd3e6659c96ae14f2055707392dee1d91831bb5ef5bda561a8f67a891fca40b6",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A55",
+          "formula": "_xlfn.LET(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A93",
+          "formula": "_xlfn.LET(_xlpm.x$,42, _xlpm.x$)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A94",
+          "formula": "_xlfn.LET(AX1,0, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A96",
+          "formula": "_xlfn.LET(_xlpm.aa#a,0, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A97",
+          "formula": "_xlfn.LET(_xlpm.a%,0, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A98",
+          "formula": "_xlfn.LET(#REF!,0, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A99",
+          "formula": "_xlfn.LET(\"x\",1, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A100",
+          "formula": "_xlfn.LET(_xlpm.x,1, _xlpm.y,20, _xlpm.z,3, {_xlpm.x,_xlpm.y,_xlpm.z})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/lookup.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/match.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/offset.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/randarray.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "3cf7c3804d70fa7c0968ac1817756689b285e964f0cfecefe086140c9827a531",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/row.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "9d2288f55decc9b07385fb931d7587ef5679edeb72bd3f59c2b90e41dcd4590c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "ROW({1,2,3;4,5,6})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/rows.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/sequence.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "69ebd474866db00d6f91bfae1b7c6017d87254f930b8a1680772ecb7a67e1f83",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/sheet.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "9fd6b751cf843c69ecbab0f8b9d7c49d205b59f06405e09c30541f98ebfde453",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.SHEET(image 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/sheets.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "b3c61937a878c62f23adcab742259d3b9375254e40136a545c40bb2ad34a30d2",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.SHEETS(image 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/sort.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "2583777706f1bc4696687209daa3727cc11019928b1b1a1e68f41dd2d86056b8",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/sortby.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "d44c5f00a73e8e0ce7e667d6a42fa4851b1d8a0e7519462314d4716b546813e5",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/take.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "b47fdd0f8fbca3ae7ba1a6b5872797e19b82afa5126f8586670d9147a2ddcd30",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A53",
+          "formula": "_xlfn.TAKE(J3:L8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/textafter.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/textbefore.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/textsplit.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "1d8ab7b24f21855ddd4e36960e829d994a479b848e20fff3e18206ebd891a14c",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/tocol.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/torow.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "08c2d0a36edfe8899417134d322aaf13c90184419ccb19ca2f9084be3f863d28",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/unique.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "4c37f40c498144c8a978db65380e95891f803707ca3ed4d3e2edcaeb41130639",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/vlookup.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/vlookup2.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/vstack.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "2bf24029e8a7b5b81879527ef3c42afce193b7424b4155194d3ad8f5a904f214",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A73",
+          "formula": "_xlfn.VSTACK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "spreadsheet/wrapcols.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "8f020dd94acc98bd09e5f408982f203500196a921ef0efc0e4e59fdf9029ad76",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/wraprows.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "a354755c282229122d49ebd6c3d631dfc91dca66f306410ab33d85a4cc31b28c",
+      "excludedCases": []
+    },
+    {
+      "file": "spreadsheet/xlookup.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "spreadsheet/xmatch.xlsx",
+      "category": "spreadsheet",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/KahanSum.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/avedev.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/average.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/averagea.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/averageif.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/averageif_wildcards.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/averageifs.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/b.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/beta.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/beta.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "6cfbf154d6e96b0545de1a2c40f2a2960767f68dd6d4b27c7912ed8bc74c37fc",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.BETA.INV(0.5,5,10,0,*)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/betadist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "ff9b3616bff094da983e63e3a25b5b49e0a4f0f509eeb5126d359b30973a8b10",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A3",
+          "formula": "BETADIST(1,5,3,-2,4,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "BETADIST(0.2,0.7,4,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "BETADIST(1,1,0.5,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "BETADIST(1.1,1,0.5,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "BETADIST(1,5,3,-2,4,TRUE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "BETADIST(0.2,0.7,4,0,1,TRUE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "BETADIST(1.1,1,0.5,0,1,TRUE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "BETADIST(I16,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "BETADIST(I17,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "BETADIST(I18,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A18",
+          "formula": "BETADIST(I19,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A19",
+          "formula": "BETADIST(I20,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A20",
+          "formula": "BETADIST(I21,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A21",
+          "formula": "BETADIST(I22,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "BETADIST(I23,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A23",
+          "formula": "BETADIST(I24,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "BETADIST(I25,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A25",
+          "formula": "BETADIST(I26,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A26",
+          "formula": "BETADIST(I27,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A27",
+          "formula": "BETADIST(I28,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A28",
+          "formula": "BETADIST(I29,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A29",
+          "formula": "BETADIST(I30,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A30",
+          "formula": "BETADIST(I31,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A31",
+          "formula": "BETADIST(I32,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A32",
+          "formula": "BETADIST(I33,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A33",
+          "formula": "BETADIST(I34,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A34",
+          "formula": "BETADIST(I35,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A35",
+          "formula": "BETADIST(I36,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A36",
+          "formula": "BETADIST(I37,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A37",
+          "formula": "BETADIST(I38,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A38",
+          "formula": "BETADIST(I39,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A39",
+          "formula": "BETADIST(I40,$J$13,$J$14,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A40",
+          "formula": "BETADIST(I42,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A41",
+          "formula": "BETADIST(I43,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A42",
+          "formula": "BETADIST(I44,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A43",
+          "formula": "BETADIST(I45,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A44",
+          "formula": "BETADIST(I46,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A45",
+          "formula": "BETADIST(I47,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A46",
+          "formula": "BETADIST(I48,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A47",
+          "formula": "BETADIST(I49,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A48",
+          "formula": "BETADIST(I50,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A49",
+          "formula": "BETADIST(I51,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A50",
+          "formula": "BETADIST(I52,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A51",
+          "formula": "BETADIST(I53,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A52",
+          "formula": "BETADIST(I54,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A53",
+          "formula": "BETADIST(I55,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A54",
+          "formula": "BETADIST(I56,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A55",
+          "formula": "BETADIST(I57,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A56",
+          "formula": "BETADIST(I58,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A57",
+          "formula": "BETADIST(I59,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A58",
+          "formula": "BETADIST(I60,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A59",
+          "formula": "BETADIST(I61,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A60",
+          "formula": "BETADIST(I62,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A61",
+          "formula": "BETADIST(I63,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A62",
+          "formula": "BETADIST(I64,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A63",
+          "formula": "BETADIST(I65,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A64",
+          "formula": "BETADIST(I66,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A65",
+          "formula": "BETADIST(I67,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A66",
+          "formula": "BETADIST(I68,$J$40,$J$41,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A67",
+          "formula": "BETADIST(I70,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A68",
+          "formula": "BETADIST(I71,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A69",
+          "formula": "BETADIST(I72,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A70",
+          "formula": "BETADIST(I73,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A71",
+          "formula": "BETADIST(I74,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A72",
+          "formula": "BETADIST(I75,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A73",
+          "formula": "BETADIST(I76,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A74",
+          "formula": "BETADIST(I77,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A75",
+          "formula": "BETADIST(I78,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A76",
+          "formula": "BETADIST(I79,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A77",
+          "formula": "BETADIST(I80,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A78",
+          "formula": "BETADIST(I81,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A79",
+          "formula": "BETADIST(I82,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A80",
+          "formula": "BETADIST(I83,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A81",
+          "formula": "BETADIST(I84,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A82",
+          "formula": "BETADIST(I85,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A83",
+          "formula": "BETADIST(I86,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A84",
+          "formula": "BETADIST(I87,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A85",
+          "formula": "BETADIST(I88,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A86",
+          "formula": "BETADIST(I89,$J$68,$J$69,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A87",
+          "formula": "BETADIST(I91,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A88",
+          "formula": "BETADIST(I92,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A89",
+          "formula": "BETADIST(I93,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A90",
+          "formula": "BETADIST(I94,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A91",
+          "formula": "BETADIST(I95,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A92",
+          "formula": "BETADIST(I96,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A93",
+          "formula": "BETADIST(I97,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A94",
+          "formula": "BETADIST(I98,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A95",
+          "formula": "BETADIST(I99,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A96",
+          "formula": "BETADIST(I100,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A97",
+          "formula": "BETADIST(I101,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A98",
+          "formula": "BETADIST(I102,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A99",
+          "formula": "BETADIST(I103,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A100",
+          "formula": "BETADIST(I104,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A101",
+          "formula": "BETADIST(I105,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A102",
+          "formula": "BETADIST(I106,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A103",
+          "formula": "BETADIST(I107,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A104",
+          "formula": "BETADIST(I108,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A105",
+          "formula": "BETADIST(I109,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A106",
+          "formula": "BETADIST(I110,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A107",
+          "formula": "BETADIST(I111,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A108",
+          "formula": "BETADIST(I112,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A109",
+          "formula": "BETADIST(I113,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A110",
+          "formula": "BETADIST(I114,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A111",
+          "formula": "BETADIST(I115,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A112",
+          "formula": "BETADIST(I116,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A113",
+          "formula": "BETADIST(I117,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A114",
+          "formula": "BETADIST(I118,$J$89,$J$90,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A115",
+          "formula": "BETADIST(I120,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A116",
+          "formula": "BETADIST(I121,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A117",
+          "formula": "BETADIST(I122,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A118",
+          "formula": "BETADIST(I123,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A119",
+          "formula": "BETADIST(I124,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A120",
+          "formula": "BETADIST(I125,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A121",
+          "formula": "BETADIST(I126,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A122",
+          "formula": "BETADIST(I127,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A123",
+          "formula": "BETADIST(I128,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A124",
+          "formula": "BETADIST(I129,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A125",
+          "formula": "BETADIST(I130,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A126",
+          "formula": "BETADIST(I131,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A127",
+          "formula": "BETADIST(I132,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A128",
+          "formula": "BETADIST(I133,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A129",
+          "formula": "BETADIST(I134,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A130",
+          "formula": "BETADIST(I135,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A131",
+          "formula": "BETADIST(I136,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A132",
+          "formula": "BETADIST(I137,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A133",
+          "formula": "BETADIST(I138,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A134",
+          "formula": "BETADIST(I139,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A135",
+          "formula": "BETADIST(I140,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A136",
+          "formula": "BETADIST(I141,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A137",
+          "formula": "BETADIST(I142,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A138",
+          "formula": "BETADIST(I143,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A139",
+          "formula": "BETADIST(I144,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A140",
+          "formula": "BETADIST(I145,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A141",
+          "formula": "BETADIST(I146,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A142",
+          "formula": "BETADIST(I147,$J$118,$J$119,0,1,FALSE())",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/betainv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/binom.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/binom.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/binomdist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/chidist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/chiinv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/chisq.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/chisq.dist.rt.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/chisq.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "f7270564a2050143c79b377e1ed7cc4d3300f815d46d57a13ae8c9c6ee913725",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/chisq.inv.rt.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "82fd4c1dc927fc183d7068b792480436548119974094ba249b484cda2cade549",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/chisq.test.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "c7599d62f03b906e7d8bb17736eb7ddb354f89de9ae04bf057f03456410acb28",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/chisqdist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "6d839eda98493a76ac3105a75290ebaf4680f93f921e702ad298e9d1969a1d25",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/chisqinv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 23,
+      "canonicalFromHash": "fe7cdd264c5cc7ce799829355b35ad41f9335107899a158606395f421c39cc20",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/chitest.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "acc0aa00074247b5809915a1847579f9cc818ed6c33a74194dcadc923bd38352",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/confidence.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "41e07de4f6336f7ae82180e80788036baf256f612218699d0aee20d50d921092",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "CONFIDENCE(0.05,1.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/confidence.norm.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "9074674de1af9590c838f34e75ed448c9df0978680c1ad1ad9837b656a7d3df9",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.CONFIDENCE.NORM(0.05,1.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/confidence.t.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "12de7c26d2d7a871ce232dff97508f5bfadf85b315805941d6249e88d38f6a6c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A11",
+          "formula": "_xlfn.CONFIDENCE.T(0.05,1.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/correl.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/count.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/counta.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/countblank.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "e0a5fcc4bc2dda34aee9b94400516abf5de6d50d2051ba237ea2b6e053d12002",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A3",
+          "formula": "COUNTBLANK(I1:I6~I11:I15)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/countif.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/countif2.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/countifs.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/covar.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "cd10c4d910344f3b13b78b34f4850d361297b67cf3318dcbb96fbde826ff8bec",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "COVAR({1,2;3,4}, {5,6;7,8}, {5,6;7,8})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/covariance.p.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "9e7041030068fa468673193772ed3b9dea6d351e1716ffe1fa4cae87bd99a528",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.COVARIANCE.P({1,2;3,4}, {5,6;7,8}, {5,6;7,8})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/covariance.s.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "7397b8b1a30fd5c83b6c2a9e275ba76965c16578e072435b0016c0a643af0aff",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.COVARIANCE.S({1,2;3,4}, {5,6;7,8}, {5,6;7,8})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/critbinom.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/devsq.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "e504f5808751d776ab046a8fafbc176b4dae5e48ee58cfaf3a94f35a6b3c1a3a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A4",
+          "formula": "DEVSQ(I2:I4~I5:I8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "DEVSQ({1,-2,3,1/0,5})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/erf.precise.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/erfc.precise.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/expon.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/expondist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/f.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/f.dist.rt.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "7c76b6377fb89a77c05120708100ebf7a59aa7d0d024a5b27f0f2282040390f4",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "_xlfn.F.DIST.RT(0.8,8,12,a)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/f.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "6da50e05e9b77b84f0563140e1f4bd3d8c5885fde55e0877efdf9de66175e99f",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "_xlfn.F.INV(0.8,8,12,a)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/f.inv.rt.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "4aff5d8abc060f83d0d198820b07ee4869378f99c5807e9b9bb37e9d3b5a139c",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "_xlfn.F.INV.RT(0.8,8,12,a)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/f.test.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/fdist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "ca15f19d78c45afeebc84f88e1732cf52807c98f87569a842fd6756c3781575d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A6",
+          "formula": "FDIST(0.8,8,12,a)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/finv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/fisher.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/fisherinv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/forecast.ets.add.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/forecast.ets.mult.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/forecast.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/ftest.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gamma.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gamma.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gamma.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gammadist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gammainv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gammaln.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gammaln.precise.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/gauss.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/geomean.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 38,
+      "canonicalFromHash": "61d89c9f46a96897f5f2a6d74aa5e6c23088314b14832b7eb33aa44694911df7",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A39",
+          "formula": "GEOMEAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/harmean.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/hypgeom.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/hypgeomdist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/intercept.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/kurt.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/large.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "c732fc61f81149fb41f67f1e7571e05997d682019819bdb67f1886106b75958b",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A5",
+          "formula": "LARGE(K2:X330)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/loginv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/lognorm.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/lognorm.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/lognormdist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/max.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/maxa.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/maxifs.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "dd850d58afe4572b41dcaceefac8b5a252e50a9cc88d3dd33a681213795fba36",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A17",
+          "formula": "_xlfn.MAXIFS(ROW($J$2:$J2),$J$2:$J2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/median.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "0521bb9e289b88a016aef85b968055dc4a1bfebb56c139dbb3404e57d9be433a",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A14",
+          "formula": "MEDIAN({DATE(2015;3;4);DATE(2015;2;1);DATE(2015;3;4)})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "MEDIAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/min.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/mina.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/minifs.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/mode.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "ef054133bf783221e2f003f133d4f3b2a90044359d6618d52779af05ac9f9fcc",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "MODE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/mode.mult.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "511a0596518443c772cbc71d79a08595c4dc3d60a0d71c14ff47d0e54abf0892",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "_xlfn.MODE.MULT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/mode.sngl.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "3ea68830a4dacc13facfd0146f484f0d72728d4d123d6244bf32384ba0c91ff5",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "_xlfn.MODE.SNGL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/negbinom.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/negbinomdist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/norm.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "7147aff28d103d30198cc7e02bd98142543c0bd2e15a0b0c127c92e5db012f96",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A27",
+          "formula": "_xlfn.NORM.DIST(70,5,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/norm.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "530f97dbe0955215db422f43e48c054c7c2669e0334e8a7ea8a5c0f833210e94",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/norm.s.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/norm.s.inv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "8545691db1b77629fa40ec470413d7805dd4281fd910f6a860664e5a3dff26db",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A19",
+          "formula": "_xlfn.NORM.S.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/normdist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "e268e40891c134132ea11e4c2aebca686c5298e85f0c7f224e3c26b1de3b1353",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A31",
+          "formula": "NORMDIST(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A42",
+          "formula": "NORMDIST(70,63)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/norminv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "fb700a26a67d2a57cf429b21e68e0ea02efb59251f3bdc1a705c91ac326373c9",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/normsdist.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/normsinv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "085c6a3264fffd81f5e1ed09f4dd4d1e75c3ed2dc72d3299e7a429a6b09711d2",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/pearson.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/percentile.exc.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/percentile.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/percentile.inc.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/percentrank.exc.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 24,
+      "canonicalFromHash": "68a2af36d30bab3fa818dcfee22a99d5c4520d75297de96d0ac9ac7e34f1b00a",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/percentrank.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "4f2f391f4922700f03ff1ceee2686810f7e5d23e9cae533327476b336d21f8a2",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/percentrank.inc.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/permut.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/permutationa.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/phi.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/poisson.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 328,
+      "canonicalFromHash": "8bfb06c6cdd36396024e892e7dfaea58f282bc3df913fd62bd1bb2513519c862",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A329",
+          "formula": "_xlfn.POISSON.DIST(150,120)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/poisson.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 329,
+      "canonicalFromHash": "c81859a2aaf586decd948146ceb6c4aae73328b194aed79f5147cc9f9c5ab78d",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/prob.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/quartile.exc.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "fe68a2895f3abfc28aef8616156abf7838fd1b7f84c6cfbe1b242fbbb67b19b1",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "_xlfn.QUARTILE.EXC(L6:L160)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/quartile.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/quartile.inc.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "a36a9f9f517b2a9531c5642ffe0c9d9b83a6a800fbf6aa8b4cbd46f73f230847",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "_xlfn.QUARTILE.INC(L6:L160)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rank.avg.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "1a67040ab50eca574388ad985018b2ae2f79aa70bc091e83d9f7cfec65ce886e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "_xlfn.RANK.AVG(5, {3;5;2.6;1}, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "_xlfn.RANK.AVG(32,(Q1:Q5~P1:P5~R1:R5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rank.eq.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "ac60c497f6791eacd2ad0a9510e16e1dcc895435971bde44735e4a18980e02ae",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "_xlfn.RANK.EQ(5, {3;5;2.6;1}, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "_xlfn.RANK.EQ(32,(Q1:Q5~P1:P5~R1:R5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rank.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "9adc34b1dbf8c2e679818d57dd73e931090e4aa949eca00a1094e06d725b7f27",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A2",
+          "formula": "RANK(5, {3;5;2.6;1}, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "Sheet2",
+          "ref": "A15",
+          "formula": "RANK(32,(Q1:Q5~P1:P5~R1:R5))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/rsq.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/skew.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 31,
+      "canonicalFromHash": "341cdabbf5157852c9d2edf6dee930e3ff87177987a16aeaa147639969a385d5",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/skewp.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 31,
+      "canonicalFromHash": "1203caef279b2be184d092b25b917785fdc3df3ff062c302e8ad7a34c4ccb6fc",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/slope.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/small.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "2496c8d625d04a76372b7385666b1d46b184128b474d405732bde4846580326e",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/standardize.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 6,
+      "canonicalFromHash": "9ac15b1656b6473842c95f007974752a461a7b7fafba3934bc17e362c52ed6ed",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A56",
+          "formula": "STANDARDIZE(11,10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/stdev.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/stdev.p.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "8cc9aa6a65e27a39ba376d764a136f14d671d498eb059acc7d5ec58d9326e414",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/stdev.s.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "2f5130953c73b88972dc706687d2e7d71b2e658908c4ff35647a8c3e8a001c77",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/stdeva.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/stdevp.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 12,
+      "canonicalFromHash": "153f8d0d73da73a090aad2b0189327242440d89a3ffb74e56336dc56d6efd097",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/stdevpa.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/steyx.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/t.dist.2t.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "bc720bc41674ed0c92db251ce65ca8e6dc25ba619bab1a65c3801d32d214a8d9",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/t.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "e580edae67a9bac815b4406bec6b24af6485152827c417491811e2857111e36f",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/t.dist.rt.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "bb1886b358f716ccbf68d8cd31ef0359acd9d2bf543f444479c3d3b17afb07a5",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/t.inv.2t.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "2dc740d8b7134a4f6da2fd13b2558128de39b0dd7b677fafba3fb8f749932416",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/t.test.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "12f5bd605462c1c468c1136636086a9c6607ca920a6b697daf023e0ff50f58d7",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/tdist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 13,
+      "canonicalFromHash": "e7e0be24860668f2f1a0faa50165ce826beff59013d78d0f6406d75f8f22ef24",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/tinv.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 20,
+      "canonicalFromHash": "f32fff9523a00352dff00b941a3a6bbcd00dc49a9e15eb21edb39130aa44c65e",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/trimmean.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "148b2d945dfbfab8996f678ccc7bbc575240d916c4d5aa5ecf10942542f28a2d",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/ttest.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 28,
+      "canonicalFromHash": "da68c8382fdd809a380422266056012ffc728e7cce95b924e05256639118e70e",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/var.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "24738737dcc197441e8d50f3542771747b82a1feabf564321b34abd78c4608c2",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "VAR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/var.p.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "6b0cd20093f9ab5413875ac4d99d18121616d7d95891c34ac08efe9128ae60ff",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "_xlfn.VAR.P()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/var.s.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 17,
+      "canonicalFromHash": "a00bd820d2ba912349f10dd6c33c911772da18cc4337f7756973950802d29df1",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "_xlfn.VAR.S()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/vara.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "57a2f15d290fa1f2918dfd0961aa9c74a29a4179008912194b1e503ef646342d",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "VARA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/varp.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 18,
+      "canonicalFromHash": "f9579b7dbe55ccd0bd0fead4a94b48a4f2adf1e28e783427d55e4e36a7c9bcb4",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "VARP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/varpa.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 19,
+      "canonicalFromHash": "c4aae5eb97ef5cf2a445697512a457d5a639fe9c32cf9a6da2b49a0f934dcda4",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A16",
+          "formula": "VARPA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/weibull.dist.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 15,
+      "canonicalFromHash": "b9548c20e8a5028f0fc02b4bae5baffed6e5d57de22b08fc9fff492746b33a37",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/weibull.xlsx",
+      "category": "statistical",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 16,
+      "canonicalFromHash": "385e5080fc593f140117cc3bd18c2a7dc4126936c25b66f02395fad9e5bd35ee",
+      "excludedCases": []
+    },
+    {
+      "file": "statistical/z.test.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "statistical/ztest.xlsx",
+      "category": "statistical",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/arabic.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "fa7696b93ce40bbd47c1f06b0c9c58da626976707f0ce5715952ba04aca416db",
+      "excludedCases": []
+    },
+    {
+      "file": "text/asc.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/bahttext.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel",
+      "cases": 16,
+      "canonicalFromHash": "0046b68042d174806d25e955b1994c071aa6123a228400dce698df91893f9201",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A10",
+          "formula": "_xlfn.BAHTTEXT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/base.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/char.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/clean.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/code.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/concat.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/concatenate.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/decimal.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/dollar.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/encodeurl.xlsx",
+      "category": "text",
+      "savedBy": "GRID",
+      "cases": 5,
+      "canonicalFromHash": "d4fdcf120d8378444375cb8c36091f5a05701e309d2664a6818ce42bfa573a16",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A7",
+          "formula": "_xlfn.ENCODEURL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/exact.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/find.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "f65c3e05fa43f2d2e03e75307fdb02ce05014f103875f6258d8f6aae22c28818",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "FIND(\"aa\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/findb.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 25,
+      "canonicalFromHash": "3c7a714bec61ac3d432934eaaa5617ead0ef60912c07af8b26cc1b3a402e1070",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A25",
+          "formula": "FINDB(\"aa\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/fixed.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/jis.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/left.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/leftb.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/len.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 10,
+      "canonicalFromHash": "cfe6863e28c7be145e0f7ba3f26786231d996b3a1713a0b2cb16f924edaa590e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "LEN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/lenb.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 7,
+      "canonicalFromHash": "f901cb6fc9ffa2787688cf88befb05e4f7478ba9d54f1ba8ce2c918861d12a9e",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A9",
+          "formula": "LENB()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/lower.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/mid.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 11,
+      "canonicalFromHash": "ba24cd8127a9140acb7c5a10bac5b8c78ce22175f051b0c3d63345b0a8553634",
+      "excludedCases": []
+    },
+    {
+      "file": "text/midb.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/numbervalue.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "c72b1d05037469785f9408a2ae8c40fb908d218f65e9837415768efa6f855ecd",
+      "excludedCases": []
+    },
+    {
+      "file": "text/proper.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "fac5603afd6837f18a9c0ca4fabfff00f09e6f014c3d0658e7031477abffda58",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A8",
+          "formula": "PROPER()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/regex.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/replace.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "c0b5d8788f876ae22a0027cfff7b625d97647dd46ded4d2b8954beb168def0a7",
+      "excludedCases": []
+    },
+    {
+      "file": "text/replaceb.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 35,
+      "canonicalFromHash": "cbb4d441b74443956a08c10e6a63d7d9273d645bb1c13128d1c0ac621d07beb3",
+      "excludedCases": []
+    },
+    {
+      "file": "text/rept.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 5,
+      "canonicalFromHash": "09d64835a9e67786cca217f5bb0177c8bf2f2aa5f39f28d5ecc4caf587829104",
+      "excludedCases": []
+    },
+    {
+      "file": "text/right.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/rightb.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "638dbcd8302ed74586745e81624cdfa498300094c33da700baf035a446555bfe",
+      "excludedCases": []
+    },
+    {
+      "file": "text/roman.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 14,
+      "canonicalFromHash": "47b14519ca733f5b4f445d666a241638e91fa65cb641dc46c128080d176ceeec",
+      "excludedCases": []
+    },
+    {
+      "file": "text/search.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/searchb.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 26,
+      "canonicalFromHash": "696462a1d40ce515456b87a45df87add6a0b5dc3d3d610ca1861e74b57bda4da",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A24",
+          "formula": "SEARCHB(\"aa\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/substitute.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 8,
+      "canonicalFromHash": "dd227760afa66dbac91178363d221b5410bf0eaf35ee0cfbb026a6f2a4f26692",
+      "excludedCases": []
+    },
+    {
+      "file": "text/t.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/text.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 21,
+      "canonicalFromHash": "863b2d16244bebbc68fae20d536bab26d80844f5e375cec61bdaf88fb767ae31",
+      "excludedCases": [
+        {
+          "sheet": "Sheet2",
+          "ref": "A22",
+          "formula": "TEXT(J1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "text/textjoin.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/trim.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/unichar.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/unicode.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/upper.xlsx",
+      "category": "text",
+      "savedBy": "LibreOffice (soffice --convert-to xlsx)"
+    },
+    {
+      "file": "text/value.xlsx",
+      "category": "text",
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "cases": 9,
+      "canonicalFromHash": "43d9cd4d3a35de78d48c21e65446f2977bc7c8460d2913734b4ecf618a077aa7",
+      "excludedCases": []
+    }
+  ],
+  "skipped": {
+    "Excel removed the case formula during canonical input repair": 416
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "createdAt": "2026-11-09T01:31:40.514Z",
+  "engine": {
+    "name": "grid",
+    "version": "19.0.0",
+    "source": "19.0.0",
+    "hash": "e018d83eb8c6a829",
+    "options": {
+      "input": "xlsx"
+    }
+  },
+  "catalogue": {
+    "apiaryVersion": "19.0.0",
+    "generatedAt": "2026-11-08T12:06:24.662Z"
+  },
+  "measurement": {
+    "revision": 3,
+    "timeoutMs": 60000,
+    "memoryLimitMiB": 11264,
+    "heapLimitMiB": 10240
+  },
+  "environment": {
+    "platform": "darwin",
+    "architecture": "arm64",
+    "node": "v26.12.0",
+    "locale": "en-US",
+    "timeZone": "Atlantic/Reykjavik",
+    "variables": {
+      "LANG": "en_US.UTF-8"
+    }
+  },
+  "memoryPressure": {
+    "start": "normal",
+    "peak": "normal",
+    "end": "normal",
+    "perFile": true
+  },
+  "suites": {
+    "fast-formula-parser": {
+      "commit": "ed38a50f759c1ed918444e94e8b5876e6d1e873b",
+      "commitDate": "2025-09-10T14:35:01-04:00",
+      "fixtures": "4f01717b8beeb5c2ef69fc6b1cd9d32f0b3bb085c7c4da34a0c58b8001533e9c",
+      "files": 10,
+      "cases": 1470,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "gnumeric": {
+      "commit": "09a37c89f701712d8c71a71058c751650778a9c1",
+      "commitDate": "2026-10-31T19:27:19-04:00",
+      "fixtures": "c129ae5aa372a26e49f527d1927ddbbab429de9a80f10dfbb9cbcc976557e9ee",
+      "files": 14,
+      "cases": 1969,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "hyperformula": {
+      "commit": "d30eeab3fadbb88d7bdede4ee12478baf5d0a24f",
+      "commitDate": "2025-12-18T11:47:57+01:00",
+      "fixtures": "5dbeaf0914cb37041ea0e281558e4e4edd1d06c392848b7608fb650a20c1cb1d",
+      "files": 360,
+      "cases": 4743,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "ironcalc": {
+      "commit": "2128db12ab30b77fdebde9cba994273a26438ae3",
+      "commitDate": "2026-10-30T17:40:20+01:00",
+      "fixtures": "16482cfd93388b9f2cd54c33d44ccc22ec0bba5ab454deea7ab3f3a2a99eb675",
+      "files": 224,
+      "cases": 72689,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "ironcalc-unit": {
+      "commit": "2128db12ab30b77fdebde9cba994273a26438ae3",
+      "commitDate": "2026-10-30T17:40:20+01:00",
+      "fixtures": "ae3b9e662550abf4b05b5151700d30140c37bb34d32ad5383aa6d19c4bfa0daa",
+      "files": 171,
+      "cases": 1789,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "libreoffice": {
+      "commit": "195620c27479b88b5e4a5a90a59777298d8b6282",
+      "commitDate": "2026-10-31T22:24:39+01:00",
+      "fixtures": "21b20fd8687e40c9a5df77f09b3e204363cb278e2d72006c1f006b82e93b228a",
+      "files": 514,
+      "cases": 12060,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "poi": {
+      "commit": "6327f056ba3cfdae326a0261a236460592b80f5c",
+      "commitDate": "2026-10-30T18:10:38+01:00",
+      "fixtures": "474175593b08df5f0bbb3d6a8648b7b9890745b80095a775b7c63e1aa6f9274f",
+      "files": 29,
+      "cases": 3182,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    },
+    "univer": {
+      "commit": "4e6a56e45c8647d9741139af7ebf2f725945d7f3",
+      "commitDate": "2026-10-30T20:03:46+08:00",
+      "fixtures": "c0ea915ad624586136e1da4ab18510a45308460eaad4f0a9c4ec1baab0592d29",
+      "files": 474,
+      "cases": 5856,
+      "excel": {
+        "app": "Microsoft Excel 16.0 (20527)"
+      },
+      "upstreamValues": false
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "suite": "poi",
+  "upstream": "https://github.com/apache/poi.git",
+  "commit": "6327f056ba3cfdae326a0261a236460592b80f5c",
+  "commitDate": "2026-10-30T18:10:38+01:00",
+  "subdir": "test-data/spreadsheet",
+  "license": "Apache-2.0",
+  "shape": "expected-literal workbook: eval = 4-row blocks, formula row then literal row, columns D onward; functions = column B formula, column C literal, column A marker; matrix = 4-row blocks, formulas H:J, literals K:M; multisheet = sheet \"test\", column D formula, column C literal",
+  "importedAt": "2026-11-01T00:22:30.635Z",
+  "files": [
+    {
+      "file": "eval/FormulaEvalTestData.xls",
+      "category": "eval",
+      "savedBy": ""
+    },
+    {
+      "file": "eval/FormulaEvalTestData_Copy.xlsx",
+      "category": "eval",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "functions/57003-FixedFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/BooleanFunctionsTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/CodeFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/ComplexFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/DGet.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/DStar.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/DateTimeToNumberTestCases.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/DeltaFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/FactDoubleFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/IfFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/IfNaTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/ImRealFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/ImaginaryFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/IndexFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/IndirectFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/LogicalFunctionsTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/LookupFunctionsTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/MatchFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/QuotientFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/ReptFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/RomanFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/Trend.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/TwoOperandNumericFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/WeekNumFunctionTestCaseData.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/WeekNumFunctionTestCaseData2013.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "matrix/MatrixFormulaEvalTestData.xlsx",
+      "category": "matrix",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "multisheet/FormulaSheetRange.xlsx",
+      "category": "multisheet",
+      "savedBy": "Microsoft Excel"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "suite": "fast-formula-parser",
+  "upstream": "https://github.com/LesterLyu/fast-formula-parser.git",
+  "commit": "ed38a50f759c1ed918444e94e8b5876e6d1e873b",
+  "commitDate": "2025-09-10T14:35:01-04:00",
+  "subdir": "test",
+  "license": "MIT",
+  "shape": "web (WEBSERVICE, network) excluded; case workbook per category: the category data at A1, one case per row in column AA with the upstream literal in BA and the function name in CA; upstream evaluates each formula at A1, so ROW() and COLUMN() differ",
+  "importedAt": "2026-09-08T17:18:53.141Z",
+  "files": [
+    {
+      "file": "date.xlsx",
+      "category": "date",
+      "cases": 158,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering.xlsx",
+      "category": "engineering",
+      "cases": 376,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "information.xlsx",
+      "category": "information",
+      "cases": 58,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical.xlsx",
+      "category": "logical",
+      "cases": 37,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "4cd2bcc558003eccd9769072bebfc92039212fff5f82496b52345aa0e6139549",
+      "excludedCases": [
+        {
+          "sheet": "logical",
+          "ref": "AA18",
+          "formula": "_xlfn.IFS(\"HELLO\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "logical",
+          "ref": "AA19",
+          "formula": "_xlfn.IFNA(#N/A, 1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "math.xlsx",
+      "category": "math",
+      "cases": 272,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "operators.xlsx",
+      "category": "operators",
+      "cases": 56,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "reference.xlsx",
+      "category": "reference",
+      "cases": 88,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "60473bdb07ca9e089242c54c1319955c905d7c264de1e20d8c15811e4841175c",
+      "excludedCases": [
+        {
+          "sheet": "reference",
+          "ref": "AA16",
+          "formula": "COLUMN(123)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "reference",
+          "ref": "AA17",
+          "formula": "COLUMN({1,2,3})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "reference",
+          "ref": "AA18",
+          "formula": "COLUMN(\"A1\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "reference",
+          "ref": "AA62",
+          "formula": "ROW(123)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "reference",
+          "ref": "AA63",
+          "formula": "ROW({1,2,3})",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "reference",
+          "ref": "AA64",
+          "formula": "ROW(\"A1\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical.xlsx",
+      "category": "statistical",
+      "cases": 262,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "text.xlsx",
+      "category": "text",
+      "cases": 81,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "trigonometry.xlsx",
+      "category": "trigonometry",
+      "cases": 82,
+      "savedBy": "engine-compatibility (case workbook)"
+    }
+  ],
+  "skipped": {
+    "Excel removed the case formula during canonical input repair": 8
+  }
+}

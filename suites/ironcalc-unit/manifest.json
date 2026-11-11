@@ -1,0 +1,5014 @@
+{
+  "suite": "ironcalc-unit",
+  "upstream": "https://github.com/ironcalc/IronCalc.git",
+  "commit": "2128db12ab30b77fdebde9cba994273a26438ae3",
+  "commitDate": "2026-10-30T17:40:20+01:00",
+  "subdir": "base/src/test",
+  "license": "MIT OR Apache-2.0",
+  "shape": "case workbook per Rust test file, one sheet per #[test] fn: every model._set input in its cell, the _get_text expectation (formatted text, parsed to number, boolean or error where it reads as one) 26 columns right of the asserted formula cell and the fn name 52 columns right; a formula that IronCalc evaluates as a dynamic array formula, captured by running the tests with _get_text patched, is one over the range it spills into; tests that call other model methods, evaluate more than once, or address other sheets are left out, as are tests of formulas in a German locale and of LAMBDA parameters in brackets, which are IronCalc syntax",
+  "skipped": {
+    "other api": 916,
+    "not one evaluate": 149,
+    "expectation not on a formula": 597,
+    "formula the xlsx writer cannot write": 22,
+    "not Excel syntax": 10,
+    "upstream locale test, not an Excel formula": 4,
+    "Excel-invalid argument count": 2,
+    "Excel removed the case formula during canonical input repair": 609
+  },
+  "importedAt": "2026-11-01T00:15:19.926Z",
+  "files": [
+    {
+      "file": "array_formulas/dynamic_arrays.xlsx",
+      "category": "array_formulas",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "array_formulas/whole_column_row_reference.xlsx",
+      "category": "array_formulas",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/bug_hunt.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/evaluation_order.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/known_gaps.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 26,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/ordered_restart.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/range_reads.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "dynamic_evaluation/wrong_order.xlsx",
+      "category": "dynamic_evaluation",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/bessel.xlsx",
+      "category": "engineering",
+      "cases": 0,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "8d8782663fdc741a8ab355ab063f25fb8123c1aeafb0b84b632cce4f892e5ecd",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_besseli",
+          "ref": "B1",
+          "formula": "BESSELI()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_besseli",
+          "ref": "B2",
+          "formula": "BESSELI(1,2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_besselj",
+          "ref": "B1",
+          "formula": "BESSELJ()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_besselj",
+          "ref": "B2",
+          "formula": "BESSELJ(1,2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_besselk",
+          "ref": "B1",
+          "formula": "BESSELK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_besselk",
+          "ref": "B2",
+          "formula": "BESSELK(1,2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_bessely",
+          "ref": "B1",
+          "formula": "BESSELY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_bessely",
+          "ref": "B2",
+          "formula": "BESSELY(1,2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/bit_operations.xlsx",
+      "category": "engineering",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "3ee291bc77df7990c64be6ad11ff5442e122f3ac50679e019cc429102f83397c",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_bitand",
+          "ref": "B1",
+          "formula": "_xlfn.BITAND(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_bitand",
+          "ref": "B2",
+          "formula": "_xlfn.BITAND(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_bitor",
+          "ref": "B1",
+          "formula": "_xlfn.BITOR(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_bitor",
+          "ref": "B2",
+          "formula": "_xlfn.BITOR(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_bitxor",
+          "ref": "B1",
+          "formula": "_xlfn.BITXOR(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_bitxor",
+          "ref": "B2",
+          "formula": "_xlfn.BITXOR(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_bitlshift",
+          "ref": "B1",
+          "formula": "_xlfn.BITLSHIFT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_bitlshift",
+          "ref": "B2",
+          "formula": "_xlfn.BITLSHIFT(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_bitrshift",
+          "ref": "B1",
+          "formula": "_xlfn.BITRSHIFT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_bitrshift",
+          "ref": "B2",
+          "formula": "_xlfn.BITRSHIFT(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/complex.xlsx",
+      "category": "engineering",
+      "cases": 19,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c19947a85c3241586c22b861d8a5947c1249af389a4200ad42ad000fee0f1490",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_complex",
+          "ref": "B1",
+          "formula": "COMPLEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_complex",
+          "ref": "B2",
+          "formula": "COMPLEX(1,2, \"i\", 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/convert.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "engineering/misc.xlsx",
+      "category": "engineering",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "a2ec2582038fc39d96980c44e262df39f3dd305253882a3309da573bd0ed380d",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_getstep",
+          "ref": "B1",
+          "formula": "GESTEP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_getstep",
+          "ref": "B2",
+          "formula": "GESTEP(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_delta",
+          "ref": "B1",
+          "formula": "DELTA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_delta",
+          "ref": "B2",
+          "formula": "DELTA(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "engineering/number_basis.xlsx",
+      "category": "engineering",
+      "cases": 56,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "1c5f8d6f2311649c974bc56ee4d34e9c95755af8a91d40512a5f7f9e73a8f545",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_bin2dec",
+          "ref": "B1",
+          "formula": "BIN2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_bin2dec",
+          "ref": "B2",
+          "formula": "BIN2DEC(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_bin2hex",
+          "ref": "B1",
+          "formula": "BIN2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_bin2hex",
+          "ref": "B2",
+          "formula": "BIN2HEX(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_bin2oct",
+          "ref": "B1",
+          "formula": "BIN2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_bin2oct",
+          "ref": "B2",
+          "formula": "BIN2OCT(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_dec2bin",
+          "ref": "B1",
+          "formula": "DEC2BIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_dec2bin",
+          "ref": "B2",
+          "formula": "DEC2BIN(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_dec2hex",
+          "ref": "B1",
+          "formula": "DEC2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_dec2hex",
+          "ref": "B2",
+          "formula": "DEC2HEX(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 fn_dec2oct",
+          "ref": "B1",
+          "formula": "DEC2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 fn_dec2oct",
+          "ref": "B2",
+          "formula": "DEC2OCT(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 fn_hex2bin",
+          "ref": "B1",
+          "formula": "HEX2BIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 fn_hex2bin",
+          "ref": "B2",
+          "formula": "HEX2BIN(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 fn_hex2dec",
+          "ref": "B1",
+          "formula": "HEX2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 fn_hex2dec",
+          "ref": "B2",
+          "formula": "HEX2DEC(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_hex2oct",
+          "ref": "B1",
+          "formula": "HEX2OCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_hex2oct",
+          "ref": "B2",
+          "formula": "HEX2OCT(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "10 fn_oct2bin",
+          "ref": "B1",
+          "formula": "OCT2BIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "10 fn_oct2bin",
+          "ref": "B2",
+          "formula": "OCT2BIN(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 fn_oct2dec",
+          "ref": "B1",
+          "formula": "OCT2DEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 fn_oct2dec",
+          "ref": "B2",
+          "formula": "OCT2DEC(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 fn_oct2hex",
+          "ref": "B1",
+          "formula": "OCT2HEX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 fn_oct2hex",
+          "ref": "B2",
+          "formula": "OCT2HEX(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "17 fn_hex2whatever_misc",
+          "ref": "A2",
+          "formula": "HEX2DEC(TRUE, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "18 fn_oct2whatever_misc",
+          "ref": "A2",
+          "formula": "OCT2DEC(TRUE, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/fn_if_array.xlsx",
+      "category": "logical",
+      "cases": 13,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "logical/fn_iferror_array.xlsx",
+      "category": "logical",
+      "cases": 24,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "72f1fac6a298793ea36ed95a1d7c564bd35a4d2c3a0968c0f08614993db8e32c",
+      "excludedCases": [
+        {
+          "sheet": "13 iferror_wrong_number_of_args",
+          "ref": "A2",
+          "formula": "IFERROR(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "24 ifna_wrong_number_of_args",
+          "ref": "A2",
+          "formula": "_xlfn.IFNA(1,2,3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "logical/fn_not_array.xlsx",
+      "category": "logical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "3b9ff62dec877c03c78502e2ca68660b25ff3c44b3ce13ad5fa702307994efe8",
+      "excludedCases": [
+        {
+          "sheet": "7 not_wrong_number_of_args",
+          "ref": "A1",
+          "formula": "NOT(TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "lookup_and_reference/fn_address_areas.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_choosecols_chooserows.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_expand.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_hlookup.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_hstack_vstack.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_index.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_lookup.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_match.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_rows_columns.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_trimrange.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_vlookup.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_wrapcols_wraprows.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "lookup_and_reference/fn_xmatch.xlsx",
+      "category": "lookup_and_reference",
+      "cases": 22,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "mathematical/mdeterm.xlsx",
+      "category": "mathematical",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "mathematical/minverse.xlsx",
+      "category": "mathematical",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "mathematical/multinomial.xlsx",
+      "category": "mathematical",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "mathematical/munit.xlsx",
+      "category": "mathematical",
+      "cases": 4,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "eabbdfb3d354fbea3270b47c6e3c50fb461b450bc1e91c5e036917fc29e8ac92",
+      "excludedCases": [
+        {
+          "sheet": "5 test_munit_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.MUNIT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/seriessum.xlsx",
+      "category": "mathematical",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c33ed60b4dd103fcea3e06b25326643522472b67c24098bfbfc861bdda783a88",
+      "excludedCases": [
+        {
+          "sheet": "4 test_seriessum_wrong_arg_coun",
+          "ref": "A1",
+          "formula": "SERIESSUM(1,0,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "mathematical/sumproduct.xlsx",
+      "category": "mathematical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fn_avedev.xlsx",
+      "category": "statistical",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "09d6660063ef5f90612a5cd0ec6cf7dc3b64393c7a2576d94f112ce49c1a8b7c",
+      "excludedCases": [
+        {
+          "sheet": "3 arguments",
+          "ref": "A1",
+          "formula": "AVEDEV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_beta_dist.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "1cef6fb1db4550791c344aae4c61918c46e352d3374a94ffc76f521c86bccfa6",
+      "excludedCases": [
+        {
+          "sheet": "2 arguments",
+          "ref": "A1",
+          "formula": "_xlfn.BETA.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "B1",
+          "formula": "_xlfn.BETA.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "A2",
+          "formula": "_xlfn.BETA.DIST(3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "B2",
+          "formula": "_xlfn.BETA.INV(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "A3",
+          "formula": "_xlfn.BETA.DIST(3, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "B3",
+          "formula": "_xlfn.BETA.INV(0.5, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "A4",
+          "formula": "_xlfn.BETA.DIST(3, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "B7",
+          "formula": "_xlfn.BETA.INV(0.5, 2, 2, 0, 1, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 arguments",
+          "ref": "A8",
+          "formula": "_xlfn.BETA.DIST(3, 2, 3, 1, 1, 10, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_binom.xlsx",
+      "category": "statistical",
+      "cases": 23,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c790217629db4676ae04d8e67fc587c7a8a8ad46a51ce8a93a4bd604449518ae",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_binom_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.BINOM.DIST(6, 10, 0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_binom_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.BINOM.DIST(6, 10, 0.5, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_binom_inv_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.BINOM.INV(6, 0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_negbinom_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.NEGBINOM.DIST(10, 5, 0.25)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_negbinom_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.NEGBINOM.DIST(10, 5, 0.25, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.BINOM.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.BINOM.DIST.RANGE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "C1",
+          "formula": "_xlfn.BINOM.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "D1",
+          "formula": "_xlfn.NEGBINOM.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.BINOM.DIST(3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.BINOM.DIST.RANGE(10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "C2",
+          "formula": "_xlfn.BINOM.INV(10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "D2",
+          "formula": "_xlfn.NEGBINOM.DIST(5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.BINOM.DIST(3, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "B3",
+          "formula": "_xlfn.BINOM.DIST.RANGE(10, 0.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "C3",
+          "formula": "_xlfn.BINOM.INV(10, 0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "D3",
+          "formula": "_xlfn.NEGBINOM.DIST(5, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.BINOM.DIST(3, 10, 0.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "D4",
+          "formula": "_xlfn.NEGBINOM.DIST(5, 10, 0.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "C5",
+          "formula": "_xlfn.BINOM.INV(10, 0.5, 0.5, TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "A6",
+          "formula": "_xlfn.BINOM.DIST(3, 10, 0.3, FALSE, TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "B6",
+          "formula": "_xlfn.BINOM.DIST.RANGE(10, 0.3, 3, 4, TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_arguments",
+          "ref": "D6",
+          "formula": "_xlfn.NEGBINOM.DIST(5, 10, 0.3, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_chisq.xlsx",
+      "category": "statistical",
+      "cases": 35,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "eee15a64fa267556a472c3fb297b3b0fafec1af287e6cdd7c1f3111f35cfe5e6",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_chisq_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.CHISQ.DIST(0.5, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_chisq_dist_smoke",
+          "ref": "A5",
+          "formula": "_xlfn.CHISQ.DIST(0.5, 4, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_chisq_dist_rt_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.CHISQ.DIST.RT(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_chisq_dist_rt_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.CHISQ.DIST.RT(0.5, 4, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_chisq_inv_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.CHISQ.INV(0.95)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_chisq_inv_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.CHISQ.INV(0.95, 4, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_chisq_inv_rt_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.CHISQ.INV.RT(0.05)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_chisq_inv_rt_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.CHISQ.INV.RT(0.05, 4, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.CHISQ.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.CHISQ.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "C1",
+          "formula": "_xlfn.CHISQ.DIST.RT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "D1",
+          "formula": "_xlfn.CHISQ.INV.RT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.CHISQ.DIST(8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.CHISQ.INV(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "C2",
+          "formula": "_xlfn.CHISQ.DIST.RT(8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "D2",
+          "formula": "_xlfn.CHISQ.INV.RT(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.CHISQ.DIST(8, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "B4",
+          "formula": "_xlfn.CHISQ.INV(0, 1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "C4",
+          "formula": "_xlfn.CHISQ.DIST.RT(8, 3, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "D4",
+          "formula": "_xlfn.CHISQ.INV.RT(0, 1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_arguments",
+          "ref": "A5",
+          "formula": "_xlfn.CHISQ.DIST(8, 3, TRUE, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_chisq_test.xlsx",
+      "category": "statistical",
+      "cases": 14,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "0aeceb2fb3068d90462f9b3607fdaa87ccb6103f6d2f6007aa05d6c5b78faf45",
+      "excludedCases": [
+        {
+          "sheet": "7 arguments",
+          "ref": "C1",
+          "formula": "_xlfn.CHISQ.TEST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 arguments",
+          "ref": "C2",
+          "formula": "_xlfn.CHISQ.TEST(A1:B3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_confidence.xlsx",
+      "category": "statistical",
+      "cases": 14,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "99ed64fbcea026f7e39bb3276cd0d2e5faf41e8c6b838e1b839d049bba2804b3",
+      "excludedCases": [
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.CONFIDENCE.NORM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.CONFIDENCE.T()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.CONFIDENCE.NORM(0.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.CONFIDENCE.T(0.3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.CONFIDENCE.NORM(0.3, 0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "B3",
+          "formula": "_xlfn.CONFIDENCE.T(0.3, 0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "A5",
+          "formula": "_xlfn.CONFIDENCE.NORM(0.3, 0.5, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_confidence_arguments",
+          "ref": "B5",
+          "formula": "_xlfn.CONFIDENCE.T(0.3, 0.5, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_covariance.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "845f848bcf16d3241fa3b6cebcd4b078b04c012ce4faf66a3313501572c9916b",
+      "excludedCases": [
+        {
+          "sheet": "3 arguments",
+          "ref": "A1",
+          "formula": "_xlfn.COVARIANCE.P()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 arguments",
+          "ref": "A2",
+          "formula": "_xlfn.COVARIANCE.S()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 arguments",
+          "ref": "A3",
+          "formula": "_xlfn.COVARIANCE.P(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 arguments",
+          "ref": "A4",
+          "formula": "_xlfn.COVARIANCE.S(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_devsq.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "cb840b38d192cf81ab1f7d7cd4f3e5312565d1b3ae729213923f200a7c6560d9",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments_smoke_test",
+          "ref": "A1",
+          "formula": "DEVSQ()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_expon_dist.xlsx",
+      "category": "statistical",
+      "cases": 4,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "4e5cd0f0a322c5cfaae65635b7bb93b5eea6010261dfbbf846078b40f076f734",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_expon_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.EXPON.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_expon_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.EXPON.DIST(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_expon_dist_smoke",
+          "ref": "A5",
+          "formula": "_xlfn.EXPON.DIST(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_expon_dist_smoke",
+          "ref": "A6",
+          "formula": "_xlfn.EXPON.DIST(0.5, 1, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_f.xlsx",
+      "category": "statistical",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "4202ba3572d65c8707418e543454754005f3602b95757dac76a6dab506c5a1bb",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_f_dist_sanity",
+          "ref": "A3",
+          "formula": "_xlfn.F.DIST(15, 6, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_f_dist_sanity",
+          "ref": "A4",
+          "formula": "_xlfn.F.DIST(15, 6, 4, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_f_dist_rt_sanity",
+          "ref": "A2",
+          "formula": "_xlfn.F.DIST.RT(15, 6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_f_dist_rt_sanity",
+          "ref": "A3",
+          "formula": "_xlfn.F.DIST.RT(15, 6, 4, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_f_inv_sanity",
+          "ref": "A2",
+          "formula": "_xlfn.F.INV(0.5, 6, 4, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_f_inv_sanity",
+          "ref": "A3",
+          "formula": "_xlfn.F.INV(0.5, 6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_f_inv_rt_sanity",
+          "ref": "A2",
+          "formula": "_xlfn.F.INV.RT(0.5, 6, 4, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_f_inv_rt_sanity",
+          "ref": "A3",
+          "formula": "_xlfn.F.INV.RT(0.5, 6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_f_test.xlsx",
+      "category": "statistical",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "6b596b6dcff9eddd30f8cd272bb1af2b5b2c57bdfb5e0f7453f18ec36d64037c",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_f_test_sanity",
+          "ref": "A8",
+          "formula": "_xlfn.F.TEST(A2:A7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_f_test_sanity",
+          "ref": "A9",
+          "formula": "_xlfn.F.TEST(A2:A7, B2:B7, C2:C7)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_fisher.xlsx",
+      "category": "statistical",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5a419dddf534ad4191f64d010f3be6e0349daeb5e549a3d355f330c222ce9aa0",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_fisher_smoke",
+          "ref": "A7",
+          "formula": "FISHER()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_fisher_smoke",
+          "ref": "A8",
+          "formula": "FISHER(0.1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_fisher_inv_smoke",
+          "ref": "A4",
+          "formula": "FISHERINV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_fisher_inv_smoke",
+          "ref": "A5",
+          "formula": "FISHERINV(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_gamma.xlsx",
+      "category": "statistical",
+      "cases": 23,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "db6bf37a8527e5eda4347c223a904c5aef9fee2f4016f69a0d9b07cbd2f71906",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_gamma",
+          "ref": "A6",
+          "formula": "_xlfn.GAMMA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_gamma",
+          "ref": "A7",
+          "formula": "_xlfn.GAMMA(0.1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_gamma_dist",
+          "ref": "A4",
+          "formula": "_xlfn.GAMMA.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_gamma_dist",
+          "ref": "A5",
+          "formula": "_xlfn.GAMMA.DIST(10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_gamma_dist",
+          "ref": "A6",
+          "formula": "_xlfn.GAMMA.DIST(10, 9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_gamma_dist",
+          "ref": "A7",
+          "formula": "_xlfn.GAMMA.DIST(10, 9, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_gamma_dist",
+          "ref": "A8",
+          "formula": "_xlfn.GAMMA.DIST(10, 9, 2, TRUE, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_gamma_inv",
+          "ref": "A4",
+          "formula": "_xlfn.GAMMA.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_gamma_inv",
+          "ref": "A5",
+          "formula": "_xlfn.GAMMA.INV(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_gamma_inv",
+          "ref": "A6",
+          "formula": "_xlfn.GAMMA.INV(0.5, 9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_gamma_inv",
+          "ref": "A7",
+          "formula": "_xlfn.GAMMA.INV(0.5, 9, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_gammaln",
+          "ref": "A2",
+          "formula": "GAMMALN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_gammaln",
+          "ref": "A3",
+          "formula": "GAMMALN(0.5, 9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_gammaln_precise",
+          "ref": "A2",
+          "formula": "_xlfn.GAMMALN.PRECISE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_gammaln_precise",
+          "ref": "A3",
+          "formula": "_xlfn.GAMMALN.PRECISE(0.5, 9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_gauss.xlsx",
+      "category": "statistical",
+      "cases": 11,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "79087af9740597fa590c16d728edddc8e8361ade8e156805bd0adcda29334459",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_gauss_smoke",
+          "ref": "G6",
+          "formula": "_xlfn.GAUSS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_gauss_smoke",
+          "ref": "G7",
+          "formula": "_xlfn.GAUSS(1, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_hyp_geom_dist.xlsx",
+      "category": "statistical",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "af0043a3f775b48f94f41777adf5180b4b01b73499a4f5b1f93bec7a55dac63b",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_hyp_geom_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.HYPGEOM.DIST(1, 4, 12, 20)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_hyp_geom_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.HYPGEOM.DIST(1, 4, 12, 20, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_log_norm.xlsx",
+      "category": "statistical",
+      "cases": 10,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "6966878565fce75ce32d66a26d31692c52d38b1e6620655b46a26f60a69bdf6c",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_log_norm_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.LOGNORM.DIST(4, 3.5, 1.2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_log_norm_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.LOGNORM.DIST(4, 3.5, 1.2, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_log_norm_inv_smoke",
+          "ref": "A2",
+          "formula": "_xlfn.LOGNORM.INV(0.5, 3.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_log_norm_inv_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.LOGNORM.INV(0.5, 3.5, 1.2, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.LOGNORM.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.LOGNORM.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.LOGNORM.DIST(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.LOGNORM.INV(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.LOGNORM.DIST(0.5, 3.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "B3",
+          "formula": "_xlfn.LOGNORM.INV(0.5, 3.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.LOGNORM.DIST(0.5, 3.5, 1.2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "B5",
+          "formula": "_xlfn.LOGNORM.INV(0.5, 3.5, 1.2, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_log_norm_arguments",
+          "ref": "A6",
+          "formula": "_xlfn.LOGNORM.DIST(0.5, 3.5, 1.2, 0, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_norm_dist.xlsx",
+      "category": "statistical",
+      "cases": 22,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "1867546a640e29371f0046ec78dda5a0d38ccbe38e45d2d05ae288370f7f0e7b",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_norm_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.NORM.DIST(1, 0, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_norm_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.NORM.DIST(1, 0, 1, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_norm_inv_smoke",
+          "ref": "A2",
+          "formula": "_xlfn.NORM.INV(0.5, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_norm_inv_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.NORM.INV(0.5, 0, 1, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_norm_s_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.NORM.S.DIST(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_norm_s_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.NORM.S.DIST(0, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_norm_s_inv_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.NORM.S.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_norm_s_inv_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.NORM.S.INV(0.5, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.NORM.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.NORM.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "C1",
+          "formula": "_xlfn.NORM.S.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "D1",
+          "formula": "_xlfn.NORM.S.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.NORM.DIST(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.NORM.INV(0.5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "C2",
+          "formula": "_xlfn.NORM.S.DIST(0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.NORM.DIST(0, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "B3",
+          "formula": "_xlfn.NORM.INV(0.5, 40)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "D3",
+          "formula": "_xlfn.NORM.S.INV(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.NORM.DIST(0, 0, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "C4",
+          "formula": "_xlfn.NORM.S.DIST(0, TRUE, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "B5",
+          "formula": "_xlfn.NORM.INV(0.5, 40, 1.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_norm_arguments",
+          "ref": "A6",
+          "formula": "_xlfn.NORM.DIST(0, 0, 1, TRUE, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_pearson.xlsx",
+      "category": "statistical",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fn_phi.xlsx",
+      "category": "statistical",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7c7f96d63ca934220e21948f9ca64c72915c1e3af94234bf080f934cb85879b2",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_phi_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.PHI()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_phi_smoke",
+          "ref": "A5",
+          "formula": "_xlfn.PHI(0, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_poisson.xlsx",
+      "category": "statistical",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "93ae338fe02f067d7aa595d0ec26dc51c6b359e1ea361fd07409015e45e00485",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_poisson_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.POISSON.DIST(3, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_poisson_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.POISSON.DIST(3, 2, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_poisson_dist_argument",
+          "ref": "A1",
+          "formula": "_xlfn.POISSON.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_poisson_dist_argument",
+          "ref": "A2",
+          "formula": "_xlfn.POISSON.DIST(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_poisson_dist_argument",
+          "ref": "A3",
+          "formula": "_xlfn.POISSON.DIST(2, 5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_poisson_dist_argument",
+          "ref": "A5",
+          "formula": "_xlfn.POISSON.DIST(2, 5, TRUE, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_stdev.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fn_t_dist.xlsx",
+      "category": "statistical",
+      "cases": 25,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "951b80e0a79229947ff70c628e5e63097bd4b4a28c9e40fdf12acba41a7c0d71",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_t_dist_smoke",
+          "ref": "A2",
+          "formula": "_xlfn.T.DIST(2, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_t_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.T.DIST(2, 10, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_t_dist_rt_smoke",
+          "ref": "A2",
+          "formula": "_xlfn.T.DIST.RT(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_t_dist_rt_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.T.DIST.RT(2, 10, TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_t_dist_2t_smoke",
+          "ref": "A2",
+          "formula": "_xlfn.T.DIST.2T(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_t_dist_2t_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.T.DIST.2T(2, 10, TRUE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_t_inv_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.T.INV(0.95)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_fn_t_inv_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.T.INV(0.95, 10, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_t_inv_2t_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.T.INV.2T(0.1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_fn_t_inv_2t_smoke",
+          "ref": "A5",
+          "formula": "_xlfn.T.INV.2T(0.1, 10, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.T.DIST()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.T.INV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.T.DIST(8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.T.INV(A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.T.DIST(8, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "B4",
+          "formula": "_xlfn.T.INV(A4, 3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 test_fn_t_dist_arguments",
+          "ref": "A5",
+          "formula": "_xlfn.T.DIST(8, 3, TRUE, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_t_test.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fn_var.xlsx",
+      "category": "statistical",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "statistical/fn_weibull.xlsx",
+      "category": "statistical",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d46eaa9ecca4eb70544ab31010022213f0741b43beb0d69ccc87e35a818a1320",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_weibull_dist_smoke",
+          "ref": "A3",
+          "formula": "_xlfn.WEIBULL.DIST(1, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_weibull_dist_smoke",
+          "ref": "A4",
+          "formula": "_xlfn.WEIBULL.DIST(1, 2, 1, TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "statistical/fn_z_test.xlsx",
+      "category": "statistical",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/arabic_roman.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "0a7bd9812caf3721b708c4728100fa8c06882678327300996fb55fcb45fb7fe1",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "_xlfn.ARABIC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "_xlfn.ARABIC(\"V\", 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "ROMAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A7",
+          "formula": "ROMAN(5, 0, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/arrays.xlsx",
+      "category": "general",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/arrays_and_errors.xlsx",
+      "category": "general",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/base_decimal.xlsx",
+      "category": "general",
+      "cases": 26,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "303cce98dc9bb31fe1ab5354ba4eb84658815ec4abc3e8f600650844d0a18951",
+      "excludedCases": [
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.BASE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "B1",
+          "formula": "_xlfn.DECIMAL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "A2",
+          "formula": "_xlfn.BASE(10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "B2",
+          "formula": "_xlfn.DECIMAL(1010)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "B4",
+          "formula": "_xlfn.DECIMAL(1010, 2, 8)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 wrong_arg_count",
+          "ref": "A5",
+          "formula": "_xlfn.BASE(10, 2, 8, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/ceiling_floor.xlsx",
+      "category": "general",
+      "cases": 12,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d57802a8b60e6ea2f2063a2066b31b6986f5500465f47750d98bb2d5386f2539",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "CEILING()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "FLOOR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "CEILING(5.2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B2",
+          "formula": "FLOOR(5.2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "CEILING(5.2, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B4",
+          "formula": "FLOOR(5.2, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "_xlfn.CEILING.PRECISE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B5",
+          "formula": "_xlfn.FLOOR.PRECISE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A8",
+          "formula": "_xlfn.CEILING.PRECISE(5.2, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B8",
+          "formula": "_xlfn.FLOOR.PRECISE(5.2, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A9",
+          "formula": "_xlfn.CEILING.MATH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B9",
+          "formula": "_xlfn.FLOOR.MATH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A13",
+          "formula": "_xlfn.CEILING.MATH(5.2, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B13",
+          "formula": "_xlfn.FLOOR.MATH(5.2, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/cell_info_n_sheets.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c05308ec391e45ec555b751d40917667784e205db556528062df80170c04a9bb",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "CELL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "INFO()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "N()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A7",
+          "formula": "N(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/circular_references.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/combin_combina.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "8b8a80bc4aa9927a59e8b295dad07dc26ef550c6fe0e665270adec5ca43406c4",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "COMBIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "_xlfn.COMBINA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "COMBIN(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "_xlfn.COMBINA(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A7",
+          "formula": "COMBIN(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A8",
+          "formula": "_xlfn.COMBINA(1, 2, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/database.xlsx",
+      "category": "general",
+      "cases": 63,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c23f855986a78ae7985be040a93dd24370d85c17db4ed5db70a48599fc822fbc",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "DMIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "DGET()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "DMIN(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B2",
+          "formula": "DGET(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "DMIN(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B3",
+          "formula": "DGET(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "DMIN(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B4",
+          "formula": "DGET(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "DMAX()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B5",
+          "formula": "DPRODUCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "DMAX(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B6",
+          "formula": "DPRODUCT(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A7",
+          "formula": "DMAX(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B7",
+          "formula": "DPRODUCT(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A8",
+          "formula": "DMAX(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B8",
+          "formula": "DPRODUCT(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A9",
+          "formula": "DAVERAGE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B9",
+          "formula": "DVAR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A10",
+          "formula": "DAVERAGE(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B10",
+          "formula": "DVAR(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A11",
+          "formula": "DAVERAGE(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B11",
+          "formula": "DVAR(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A12",
+          "formula": "DAVERAGE(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B12",
+          "formula": "DVAR(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A13",
+          "formula": "DSUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B13",
+          "formula": "DVARP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A14",
+          "formula": "DSUM(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B14",
+          "formula": "DVARP(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A15",
+          "formula": "DSUM(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B15",
+          "formula": "DVARP(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A16",
+          "formula": "DSUM(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B16",
+          "formula": "DVARP(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A17",
+          "formula": "DCOUNT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B17",
+          "formula": "DSTDEV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A18",
+          "formula": "DCOUNT(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B18",
+          "formula": "DSTDEV(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A19",
+          "formula": "DCOUNT(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B19",
+          "formula": "DSTDEV(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A20",
+          "formula": "DCOUNT(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B20",
+          "formula": "DSTDEV(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A21",
+          "formula": "DCOUNTA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B21",
+          "formula": "DSTDEVP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A22",
+          "formula": "DCOUNTA(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B22",
+          "formula": "DSTDEVP(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A23",
+          "formula": "DCOUNTA(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B23",
+          "formula": "DSTDEVP(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A24",
+          "formula": "DCOUNTA(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B24",
+          "formula": "DSTDEVP(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/date_and_time.xlsx",
+      "category": "general",
+      "cases": 160,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e08a23a1370e991199bcdc3a5859656ed27d1373c7df21c3fda86f5756089a3e",
+      "excludedCases": [
+        {
+          "sheet": "2 test_year_arguments",
+          "ref": "A1",
+          "formula": "YEAR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_year_arguments",
+          "ref": "A3",
+          "formula": "YEAR(27819, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_month_arguments",
+          "ref": "A1",
+          "formula": "MONTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_month_arguments",
+          "ref": "A3",
+          "formula": "MONTH(27819, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_day_arguments",
+          "ref": "A1",
+          "formula": "DAY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 test_day_arguments",
+          "ref": "A3",
+          "formula": "DAY(27819, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 test_days_function",
+          "ref": "A6",
+          "formula": "_xlfn.DAYS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 test_days_function",
+          "ref": "A7",
+          "formula": "_xlfn.DAYS(44561)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 test_days_function",
+          "ref": "A8",
+          "formula": "_xlfn.DAYS(44561,44570,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 test_days360_function",
+          "ref": "A10",
+          "formula": "DAYS360()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 test_days360_function",
+          "ref": "A11",
+          "formula": "DAYS360(44561)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 test_days360_function",
+          "ref": "A12",
+          "formula": "DAYS360(44561,44570,TRUE,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "13 test_weekday_function",
+          "ref": "A7",
+          "formula": "WEEKDAY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "14 test_weeknum_function",
+          "ref": "A12",
+          "formula": "WEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "14 test_weeknum_function",
+          "ref": "A13",
+          "formula": "WEEKNUM(44561,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "15 test_workday_function",
+          "ref": "A13",
+          "formula": "WORKDAY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "15 test_workday_function",
+          "ref": "A14",
+          "formula": "WORKDAY(44560)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "15 test_workday_function",
+          "ref": "A15",
+          "formula": "WORKDAY(44560,1,B1,B2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "16 test_workday_intl_function",
+          "ref": "A9",
+          "formula": "WORKDAY.INTL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "17 test_yearfrac_function",
+          "ref": "A7",
+          "formula": "YEARFRAC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "18 test_isoweeknum_function",
+          "ref": "A6",
+          "formula": "_xlfn.ISOWEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "19 test_edate_function",
+          "ref": "A7",
+          "formula": "EDATE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "19 test_edate_function",
+          "ref": "A8",
+          "formula": "EDATE(44561,44926,5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "20 test_fn_eomonth_wrong_argume",
+          "ref": "A1",
+          "formula": "EOMONTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "20 test_fn_eomonth_wrong_argume",
+          "ref": "A3",
+          "formula": "EOMONTH(46000, 3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 test_time_function",
+          "ref": "A7",
+          "formula": "TIME(12)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 test_time_function",
+          "ref": "A8",
+          "formula": "TIME(12, 30)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 test_time_function",
+          "ref": "A9",
+          "formula": "TIME(12, 30, 45, 0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "23 test_hour_function",
+          "ref": "A7",
+          "formula": "HOUR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "23 test_hour_function",
+          "ref": "A8",
+          "formula": "HOUR(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "24 test_minute_function",
+          "ref": "A7",
+          "formula": "MINUTE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "24 test_minute_function",
+          "ref": "A8",
+          "formula": "MINUTE(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "25 test_second_function",
+          "ref": "A7",
+          "formula": "SECOND()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "25 test_second_function",
+          "ref": "A8",
+          "formula": "SECOND(0.5, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/datedif_leap_month_end.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/datetime_format.xlsx",
+      "category": "general",
+      "cases": 12,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/datevalue_rollover.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/datevalue_timevalue_spaces.xlsx",
+      "category": "general",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/days360_month_end.xlsx",
+      "category": "general",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/days_days360.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c53712dfa7b7530d67f573225f1a4a8800106d7cd14e2deb8a5e909b940eed11",
+      "excludedCases": [
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.DAYS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "B1",
+          "formula": "DAYS360()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.DAYS(DATE(2026,8,6))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "B2",
+          "formula": "DAYS360(DATE(2026,8,6))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.DAYS(DATE(2026,8,8), DATE(2026,8,6), DATE(2026,8,4))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_days_days360_arguments",
+          "ref": "B5",
+          "formula": "DAYS360(DATE(2026,8,8), DATE(2026,8,6), TRUE, FALSE)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/degrees_radians.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "22f04c464950372daccddf6cc48fd4ce11f46d8954bd005f30e5ac45894b3227",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_degrees_radians_arguments",
+          "ref": "A1",
+          "formula": "DEGREES()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_degrees_radians_arguments",
+          "ref": "A2",
+          "formula": "RADIANS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_degrees_radians_arguments",
+          "ref": "A4",
+          "formula": "RADIANS(180, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_degrees_radians_arguments",
+          "ref": "A6",
+          "formula": "DEGREES(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/ecma_ceiling.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/error_propagation.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/even_odd.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "8ba59c7e0bd5995846616c57849fe5f01c4f05d42ceaed50fcff0f063ef9e5f2",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "EVEN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "ODD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "EVEN(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "ODD(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/exp_sign.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "3f23000e69d90481f5f6da287d72b76297ef4523a280d466d8086a2af4b01687",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A1",
+          "formula": "EXP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A2",
+          "formula": "SIGN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A5",
+          "formula": "EXP(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A6",
+          "formula": "SIGN(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fact_factdouble.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "3ae0d8cee4a5e6cad7876a44b23021fbf8d9396547ab8b91f81fb786471790e9",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "FACT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "FACTDOUBLE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "FACT(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "FACTDOUBLE(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/floor.xlsx",
+      "category": "general",
+      "cases": 24,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "82341e3df413ebf5ca8579af68ee326c8d48ab3e559ea8df347515c93b0321d7",
+      "excludedCases": [
+        {
+          "sheet": "5 test_floor_error_cases",
+          "ref": "A4",
+          "formula": "FLOOR(5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_floor_error_cases",
+          "ref": "A5",
+          "formula": "FLOOR(5, 1, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_accrint.xlsx",
+      "category": "general",
+      "cases": 14,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7830729e8e07436956fc3f8312cc370be62938b751a38c46e06573528ce83e99",
+      "excludedCases": [
+        {
+          "sheet": "9 fn_accrint_error_args_count",
+          "ref": "A1",
+          "formula": "ACCRINT(DATE(2008,3,1), DATE(2008,9,1), DATE(2008,5,1), 0.1, 1000)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_accrint_error_args_count",
+          "ref": "A2",
+          "formula": "ACCRINT(DATE(2008,3,1), DATE(2008,9,1), DATE(2008,5,1), 0.1, 1000, 2, 0, TRUE, 99)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_accrintm.xlsx",
+      "category": "general",
+      "cases": 18,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5e708472e7578d4c08bf45c5c590f0be69d1f74e6de6915bd9774de59a128bd7",
+      "excludedCases": [
+        {
+          "sheet": "2 fn_accrintm_defaults",
+          "ref": "A1",
+          "formula": "ACCRINTM(39539, 39614, 0.1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_accrintm_error_arg_count",
+          "ref": "A1",
+          "formula": "ACCRINTM(39539, 39614)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_accrintm_error_arg_count",
+          "ref": "A2",
+          "formula": "ACCRINTM(39539, 39614, 0.1, 1000, 3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_average.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "14888a84bd7b9c0eeb3ff28e7d44ce81780e7e6d82d870a45ac27c90638f8e05",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_average_arguments",
+          "ref": "A1",
+          "formula": "AVERAGE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_average_arguments",
+          "ref": "A2",
+          "formula": "AVERAGEA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_averageifs.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c59dfdadd7f5bd16328e141f4594c24d5d725041279717a9fd03c842c38516d7",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_averageifs_arguments",
+          "ref": "A1",
+          "formula": "AVERAGEIFS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_averageifs_arguments",
+          "ref": "A2",
+          "formula": "AVERAGEIFS(B2:B9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_averageifs_arguments",
+          "ref": "A3",
+          "formula": "AVERAGEIFS(B2:B9,C2:C9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_averageifs_arguments",
+          "ref": "A4",
+          "formula": "AVERAGEIFS(B2:B9,C2:C9,\"=A*\",D2:D9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_bond_functions.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "9efc24f5e41775c4350246eb8adc19a8514e7d927bf1d6b23e26d0094a6e724d",
+      "excludedCases": [
+        {
+          "sheet": "2 fn_duration_wrong_arg_count",
+          "ref": "A1",
+          "formula": "DURATION(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_price_wrong_arg_count",
+          "ref": "A1",
+          "formula": "PRICE(1, 2, 3, 4, 5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_yield_wrong_arg_count",
+          "ref": "A1",
+          "formula": "YIELD(1, 2, 3, 4, 5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_bycol_byrow.xlsx",
+      "category": "general",
+      "cases": 15,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "b1449bd6e7112bd79626f347afdcfbe0c632126cd5c94081e4416f450ef1f32a",
+      "excludedCases": [
+        {
+          "sheet": "13 makearray_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.MAKEARRAY(3, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_choose.xlsx",
+      "category": "general",
+      "cases": 16,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "02ce3bd8d6ef9be416ef1a44f2986a0976b42e14f7b9c9fa0b5d207d10f8ea6d",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_choose_args_number",
+          "ref": "A1",
+          "formula": "CHOOSE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_choose_args_number",
+          "ref": "A2",
+          "formula": "CHOOSE(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_concatenate.xlsx",
+      "category": "general",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "3a986f8b8587a4b9fcd87f287779ad2619610ea2013a9e290131d1cdd376e9e7",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_concatenate_args_number",
+          "ref": "A1",
+          "formula": "CONCATENATE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_count.xlsx",
+      "category": "general",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "91eba29ecad1ce48fd50f0106143deffd2a3ffef12a0032fdca9246c296ead3e",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_count_arguments",
+          "ref": "A1",
+          "formula": "COUNT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_count_arguments",
+          "ref": "A2",
+          "formula": "COUNTA()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_count_arguments",
+          "ref": "A3",
+          "formula": "COUNTBLANK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_count_arguments",
+          "ref": "A4",
+          "formula": "COUNTBLANK(C1:D1, H3:H4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_datevalue_datedif.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_datevalue_timevalue.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "2e84413c1da258946a175a4597982ef68b56d3c8bd3832ff395aa85b85dc880a",
+      "excludedCases": [
+        {
+          "sheet": "1 datevalue_timevalue_arguments",
+          "ref": "A1",
+          "formula": "DATEVALUE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 datevalue_timevalue_arguments",
+          "ref": "A2",
+          "formula": "TIMEVALUE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 datevalue_timevalue_arguments",
+          "ref": "A5",
+          "formula": "DATEVALUE(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 datevalue_timevalue_arguments",
+          "ref": "A6",
+          "formula": "TIMEVALUE(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_day.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_depreciation.xlsx",
+      "category": "general",
+      "cases": 9,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "80082ca489a5a9eff2191bd2adac01baf82bc136d43fa683852c6104c2453cf4",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_vdb_errors",
+          "ref": "A3",
+          "formula": "VDB(2400, 300, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_drop_take.xlsx",
+      "category": "general",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_encodeurl.xlsx",
+      "category": "general",
+      "cases": 20,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "410b03087a3696790f0568b28343e1c61777bdf51d7dcbb683940cc027dc698f",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_encodeurl_args_number",
+          "ref": "A1",
+          "formula": "_xlfn.ENCODEURL()",
+          "reason": "Excel-invalid argument count"
+        },
+        {
+          "sheet": "1 fn_encodeurl_args_number",
+          "ref": "A2",
+          "formula": "_xlfn.ENCODEURL(\"a\", \"b\")",
+          "reason": "Excel-invalid argument count"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_exact.xlsx",
+      "category": "general",
+      "cases": 17,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "1d74cc09523c90137e7bce9de2ac205496e325510cd80801be192138ce377c93",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_exact_args_number",
+          "ref": "A1",
+          "formula": "EXACT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_exact_args_number",
+          "ref": "A2",
+          "formula": "EXACT(1, 1, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_financial.xlsx",
+      "category": "general",
+      "cases": 31,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "6d9ee1b1b8fc7b67ea30254b7e8bb179b8ae1cf89b2bac2fddc6bb241fb21dc3",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A1",
+          "formula": "PMT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B1",
+          "formula": "FV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "C1",
+          "formula": "PV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "D1",
+          "formula": "NPER()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "E1",
+          "formula": "RATE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A2",
+          "formula": "PMT(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B2",
+          "formula": "FV(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "C2",
+          "formula": "PV(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "D2",
+          "formula": "NPER(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "E2",
+          "formula": "RATE(1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A3",
+          "formula": "PMT(1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B3",
+          "formula": "FV(1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "C3",
+          "formula": "PV(1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "D3",
+          "formula": "NPER(1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "A1",
+          "formula": "IPMT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "B1",
+          "formula": "PPMT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "A2",
+          "formula": "IPMT(1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "B2",
+          "formula": "PPMT(1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "A3",
+          "formula": "IPMT(1,1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 fn_impmt_ppmt_arguments",
+          "ref": "B3",
+          "formula": "PPMT(1,1,1,1,1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_irr_npv_arguments",
+          "ref": "A1",
+          "formula": "NPV()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_irr_npv_arguments",
+          "ref": "B1",
+          "formula": "IRR()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 fn_irr_npv_arguments",
+          "ref": "B3",
+          "formula": "IRR(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_ispmt",
+          "ref": "B2",
+          "formula": "ISPMT(A1, A2, A3, A4, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_ispmt",
+          "ref": "B3",
+          "formula": "ISPMT(A1, A2, A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_rri",
+          "ref": "B2",
+          "formula": "_xlfn.RRI(A1, A2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 fn_rri",
+          "ref": "B3",
+          "formula": "_xlfn.RRI(A1, A2, A3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 fn_effect",
+          "ref": "B2",
+          "formula": "EFFECT(A1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 fn_effect",
+          "ref": "B3",
+          "formula": "EFFECT(A1, A2, A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 fn_nominal",
+          "ref": "B2",
+          "formula": "NOMINAL(A1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 fn_nominal",
+          "ref": "B3",
+          "formula": "NOMINAL(A1, A2, A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 fn_db",
+          "ref": "C1",
+          "formula": "DB(A2,A3,A4,7,7,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 fn_db",
+          "ref": "C2",
+          "formula": "DB(A2,A3,A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_ddb",
+          "ref": "C1",
+          "formula": "DB(A2,A3,A4,7,7,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 fn_ddb",
+          "ref": "C2",
+          "formula": "DB(A2,A3,A4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "10 fn_tbilleq",
+          "ref": "C1",
+          "formula": "TBILLEQ(A2,A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "10 fn_tbilleq",
+          "ref": "C2",
+          "formula": "TBILLEQ(A2,A3,A4,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 fn_tbillprice",
+          "ref": "C1",
+          "formula": "TBILLPRICE(A2,A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 fn_tbillprice",
+          "ref": "C2",
+          "formula": "TBILLPRICE(A2,A3,A4,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 fn_tbillyield",
+          "ref": "C1",
+          "formula": "TBILLYIELD(A2,A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "12 fn_tbillyield",
+          "ref": "C2",
+          "formula": "TBILLYIELD(A2,A3,A4,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "13 fn_dollarde",
+          "ref": "C1",
+          "formula": "DOLLARDE(1.1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "13 fn_dollarde",
+          "ref": "C2",
+          "formula": "DOLLARDE(1.1, 32, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "14 fn_dollarfr",
+          "ref": "C1",
+          "formula": "DOLLARFR(1.1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "14 fn_dollarfr",
+          "ref": "C2",
+          "formula": "DOLLARFR(1.1, 32, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "15 fn_cumipmt",
+          "ref": "C1",
+          "formula": "CUMIPMT(A2/12,A3*12,A4,1,1,0,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "15 fn_cumipmt",
+          "ref": "C2",
+          "formula": "CUMIPMT(A2/12,A3*12,A4,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "16 fn_cumprinc",
+          "ref": "C1",
+          "formula": "CUMPRINC(A2/12,A3*12,A4,1,1,0,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "16 fn_cumprinc",
+          "ref": "C2",
+          "formula": "CUMPRINC(A2/12,A3*12,A4,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_financial_simple.xlsx",
+      "category": "general",
+      "cases": 19,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_formulatext.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "25dc58ced97b1ce744a8b6e59cb165a3b9687ee065532f8ceccb9836fd088082",
+      "excludedCases": [
+        {
+          "sheet": "1 wrong_number_of_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.FORMULATEXT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 wrong_number_of_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.FORMULATEXT(\"B\",\"A\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 non_reference",
+          "ref": "A1",
+          "formula": "_xlfn.FORMULATEXT(42)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_fv.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_hyperlink.xlsx",
+      "category": "general",
+      "cases": 7,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "ec3ef42adaf14918ad52459d8a7d9418cb7672e0f111094d059540ebbbe3a802",
+      "excludedCases": [
+        {
+          "sheet": "4 errors",
+          "ref": "A1",
+          "formula": "HYPERLINK()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 errors",
+          "ref": "A2",
+          "formula": "HYPERLINK(\"a\", \"b\", \"c\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_if.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "67586b55f32b4b601c08a0590c0f56a5bc60619a5a4e3c1bf70a95ee21c58f2f",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_if_arguments",
+          "ref": "A1",
+          "formula": "IF()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_if_arguments",
+          "ref": "A2",
+          "formula": "IF(1, 2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_indirect.xlsx",
+      "category": "general",
+      "cases": 31,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "9705b87d567fbf9ce24aef1e5ca80dcf16ee7d47bb1fb909e1125ba3e958cbe9",
+      "excludedCases": [
+        {
+          "sheet": "6 errors",
+          "ref": "E1",
+          "formula": "INDIRECT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 errors",
+          "ref": "E2",
+          "formula": "INDIRECT(\"R1C1\", FALSE, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_isomitted.xlsx",
+      "category": "general",
+      "cases": 0,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "e601a8b149ea6d8834185116791a8304ce7923b13c8a05eea30d8b224864df95",
+      "excludedCases": [
+        {
+          "sheet": "5 test_isomitted_wrong_arg_coun",
+          "ref": "A1",
+          "formula": "_xlfn.ISOMITTED()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 test_isomitted_wrong_arg_coun",
+          "ref": "A2",
+          "formula": "_xlfn.ISOMITTED(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_isref.xlsx",
+      "category": "general",
+      "cases": 0,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "828d330b07e2eb9c4bd958084e9cf010f6f1dd67d37099a85f59a7acf632f6f4",
+      "excludedCases": [
+        {
+          "sheet": "1 wrong_number_of_arguments",
+          "ref": "A1",
+          "formula": "ISREF()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 wrong_number_of_arguments",
+          "ref": "A2",
+          "formula": "ISREF(K1, K2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_lambda.xlsx",
+      "category": "general",
+      "cases": 24,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_let.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "faae2aeb6d537fdf64ac8049a8252f0f56613a07cdccbf4907cf1c6368b0eae8",
+      "excludedCases": [
+        {
+          "sheet": "5 test_let_rebind_same_name_wit",
+          "ref": "A1",
+          "formula": "_xlfn.LET(_xlpm.x,1,_xlpm.x,2,_xlpm.x)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_map_reduce.xlsx",
+      "category": "general",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d4a284be19ef888032c3ff16720728e0665f75017dddb93f4522fc3e2e52fde6",
+      "excludedCases": [
+        {
+          "sheet": "5 map_too_few_args",
+          "ref": "A1",
+          "formula": "_xlfn.MAP(A2:A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "8 reduce_without_initial_uses_f",
+          "ref": "B1",
+          "formula": "_xlfn.REDUCE(A1:A3, _xlfn.LAMBDA(_xlpm.acc, _xlpm.x, _xlpm.acc + _xlpm.x))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 reduce_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.REDUCE(0, A2:A3, _xlfn.LAMBDA(_xlpm.a,_xlpm.b,_xlpm.a+_xlpm.b), 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_max_min.xlsx",
+      "category": "general",
+      "cases": 46,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_maxifs.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "18678f99419fec62eae9b1f5aa14b5934134701f5b374ed379294d6610b03679",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_maxifs_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.MAXIFS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_maxifs_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.MAXIFS(B2:B9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_maxifs_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.MAXIFS(B2:B9,C2:C9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_maxifs_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.MAXIFS(B2:B9,C2:C9,\"=A*\",D2:D9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_minifs.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "5b9b9e400a2cb031c7f49336014ecbe0bd2c0525fa7bf260677bf4fc66a50b93",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_minifs_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.MINIFS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_minifs_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.MINIFS(B2:B9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_minifs_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.MINIFS(B2:B9,C2:C9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_minifs_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.MINIFS(B2:B9,C2:C9,\"=A*\",D2:D9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_minute_second_rounding.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_mmult.xlsx",
+      "category": "general",
+      "cases": 17,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "57c3a09224d85088af4bcbcf37d6a18255fab45c8f8fc6469dcaf852ae103f26",
+      "excludedCases": [
+        {
+          "sheet": "4 mmult_wrong_arg_count",
+          "ref": "A1",
+          "formula": "MMULT(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 mmult_transposed_dimension_m",
+          "ref": "I9",
+          "formula": "MMULT(TRANSPOSE(A1:C2,1), E1:F3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_oddfprice.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_offset.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_or_xor.xlsx",
+      "category": "general",
+      "cases": 20,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_power.xlsx",
+      "category": "general",
+      "cases": 56,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "8f5adde4a2cfc94ba3673fff228160bdbd47261e421f7b731f129abb6ea1c532",
+      "excludedCases": [
+        {
+          "sheet": "2 errors",
+          "ref": "A5",
+          "formula": "POWER(2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 errors",
+          "ref": "A6",
+          "formula": "POWER(2, 3, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_product.xlsx",
+      "category": "general",
+      "cases": 11,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "c2fd906a6170b29fa95a5b1ab4b37b7dfdc1895db45be9fef938d6d95080e23a",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_product_arguments",
+          "ref": "A1",
+          "formula": "PRODUCT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_randarray.xlsx",
+      "category": "general",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_rept.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "a544e56c8a1cffa433c1c1b66d8acbbed2d8520d0d6c87b1ff6dcd10eeba64a6",
+      "excludedCases": [
+        {
+          "sheet": "2 wrong_number_of_arguments",
+          "ref": "B1",
+          "formula": "REPT(A1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 wrong_number_of_arguments",
+          "ref": "B2",
+          "formula": "REPT(A1,3,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_round.xlsx",
+      "category": "general",
+      "cases": 16,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "8530e2986f48fdb52bc6baa11ea90685a0afae5272d82dae048d192177dca1f4",
+      "excludedCases": [
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "A1",
+          "formula": "ROUND()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "B1",
+          "formula": "ROUNDUP()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "C1",
+          "formula": "ROUNDDOWN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "A2",
+          "formula": "ROUND(1.234)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "B2",
+          "formula": "ROUNDUP(1.234)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "C2",
+          "formula": "ROUNDDOWN(1.234)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "A4",
+          "formula": "ROUND(1.234,1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "B4",
+          "formula": "ROUNDUP(1.234,1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "4 fn_round_arguments",
+          "ref": "C4",
+          "formula": "ROUNDDOWN(1.234,1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_row_column.xlsx",
+      "category": "general",
+      "cases": 18,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "0860ccf35943a1b13b991b40eaa63cb8015530a78e992f57ae65fc048f601d3b",
+      "excludedCases": [
+        {
+          "sheet": "9 wrong_arguments",
+          "ref": "A1",
+          "formula": "ROW(C2, C3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 wrong_arguments",
+          "ref": "A2",
+          "formula": "COLUMN(C2, C3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 wrong_arguments",
+          "ref": "A3",
+          "formula": "ROW(3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "9 wrong_arguments",
+          "ref": "A4",
+          "formula": "COLUMN(\"C\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_scan.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "a345ef90183f6a6dc7eb4591e1f6280df954ce85777370e55a5a139ccbcb6048",
+      "excludedCases": [
+        {
+          "sheet": "4 scan_without_initial_uses_fir",
+          "ref": "B1",
+          "formula": "_xlfn.SCAN(A1:A3, _xlfn.LAMBDA(_xlpm.acc, _xlpm.x, _xlpm.acc + _xlpm.x))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "6 scan_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.SCAN(0, A2:A3, _xlfn.LAMBDA(_xlpm.a, _xlpm.b, _xlpm.a+_xlpm.b), 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "7 scan_too_few_args",
+          "ref": "A1",
+          "formula": "_xlfn.SCAN(A2:A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_sequence.xlsx",
+      "category": "general",
+      "cases": 11,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_sum.xlsx",
+      "category": "general",
+      "cases": 18,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "394c12c2d3b9de1e668d7976e79234d1e87dfa84d684f5f3e0386a3500a4f841",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_sum_arguments",
+          "ref": "A1",
+          "formula": "SUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_sumif_array.xlsx",
+      "category": "general",
+      "cases": 8,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_sumifs.xlsx",
+      "category": "general",
+      "cases": 14,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "6885e4fc513321d7939ac0d7b7d91cdb672ff83deba7829205ebeef210c0193a",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_sumifs_arguments",
+          "ref": "A1",
+          "formula": "SUMIFS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_sumifs_arguments",
+          "ref": "A2",
+          "formula": "SUMIFS(B2:B9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_sumifs_arguments",
+          "ref": "A3",
+          "formula": "SUMIFS(B2:B9,C2:C9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_sumifs_arguments",
+          "ref": "A4",
+          "formula": "SUMIFS(B2:B9,C2:C9,\"=A*\",D2:D9)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_tocol_torow.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/fn_transpose.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7fdb2fbeb1e2f0cce574bcc4dc8bcf7c3fc92a4600f78fedb3a681f52e4bfec1",
+      "excludedCases": [
+        {
+          "sheet": "4 transpose_wrong_arg_count",
+          "ref": "A1",
+          "formula": "TRANSPOSE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_type.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "012c0d8f174a22d802945e33ba0e86f8a632d90118f46650276a36eb4bdf2985",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_type_array",
+          "ref": "A1",
+          "formula": "TYPE()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/fn_type_array.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/forecast.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "7491df9495a9f1afcbc4bbd7d19a6d2d5b850ab2d64eb5ca440f080e940bee7e",
+      "excludedCases": [
+        {
+          "sheet": "2 test_forecast_wrong_arg_count",
+          "ref": "A1",
+          "formula": "FORECAST(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/format_case.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/gcd_lcm.xlsx",
+      "category": "general",
+      "cases": 12,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e11cee09fc014bfed97d5bcffd7a4c11b8db05d2e17d1e36da7f1d5d4c75f3c6",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "LCM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "GCD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/general.xlsx",
+      "category": "general",
+      "cases": 9,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/geomean.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "e00ef400c3a0144e6abf0efc856d86d11663b4017a8d44af158fe4857fb100d9",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_geomean_arguments",
+          "ref": "A1",
+          "formula": "GEOMEAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/implicit_intersection.xlsx",
+      "category": "general",
+      "cases": 14,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/indirect_r1c1.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/inverted_ranges.xlsx",
+      "category": "general",
+      "cases": 18,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/issue_623.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/ln.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "3718b5037caa57eb2fd93831faa17beeafdec5cd722ff9e75ba0d6980a65194c",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "LN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "LN(100, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/log.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f2ef095a6ec5a12eee89d8f1332df13050860d11e425c63727cc8dfd8c618823",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "LOG()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "LOG(100, 10, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/log10.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "0d1250617975a9f67e4ad321fd86e787b6653045962533ce03244296c53a56e7",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "LOG10()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "LOG10(100, 10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/math.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "2a6a7c3c31bf2639c79c2be24efad5827e6334ce7289799b417869dd38c5fca2",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_sqrt_arguments",
+          "ref": "A2",
+          "formula": "SQRT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 test_fn_sqrt_arguments",
+          "ref": "A3",
+          "formula": "SQRT(4, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_sqrtpi_arguments",
+          "ref": "A1",
+          "formula": "SQRTPI()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_sqrtpi_arguments",
+          "ref": "A2",
+          "formula": "SQRTPI(4, 4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/mod_quotient.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "56380216a655f9725815bce2ff4572c50789bda487bf23a87616a97f318efab6",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "MOD()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "MOD(5, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "QUOTIENT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A6",
+          "formula": "QUOTIENT(5, 2, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/mround_trunc_int.xlsx",
+      "category": "general",
+      "cases": 4,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f6cd23924e24be2455a0e28672c312a12ae5003e8d2a76743650e90676bbc417",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "MROUND()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "MROUND(10)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "MROUND(10, 3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "TRUNC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A8",
+          "formula": "TRUNC(10, 3, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A9",
+          "formula": "INT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A11",
+          "formula": "INT(10.22, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A12",
+          "formula": "INT(10.22, 1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/nan_inf.xlsx",
+      "category": "general",
+      "cases": 1,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "b79e438ecfe7d6bc0658589923f9c1a9ba2ed20434fe52e65e747112170c6eac",
+      "excludedCases": [
+        {
+          "sheet": "2 a_number_too_large_in_a_formu",
+          "ref": "A3",
+          "formula": "1e308",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 a_number_too_large_in_a_formu",
+          "ref": "A4",
+          "formula": "1e-400",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/networkdays.xlsx",
+      "category": "general",
+      "cases": 8,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "d817bcd7e6b1827db2198809e3a30701493103a8bea8e7cc66dfc0afd2e27dcd",
+      "excludedCases": [
+        {
+          "sheet": "1 networkdays_validates_argumen",
+          "ref": "A1",
+          "formula": "NETWORKDAYS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 networkdays_validates_argumen",
+          "ref": "A2",
+          "formula": "NETWORKDAYS(1,2,3,4)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 networkdays_validates_argumen",
+          "ref": "A3",
+          "formula": "NETWORKDAYS.INTL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 networkdays_validates_argumen",
+          "ref": "A4",
+          "formula": "NETWORKDAYS.INTL(1,2,3,4,5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/networkdays_networkdaysintl.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f06420ff2d6165b3f9409b2c28c0b86136a06e3e0de638e0a81389321239d5fd",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "NETWORKDAYS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "NETWORKDAYS.INTL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "NETWORKDAYS(45658)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B2",
+          "formula": "NETWORKDAYS.INTL(45658)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "NETWORKDAYS(45658, 46023, 5, 6)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B6",
+          "formula": "NETWORKDAYS.INTL(45658, 46023, 5, 46000, 5)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/now.xlsx",
+      "category": "general",
+      "cases": 0,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "2c4ad4d540542d7dd55def937ce566dca6e2d5bd4f4d2a02edf5c876fa2a0b45",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "NOW(1, 1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "NOW(\"Europe/Berlin\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "NOW(\"faketimezone\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/percentage.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/quote_prefix.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/range_evaluation.xlsx",
+      "category": "general",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/shared_formulas.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/spill_functions.xlsx",
+      "category": "general",
+      "cases": 32,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "8903acd1dee9fed68067505d5069bd2944efc2abd838f77cdedba3b648d657e8",
+      "excludedCases": [
+        {
+          "sheet": "6 sort_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn._xlws.SORT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "11 sortby_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn.SORTBY(A2:A3,B2:B3,1,C2:C3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 filter_if_empty_range_is_its",
+          "ref": "G2",
+          "formula": "OFFSET(_xlfn._xlws.FILTER(A1,B1,D1:D2),1,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 filter_if_empty_range_is_its",
+          "ref": "G3",
+          "formula": "ROW(_xlfn._xlws.FILTER(A1,B1,D1:D2))",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "22 filter_if_empty_range_is_its",
+          "ref": "G5",
+          "formula": "OFFSET(_xlfn._xlws.FILTER(D1:D2,D1:D2>0),1,0)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "24 filter_wrong_arg_count",
+          "ref": "A1",
+          "formula": "_xlfn._xlws.FILTER(A2:A3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/statistical_functions.xlsx",
+      "category": "general",
+      "cases": 10,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/sumsq.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f4d622f0678187831da000edc224f0cbb0203394051e06caa38cebc3c5f86923",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "SUMSQ()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/today.xlsx",
+      "category": "general",
+      "cases": 6,
+      "savedBy": "Microsoft Macintosh Excel 16.0300",
+      "canonicalFromHash": "878fed372652aa2ae4f722b4ad5e6317e67a669b7d8c099816b28e5f75b61ce1",
+      "excludedCases": [
+        {
+          "sheet": "2 today_now_wrong_arguments",
+          "ref": "A1",
+          "formula": "TODAY(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 today_now_wrong_arguments",
+          "ref": "A2",
+          "formula": "NOW(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 today_now_wrong_arguments",
+          "ref": "A3",
+          "formula": "TODAY(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 today_now_wrong_arguments",
+          "ref": "A4",
+          "formula": "NOW(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 today_with_invalid_timezone",
+          "ref": "A1",
+          "formula": "TODAY(\"Invalid/Timezone\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "5 today_with_invalid_timezone",
+          "ref": "A2",
+          "formula": "NOW(\"Invalid/Timezone\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/trigonometric.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "f3e8bf9bab705361f1ff6ad218a0109d9567f89b1049ed4822492956536f2b22",
+      "excludedCases": [
+        {
+          "sheet": "1 test_fn_pi_arguments",
+          "ref": "A1",
+          "formula": "PI(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_atan2_arguments",
+          "ref": "A1",
+          "formula": "ATAN2(1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "2 test_fn_atan2_arguments",
+          "ref": "A3",
+          "formula": "ATAN2(1,1,1)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A1",
+          "formula": "SIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B1",
+          "formula": "SIN(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A2",
+          "formula": "COS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B2",
+          "formula": "COS(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A3",
+          "formula": "TAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B3",
+          "formula": "TAN(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A5",
+          "formula": "ASIN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B5",
+          "formula": "ASIN(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A6",
+          "formula": "ACOS()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B6",
+          "formula": "ACOS(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A7",
+          "formula": "ATAN()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B7",
+          "formula": "ATAN(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A9",
+          "formula": "SINH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B9",
+          "formula": "SINH(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A10",
+          "formula": "COSH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B10",
+          "formula": "COSH(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "A11",
+          "formula": "TANH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "3 test_fn_trigonometric_argumen",
+          "ref": "B11",
+          "formula": "TANH(1,2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/trigonometric_reciprocals.xlsx",
+      "category": "general",
+      "cases": 0,
+      "savedBy": "Microsoft Macintosh Excel",
+      "canonicalFromHash": "27fa180b1dd114438b17c3b76d5a4c30257f2a502726695342084dc1206b0de8",
+      "excludedCases": [
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A1",
+          "formula": "_xlfn.CSC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B1",
+          "formula": "_xlfn.CSC(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A2",
+          "formula": "_xlfn.SEC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B2",
+          "formula": "_xlfn.SEC(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A3",
+          "formula": "_xlfn.COT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B3",
+          "formula": "_xlfn.COT(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A4",
+          "formula": "_xlfn.CSCH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B4",
+          "formula": "_xlfn.CSCH(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A5",
+          "formula": "_xlfn.SECH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B5",
+          "formula": "_xlfn.SECH(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A6",
+          "formula": "_xlfn.COTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B6",
+          "formula": "_xlfn.COTH(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A7",
+          "formula": "_xlfn.ACOT()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B7",
+          "formula": "_xlfn.ACOT(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "A8",
+          "formula": "_xlfn.ACOTH()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 fn_arguments",
+          "ref": "B8",
+          "formula": "_xlfn.ACOTH(1, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/true_false.xlsx",
+      "category": "general",
+      "cases": 2,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "b11fbd6095d6fc2c3153ef958266e87db720e85c72b00cb2980443ed10631e05",
+      "excludedCases": [
+        {
+          "sheet": "1 true_false_arguments",
+          "ref": "A3",
+          "formula": "TRUE( 4 )",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 true_false_arguments",
+          "ref": "A4",
+          "formula": "FALSE( 4 )",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/weekday_arg_order.xlsx",
+      "category": "general",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/weekday_return_types.xlsx",
+      "category": "general",
+      "cases": 7,
+      "savedBy": "engine-compatibility (case workbook)"
+    },
+    {
+      "file": "general/weekday_weeknum_isoweeknum.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "df8c7426af2d06d0cf002576dd42cba699ff0902912336452ddc07859f70a149",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "WEEKDAY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "WEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "C1",
+          "formula": "_xlfn.ISOWEEKNUM()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "C3",
+          "formula": "_xlfn.ISOWEEKNUM(46000, 11)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A4",
+          "formula": "WEEKDAY(46000, 11, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B4",
+          "formula": "WEEKNUM(46000, 11, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "C4",
+          "formula": "_xlfn.ISOWEEKNUM(46000, 11, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/workday_workdayintl.xlsx",
+      "category": "general",
+      "cases": 5,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "dbaff2141bcdb205b18a6d5c60ab03bbda1e3b814f7d5f3170e8deb4601901f0",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "WORKDAY()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "WORKDAY.INTL()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "WORKDAY(46000)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B2",
+          "formula": "WORKDAY.INTL(46000)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "WORKDAY(46000, 5, 46001, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B6",
+          "formula": "WORKDAY.INTL(46000, 5, 11, 46001, 2)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    },
+    {
+      "file": "general/yearfrac_datedif.xlsx",
+      "category": "general",
+      "cases": 3,
+      "savedBy": "Microsoft Macintosh Excel 16.116 (26102843)",
+      "canonicalFromHash": "4faa7e45edf96b6fd19ee73cd8f43afda93573b1523a5882f6782b8be0ffa797",
+      "excludedCases": [
+        {
+          "sheet": "1 arguments",
+          "ref": "A1",
+          "formula": "DATEDIF()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B1",
+          "formula": "YEARFRAC()",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A2",
+          "formula": "DATEDIF(\"1/1/2025\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B2",
+          "formula": "YEARFRAC(\"1/1/2025\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A3",
+          "formula": "DATEDIF(\"1/1/2025\", \"1/1/2026\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "A5",
+          "formula": "DATEDIF(\"1/1/2025\", \"1/1/2026\", \"D\", \"D\")",
+          "reason": "Excel removed the case formula during canonical input repair"
+        },
+        {
+          "sheet": "1 arguments",
+          "ref": "B5",
+          "formula": "YEARFRAC(\"1/1/2025\", \"1/1/2026\", 3, 3)",
+          "reason": "Excel removed the case formula during canonical input repair"
+        }
+      ]
+    }
+  ]
+}

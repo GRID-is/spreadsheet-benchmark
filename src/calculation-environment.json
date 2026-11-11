@@ -1,0 +1,14 @@
+{
+  "revision": 1,
+  "locale": "en-US",
+  "posixLocale": "en_US.UTF-8",
+  "timezone": "UTC",
+  "decimalSeparator": ".",
+  "thousandsSeparator": ",",
+  "listSeparator": ",",
+  "currencySymbol": "$",
+  "currencyDigits": 2,
+  "dateOrder": "MDY",
+  "dateSeparator": "/",
+  "shortDatePattern": "M/d/yyyy"
+}

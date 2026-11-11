@@ -1,0 +1,734 @@
+# ironcalc vs univer@1.4.0 (ironcalc)
+
+Function list: GRID 19.0.0. Pass rate is over parity cases only. Skips: volatile 2, excel-lacks-function 9. Fails where the engine's error came from another cell: 102. Fails where both answered an error, but a different one: 330. Fails where the case's own cell matches but its spill does not: 48.
+Functions outside Excel's list (5): COUNTWORDS, GELU, HELLO, TEMPERATURE, XYZ. Never-supported functions present: none.
+
+| category | cases | pass | fail | unsupported | error | skip | parity pass rate |
+|---|---|---|---|---|---|---|---|
+| (root) | 708 | 509 | 130 | 69 | 0 | 0 | 71.9% |
+| DATABASE | 566 | 479 | 87 | 0 | 0 | 0 | 84.6% |
+| DATE_AND_TIME | 2623 | 2196 | 211 | 0 | 213 | 3 | 83.8% |
+| ENGINEERING | 2976 | 2222 | 754 | 0 | 0 | 0 | 74.7% |
+| FINANCIAL | 3086 | 2710 | 376 | 0 | 0 | 0 | 87.8% |
+| INFORMATION | 409 | 340 | 67 | 2 | 0 | 0 | 83.1% |
+| LOGICAL | 533 | 490 | 35 | 2 | 0 | 6 | 93.0% |
+| LOOKUP_AND_REFERENCE | 1047 | 712 | 142 | 3 | 190 | 0 | 68.0% |
+| MATH_AND_TRIGONOMETRY | 56100 | 53463 | 1219 | 1416 | 0 | 2 | 95.3% |
+| STATISTICAL | 3184 | 2577 | 333 | 0 | 274 | 0 | 80.9% |
+| TEXT | 1457 | 1295 | 146 | 16 | 0 | 0 | 88.9% |
+| **total** | 72689 | 66993 | 3500 | 1508 | 677 | 11 | 92.2% |
+
+| saved by | cases | pass | fail | unsupported | error | skip | parity pass rate |
+|---|---|---|---|---|---|---|---|
+| Microsoft Excel 16.0 (20527) | 72689 | 66993 | 3500 | 1508 | 677 | 11 | 92.2% |
+| **total** | 72689 | 66993 | 3500 | 1508 | 677 | 11 | 92.2% |
+
+## Functions with most non-passing cases
+
+| function | non-pass | statuses | example |
+|---|---|---|---|
+| ISO.CEILING | 1396 | unsupported 1396 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AI217` =ISO.CEILING($A217) → Excel 7, Univer "#NAME?" |
+| ACCRINT | 302 | fail 302 | `FINANCIAL/ACCRINT.xlsx!B36` =ACCRINT(DATE(2016,6,1), DATE(2017,12,1), DATE(2016,9,1), 0.3 → Excel 239.25000000000003, Univer 247.5 |
+| IMAGINARY | 257 | fail 257 | `ENGINEERING/COMPLEXs.xlsx!AM26` =IMAGINARY(IMSQRT(D26)) → Excel 1, Univer "#VALUE!" |
+| IMREAL | 256 | fail 256 | `ENGINEERING/COMPLEXs.xlsx!AL26` =IMREAL(IMSQRT(D26)) → Excel 6.1257422745431e-17, Univer "#VALUE!" |
+| CEILING.MATH | 157 | fail 156, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AI139` =CEILING.MATH($A139,$47:$47) → Excel 8, Univer "#SPILL!" |
+| CEILING | 152 | fail 151, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AI44` =CEILING($A44,$47:$47) → Excel -1000, Univer "#SPILL!" |
+| CONVERT | 145 | fail 145 | `ENGINEERING/CONVERT.xlsx!G14` =CONVERT(0.05,F14,$B$2) → Excel "#N/A", Univer 50802345450 |
+| FLOOR.MATH | 137 | fail 136, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AI127` =FLOOR.MATH($A127) → Excel "#VALUE!", Univer 45301 |
+| FLOOR.PRECISE | 137 | fail 136, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AH83` =FLOOR.PRECISE($AM:$AM,AH$2) → Excel 0, Univer "#SPILL!" |
+| CEILING.PRECISE | 137 | fail 136, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AI83` =CEILING.PRECISE($A83) → Excel 0, Univer "#SPILL!" |
+| COUNTIF | 137 | fail 137 | `STATISTICAL/COUNTIF.xlsx!AJ10` =COUNTIF(AG$2:AG$15,CONCAT("<>", AH10)) → Excel 11, Univer 10 |
+| FLOOR | 135 | fail 134, unsupported 1 | `MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx!AG43` =FLOOR($A43,$AD$47:$AH$47) → Excel 0, Univer "#SPILL!" |
+| WORKDAY.INTL | 93 | error 93 | `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx!I44` =WORKDAY.INTL(DATE(2025,1,10),J44,17,K44) → Excel 45672, Univer null |
+| COUNTIFS | 79 | fail 79 | `STATISTICAL/COUNTIFS.xlsx!M15` =COUNTIFS($I:$I,J15,$I:$I,K15) → Excel 0, Univer 88 |
+| NEGBINOM.DIST | 78 | error 78 | `STATISTICAL/BINOM.xlsx!E73` =NEGBINOM.DIST(A73,B73,C73,D73) → Excel "#NUM!", Univer null |
+| BINOM.DIST | 74 | error 74 | `STATISTICAL/BINOM.xlsx!E75` =BINOM.DIST(A75,B75,G:G,D75) → Excel 0.0546875, Univer null |
+| WORKDAY | 67 | error 67 | `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx!H46` =WORKDAY(DATE(2025,1,10),J46,K46) → Excel 45673, Univer null |
+| IFERROR | 61 | fail 61 | `INFORMATION/error_broadcast.xlsx!E67` =IFERROR(A1:C1-AVERAGE(K1:K3), 0) → Excel 0, Univer 0 |
+| XLOOKUP | 61 | fail 61 | `LOOKUP_AND_REFERENCE/XLOOKUP.xlsx!H6` =XLOOKUP(E2,A:A,B:B,,12) → Excel "#VALUE!", Univer "+99" |
+| SUM | 59 | fail 25, unsupported 14, error 20 | `INFORMATION/error_broadcast.xlsx!E39` =SUM((A6:C6=1)*1) → Excel "#DIV/0!", Univer 1 |
+| ROW | 55 | unsupported 1, error 54 | `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx!K23` =ROW(INDIRECT(J23)) → Excel 77, Univer null |
+| COLUMN | 52 | error 52 | `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx!L23` =COLUMN(INDIRECT(J23)) → Excel 513, Univer null |
+| BINOM.DIST.RANGE | 49 | error 49 | `STATISTICAL/BINOM.xlsx!E43` =BINOM.DIST.RANGE(B43,C43,A43,D43) → Excel "#VALUE!", Univer null |
+| WEEKNUM | 48 | fail 48 | `DATE_AND_TIME/WEEKDAY_WEEKNUM_ISOWEEKNUM.xlsx!U20` =WEEKNUM($A20) → Excel "#VALUE!", Univer 27 |
+| DATE | 47 | fail 2, error 45 | `DATE_AND_TIME/DATE.xlsx!D51` =DATE(A51,B51,C51) → Excel "#VALUE!", Univer 45823 |
+
+## Errors
+
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx`: timeout after 60000 ms
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx`: worker crashed: Invalid array length
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/BINOM.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms
+- `STATISTICAL/FREQUENCY.xlsx`: timeout after 60000 ms

@@ -1,0 +1,82 @@
+{
+  "suite": "gnumeric",
+  "upstream": "https://github.com/GNOME/gnumeric.git",
+  "commit": "09a37c89f701712d8c71a71058c751650778a9c1",
+  "commitDate": "2026-10-31T19:27:19-04:00",
+  "subdir": "samples",
+  "license": "GPL-2.0-only OR GPL-3.0-only",
+  "shape": "self-checking workbooks from test/t1000-t1023: functions = A4 reads \"All ok\"; yalta2008 = D10:D99 TRUE; overview = Overview!C2:C99 all 0",
+  "importedAt": "2026-11-01T00:05:04.012Z",
+  "files": [
+    {
+      "file": "functions/statfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/mathfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/finfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/logfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/textfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/engfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/datefuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/infofuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/lookfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "functions/dbfuns.xls",
+      "category": "functions",
+      "savedBy": ""
+    },
+    {
+      "file": "yalta2008/yalta2008.xls",
+      "category": "yalta2008",
+      "savedBy": ""
+    },
+    {
+      "file": "overview/database.xlsx",
+      "category": "overview",
+      "savedBy": "gnumeric"
+    },
+    {
+      "file": "overview/countif.xlsx",
+      "category": "overview",
+      "savedBy": "gnumeric"
+    },
+    {
+      "file": "overview/ifs-funcs.xlsx",
+      "category": "overview",
+      "savedBy": "gnumeric"
+    }
+  ]
+}

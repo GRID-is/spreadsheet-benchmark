@@ -1,0 +1,3816 @@
+{
+  "source": {
+    "apiaryVersion": "19.0.0",
+    "generatedAt": "2026-11-08T12:06:24.662Z"
+  },
+  "functions": {
+    "ABS": {
+      "name": "ABS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACCRINT": {
+      "name": "ACCRINT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACCRINTM": {
+      "name": "ACCRINTM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACOS": {
+      "name": "ACOS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACOSH": {
+      "name": "ACOSH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACOT": {
+      "name": "ACOT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ACOTH": {
+      "name": "ACOTH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ADDRESS": {
+      "name": "ADDRESS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AGGREGATE": {
+      "name": "AGGREGATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AMORDEGRC": {
+      "name": "AMORDEGRC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AMORLINC": {
+      "name": "AMORLINC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ANCHORARRAY": {
+      "name": "ANCHORARRAY",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AND": {
+      "name": "AND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ARABIC": {
+      "name": "ARABIC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AREAS": {
+      "name": "AREAS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ARRAY": {
+      "name": "ARRAY",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ARRAYROW": {
+      "name": "ARRAYROW",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ARRAYTOTEXT": {
+      "name": "ARRAYTOTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ARRAY_CONSTRAIN": {
+      "name": "ARRAY_CONSTRAIN",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ASC": {
+      "name": "ASC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ASIN": {
+      "name": "ASIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ASINH": {
+      "name": "ASINH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ATAN": {
+      "name": "ATAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ATAN2": {
+      "name": "ATAN2",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ATANH": {
+      "name": "ATANH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AVEDEV": {
+      "name": "AVEDEV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AVERAGE": {
+      "name": "AVERAGE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AVERAGEA": {
+      "name": "AVERAGEA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AVERAGEIF": {
+      "name": "AVERAGEIF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "AVERAGEIFS": {
+      "name": "AVERAGEIFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BAHTTEXT": {
+      "name": "BAHTTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BASE": {
+      "name": "BASE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BESSELI": {
+      "name": "BESSELI",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BESSELJ": {
+      "name": "BESSELJ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BESSELK": {
+      "name": "BESSELK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BESSELY": {
+      "name": "BESSELY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BETA.DIST": {
+      "name": "BETA.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BETA.INV": {
+      "name": "BETA.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BETADIST": {
+      "name": "BETADIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "BETAINV": {
+      "name": "BETAINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "BIN2DEC": {
+      "name": "BIN2DEC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BIN2HEX": {
+      "name": "BIN2HEX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BIN2OCT": {
+      "name": "BIN2OCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BINOM.DIST": {
+      "name": "BINOM.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BINOM.DIST.RANGE": {
+      "name": "BINOM.DIST.RANGE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BINOM.INV": {
+      "name": "BINOM.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BINOMDIST": {
+      "name": "BINOMDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "BITAND": {
+      "name": "BITAND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BITLSHIFT": {
+      "name": "BITLSHIFT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BITOR": {
+      "name": "BITOR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BITRSHIFT": {
+      "name": "BITRSHIFT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BITXOR": {
+      "name": "BITXOR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BYCOL": {
+      "name": "BYCOL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "BYROW": {
+      "name": "BYROW",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CALL": {
+      "name": "CALL",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CEILING": {
+      "name": "CEILING",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CEILING.MATH": {
+      "name": "CEILING.MATH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CEILING.PRECISE": {
+      "name": "CEILING.PRECISE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CELL": {
+      "name": "CELL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHAR": {
+      "name": "CHAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHIDIST": {
+      "name": "CHIDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CHIINV": {
+      "name": "CHIINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CHISQ.DIST": {
+      "name": "CHISQ.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHISQ.DIST.RT": {
+      "name": "CHISQ.DIST.RT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHISQ.INV": {
+      "name": "CHISQ.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHISQ.INV.RT": {
+      "name": "CHISQ.INV.RT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHISQ.TEST": {
+      "name": "CHISQ.TEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHITEST": {
+      "name": "CHITEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CHOOSE": {
+      "name": "CHOOSE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHOOSECOLS": {
+      "name": "CHOOSECOLS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CHOOSEROWS": {
+      "name": "CHOOSEROWS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CLEAN": {
+      "name": "CLEAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CODE": {
+      "name": "CODE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COLUMN": {
+      "name": "COLUMN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COLUMNS": {
+      "name": "COLUMNS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COMBIN": {
+      "name": "COMBIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COMBINA": {
+      "name": "COMBINA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COMPLEX": {
+      "name": "COMPLEX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CONCAT": {
+      "name": "CONCAT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CONCATENATE": {
+      "name": "CONCATENATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CONFIDENCE": {
+      "name": "CONFIDENCE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CONFIDENCE.NORM": {
+      "name": "CONFIDENCE.NORM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CONFIDENCE.T": {
+      "name": "CONFIDENCE.T",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CONVERT": {
+      "name": "CONVERT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CORREL": {
+      "name": "CORREL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COS": {
+      "name": "COS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COSH": {
+      "name": "COSH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COT": {
+      "name": "COT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COTH": {
+      "name": "COTH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUNT": {
+      "name": "COUNT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUNTA": {
+      "name": "COUNTA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUNTBLANK": {
+      "name": "COUNTBLANK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUNTIF": {
+      "name": "COUNTIF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUNTIFS": {
+      "name": "COUNTIFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPDAYBS": {
+      "name": "COUPDAYBS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPDAYS": {
+      "name": "COUPDAYS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPDAYSNC": {
+      "name": "COUPDAYSNC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPNCD": {
+      "name": "COUPNCD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPNUM": {
+      "name": "COUPNUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COUPPCD": {
+      "name": "COUPPCD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COVAR": {
+      "name": "COVAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "COVARIANCE.P": {
+      "name": "COVARIANCE.P",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "COVARIANCE.S": {
+      "name": "COVARIANCE.S",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CRITBINOM": {
+      "name": "CRITBINOM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "CSC": {
+      "name": "CSC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CSCH": {
+      "name": "CSCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBEKPIMEMBER": {
+      "name": "CUBEKPIMEMBER",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBEMEMBER": {
+      "name": "CUBEMEMBER",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBEMEMBERPROPERTY": {
+      "name": "CUBEMEMBERPROPERTY",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBERANKEDMEMBER": {
+      "name": "CUBERANKEDMEMBER",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBESET": {
+      "name": "CUBESET",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBESETCOUNT": {
+      "name": "CUBESETCOUNT",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUBEVALUE": {
+      "name": "CUBEVALUE",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUMIPMT": {
+      "name": "CUMIPMT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "CUMPRINC": {
+      "name": "CUMPRINC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DATE": {
+      "name": "DATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DATEDIF": {
+      "name": "DATEDIF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DATEVALUE": {
+      "name": "DATEVALUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DAVERAGE": {
+      "name": "DAVERAGE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DAY": {
+      "name": "DAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DAYS": {
+      "name": "DAYS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DAYS360": {
+      "name": "DAYS360",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DB": {
+      "name": "DB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DBCS": {
+      "name": "DBCS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DCOUNT": {
+      "name": "DCOUNT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DCOUNTA": {
+      "name": "DCOUNTA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DDB": {
+      "name": "DDB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DEC2BIN": {
+      "name": "DEC2BIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DEC2HEX": {
+      "name": "DEC2HEX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DEC2OCT": {
+      "name": "DEC2OCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DECIMAL": {
+      "name": "DECIMAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DEGREES": {
+      "name": "DEGREES",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DELTA": {
+      "name": "DELTA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DETECTLANGUAGE": {
+      "name": "DETECTLANGUAGE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DEVSQ": {
+      "name": "DEVSQ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DGET": {
+      "name": "DGET",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DISC": {
+      "name": "DISC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DMAX": {
+      "name": "DMAX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DMIN": {
+      "name": "DMIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DOLLAR": {
+      "name": "DOLLAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DOLLARDE": {
+      "name": "DOLLARDE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DOLLARFR": {
+      "name": "DOLLARFR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DPRODUCT": {
+      "name": "DPRODUCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DROP": {
+      "name": "DROP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DSTDEV": {
+      "name": "DSTDEV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DSTDEVP": {
+      "name": "DSTDEVP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DSUM": {
+      "name": "DSUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DURATION": {
+      "name": "DURATION",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DVAR": {
+      "name": "DVAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "DVARP": {
+      "name": "DVARP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ECMA.CEILING": {
+      "name": "ECMA.CEILING",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EDATE": {
+      "name": "EDATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EFFECT": {
+      "name": "EFFECT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ENCODEURL": {
+      "name": "ENCODEURL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EOMONTH": {
+      "name": "EOMONTH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ERF": {
+      "name": "ERF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ERF.PRECISE": {
+      "name": "ERF.PRECISE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ERFC": {
+      "name": "ERFC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ERFC.PRECISE": {
+      "name": "ERFC.PRECISE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ERROR.TYPE": {
+      "name": "ERROR.TYPE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EUROCONVERT": {
+      "name": "EUROCONVERT",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EVEN": {
+      "name": "EVEN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EXACT": {
+      "name": "EXACT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EXP": {
+      "name": "EXP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EXPAND": {
+      "name": "EXPAND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EXPON.DIST": {
+      "name": "EXPON.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "EXPONDIST": {
+      "name": "EXPONDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "F.DIST": {
+      "name": "F.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "F.DIST.RT": {
+      "name": "F.DIST.RT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "F.INV": {
+      "name": "F.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "F.INV.RT": {
+      "name": "F.INV.RT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "F.TEST": {
+      "name": "F.TEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FACT": {
+      "name": "FACT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FACTDOUBLE": {
+      "name": "FACTDOUBLE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FALSE": {
+      "name": "FALSE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FDIST": {
+      "name": "FDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "FILTER": {
+      "name": "FILTER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FILTERXML": {
+      "name": "FILTERXML",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FIND": {
+      "name": "FIND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FINDB": {
+      "name": "FINDB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FINV": {
+      "name": "FINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "FISHER": {
+      "name": "FISHER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FISHERINV": {
+      "name": "FISHERINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FIXED": {
+      "name": "FIXED",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FLOOR": {
+      "name": "FLOOR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "FLOOR.MATH": {
+      "name": "FLOOR.MATH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FLOOR.PRECISE": {
+      "name": "FLOOR.PRECISE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORECAST": {
+      "name": "FORECAST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "FORECAST.ETS": {
+      "name": "FORECAST.ETS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORECAST.ETS.CONFINT": {
+      "name": "FORECAST.ETS.CONFINT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORECAST.ETS.SEASONALITY": {
+      "name": "FORECAST.ETS.SEASONALITY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORECAST.ETS.STAT": {
+      "name": "FORECAST.ETS.STAT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORECAST.LINEAR": {
+      "name": "FORECAST.LINEAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FORMULATEXT": {
+      "name": "FORMULATEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FREQUENCY": {
+      "name": "FREQUENCY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FTEST": {
+      "name": "FTEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "FV": {
+      "name": "FV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "FVSCHEDULE": {
+      "name": "FVSCHEDULE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAMMA": {
+      "name": "GAMMA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAMMA.DIST": {
+      "name": "GAMMA.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAMMA.INV": {
+      "name": "GAMMA.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAMMADIST": {
+      "name": "GAMMADIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "GAMMAINV": {
+      "name": "GAMMAINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "GAMMALN": {
+      "name": "GAMMALN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAMMALN.PRECISE": {
+      "name": "GAMMALN.PRECISE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GAUSS": {
+      "name": "GAUSS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GCD": {
+      "name": "GCD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GEOMEAN": {
+      "name": "GEOMEAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GESTEP": {
+      "name": "GESTEP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GETPIVOTDATA": {
+      "name": "GETPIVOTDATA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GOOGLEFINANCE": {
+      "name": "GOOGLEFINANCE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GOOGLETRANSLATE": {
+      "name": "GOOGLETRANSLATE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GRID.DATATABLE": {
+      "name": "GRID.DATATABLE",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GROUPBY": {
+      "name": "GROUPBY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "GROWTH": {
+      "name": "GROWTH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HARMEAN": {
+      "name": "HARMEAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HEX2BIN": {
+      "name": "HEX2BIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HEX2DEC": {
+      "name": "HEX2DEC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HEX2OCT": {
+      "name": "HEX2OCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HLOOKUP": {
+      "name": "HLOOKUP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HOUR": {
+      "name": "HOUR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HSTACK": {
+      "name": "HSTACK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HYPERLINK": {
+      "name": "HYPERLINK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HYPGEOM.DIST": {
+      "name": "HYPGEOM.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "HYPGEOMDIST": {
+      "name": "HYPGEOMDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "IF": {
+      "name": "IF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IFERROR": {
+      "name": "IFERROR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IFNA": {
+      "name": "IFNA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IFS": {
+      "name": "IFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMABS": {
+      "name": "IMABS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMAGE": {
+      "name": "IMAGE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMAGINARY": {
+      "name": "IMAGINARY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMARGUMENT": {
+      "name": "IMARGUMENT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCONJUGATE": {
+      "name": "IMCONJUGATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCOS": {
+      "name": "IMCOS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCOSH": {
+      "name": "IMCOSH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCOT": {
+      "name": "IMCOT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCSC": {
+      "name": "IMCSC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMCSCH": {
+      "name": "IMCSCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMDIV": {
+      "name": "IMDIV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMEXP": {
+      "name": "IMEXP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMLN": {
+      "name": "IMLN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMLOG10": {
+      "name": "IMLOG10",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMLOG2": {
+      "name": "IMLOG2",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPORTDATA": {
+      "name": "IMPORTDATA",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPORTFEED": {
+      "name": "IMPORTFEED",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPORTHTML": {
+      "name": "IMPORTHTML",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPORTRANGE": {
+      "name": "IMPORTRANGE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPORTXML": {
+      "name": "IMPORTXML",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPOWER": {
+      "name": "IMPOWER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMPRODUCT": {
+      "name": "IMPRODUCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMREAL": {
+      "name": "IMREAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSEC": {
+      "name": "IMSEC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSECH": {
+      "name": "IMSECH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSIN": {
+      "name": "IMSIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSINH": {
+      "name": "IMSINH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSQRT": {
+      "name": "IMSQRT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSUB": {
+      "name": "IMSUB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMSUM": {
+      "name": "IMSUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IMTAN": {
+      "name": "IMTAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INDEX": {
+      "name": "INDEX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INDIRECT": {
+      "name": "INDIRECT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INFO": {
+      "name": "INFO",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INT": {
+      "name": "INT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INTERCEPT": {
+      "name": "INTERCEPT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "INTRATE": {
+      "name": "INTRATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IPMT": {
+      "name": "IPMT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "IRR": {
+      "name": "IRR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISBLANK": {
+      "name": "ISBLANK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISERR": {
+      "name": "ISERR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISERROR": {
+      "name": "ISERROR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISEVEN": {
+      "name": "ISEVEN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISFORMULA": {
+      "name": "ISFORMULA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISLOGICAL": {
+      "name": "ISLOGICAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISNA": {
+      "name": "ISNA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISNONTEXT": {
+      "name": "ISNONTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISNUMBER": {
+      "name": "ISNUMBER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISO.CEILING": {
+      "name": "ISO.CEILING",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISODD": {
+      "name": "ISODD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISOMITTED": {
+      "name": "ISOMITTED",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISOWEEKNUM": {
+      "name": "ISOWEEKNUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISPMT": {
+      "name": "ISPMT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISREF": {
+      "name": "ISREF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ISTEXT": {
+      "name": "ISTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "JIS": {
+      "name": "JIS",
+      "inExcel": true,
+      "apiary": "unsupported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "KURT": {
+      "name": "KURT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LAMBDA": {
+      "name": "LAMBDA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LARGE": {
+      "name": "LARGE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LCM": {
+      "name": "LCM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LEFT": {
+      "name": "LEFT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LEFTB": {
+      "name": "LEFTB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LEN": {
+      "name": "LEN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LENB": {
+      "name": "LENB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LET": {
+      "name": "LET",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LINEST": {
+      "name": "LINEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LN": {
+      "name": "LN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOG": {
+      "name": "LOG",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOG10": {
+      "name": "LOG10",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOGEST": {
+      "name": "LOGEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOGINV": {
+      "name": "LOGINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "LOGNORM.DIST": {
+      "name": "LOGNORM.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOGNORM.INV": {
+      "name": "LOGNORM.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOGNORMDIST": {
+      "name": "LOGNORMDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "LOOKUP": {
+      "name": "LOOKUP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "LOWER": {
+      "name": "LOWER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MAKEARRAY": {
+      "name": "MAKEARRAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MAP": {
+      "name": "MAP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MATCH": {
+      "name": "MATCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MAX": {
+      "name": "MAX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MAXA": {
+      "name": "MAXA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MAXIFS": {
+      "name": "MAXIFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MDETERM": {
+      "name": "MDETERM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MDURATION": {
+      "name": "MDURATION",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MEDIAN": {
+      "name": "MEDIAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MID": {
+      "name": "MID",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MIDB": {
+      "name": "MIDB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MIN": {
+      "name": "MIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MINA": {
+      "name": "MINA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MINIFS": {
+      "name": "MINIFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MINUTE": {
+      "name": "MINUTE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MINVERSE": {
+      "name": "MINVERSE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MIRR": {
+      "name": "MIRR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MMULT": {
+      "name": "MMULT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MOD": {
+      "name": "MOD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MODE": {
+      "name": "MODE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "MODE.MULT": {
+      "name": "MODE.MULT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MODE.SNGL": {
+      "name": "MODE.SNGL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MONTH": {
+      "name": "MONTH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MROUND": {
+      "name": "MROUND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MULTINOMIAL": {
+      "name": "MULTINOMIAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "MUNIT": {
+      "name": "MUNIT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "N": {
+      "name": "N",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NA": {
+      "name": "NA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NEGBINOM.DIST": {
+      "name": "NEGBINOM.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NEGBINOMDIST": {
+      "name": "NEGBINOMDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "NETWORKDAYS": {
+      "name": "NETWORKDAYS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NETWORKDAYS.INTL": {
+      "name": "NETWORKDAYS.INTL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NOMINAL": {
+      "name": "NOMINAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NORM.DIST": {
+      "name": "NORM.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NORM.INV": {
+      "name": "NORM.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NORM.S.DIST": {
+      "name": "NORM.S.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NORM.S.INV": {
+      "name": "NORM.S.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NORMDIST": {
+      "name": "NORMDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "NORMINV": {
+      "name": "NORMINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "NORMSDIST": {
+      "name": "NORMSDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "NORMSINV": {
+      "name": "NORMSINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "NOT": {
+      "name": "NOT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NOW": {
+      "name": "NOW",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": true
+    },
+    "NPER": {
+      "name": "NPER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NPV": {
+      "name": "NPV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "NUMBERVALUE": {
+      "name": "NUMBERVALUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "OCT2BIN": {
+      "name": "OCT2BIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "OCT2DEC": {
+      "name": "OCT2DEC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "OCT2HEX": {
+      "name": "OCT2HEX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ODD": {
+      "name": "ODD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ODDFPRICE": {
+      "name": "ODDFPRICE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ODDFYIELD": {
+      "name": "ODDFYIELD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ODDLPRICE": {
+      "name": "ODDLPRICE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ODDLYIELD": {
+      "name": "ODDLYIELD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "OFFSET": {
+      "name": "OFFSET",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "OR": {
+      "name": "OR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PDURATION": {
+      "name": "PDURATION",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PEARSON": {
+      "name": "PEARSON",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERCENTILE": {
+      "name": "PERCENTILE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "PERCENTILE.EXC": {
+      "name": "PERCENTILE.EXC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERCENTILE.INC": {
+      "name": "PERCENTILE.INC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERCENTOF": {
+      "name": "PERCENTOF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERCENTRANK": {
+      "name": "PERCENTRANK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "PERCENTRANK.EXC": {
+      "name": "PERCENTRANK.EXC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERCENTRANK.INC": {
+      "name": "PERCENTRANK.INC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERMUT": {
+      "name": "PERMUT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PERMUTATIONA": {
+      "name": "PERMUTATIONA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PHI": {
+      "name": "PHI",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PHONETIC": {
+      "name": "PHONETIC",
+      "inExcel": true,
+      "apiary": "unsupported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PI": {
+      "name": "PI",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PIVOTBY": {
+      "name": "PIVOTBY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PMT": {
+      "name": "PMT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "POISSON": {
+      "name": "POISSON",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "POISSON.DIST": {
+      "name": "POISSON.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "POWER": {
+      "name": "POWER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PPMT": {
+      "name": "PPMT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PRICE": {
+      "name": "PRICE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PRICEDISC": {
+      "name": "PRICEDISC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PRICEMAT": {
+      "name": "PRICEMAT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PROB": {
+      "name": "PROB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PRODUCT": {
+      "name": "PRODUCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PROPER": {
+      "name": "PROPER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "PV": {
+      "name": "PV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "QUARTILE": {
+      "name": "QUARTILE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "QUARTILE.EXC": {
+      "name": "QUARTILE.EXC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "QUARTILE.INC": {
+      "name": "QUARTILE.INC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "QUOTIENT": {
+      "name": "QUOTIENT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RADIANS": {
+      "name": "RADIANS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RAND": {
+      "name": "RAND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": true
+    },
+    "RANDARRAY": {
+      "name": "RANDARRAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": true
+    },
+    "RANDBETWEEN": {
+      "name": "RANDBETWEEN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": true
+    },
+    "RANK": {
+      "name": "RANK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "RANK.AVG": {
+      "name": "RANK.AVG",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RANK.EQ": {
+      "name": "RANK.EQ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RATE": {
+      "name": "RATE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RECEIVED": {
+      "name": "RECEIVED",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REDUCE": {
+      "name": "REDUCE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REGEXEXTRACT": {
+      "name": "REGEXEXTRACT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REGEXREPLACE": {
+      "name": "REGEXREPLACE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REGEXTEST": {
+      "name": "REGEXTEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REGISTER.ID": {
+      "name": "REGISTER.ID",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REPLACE": {
+      "name": "REPLACE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REPLACEB": {
+      "name": "REPLACEB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "REPT": {
+      "name": "REPT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RIGHT": {
+      "name": "RIGHT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RIGHTB": {
+      "name": "RIGHTB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROMAN": {
+      "name": "ROMAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROUND": {
+      "name": "ROUND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROUNDDOWN": {
+      "name": "ROUNDDOWN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROUNDUP": {
+      "name": "ROUNDUP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROW": {
+      "name": "ROW",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ROWS": {
+      "name": "ROWS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RRI": {
+      "name": "RRI",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RSQ": {
+      "name": "RSQ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "RTD": {
+      "name": "RTD",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SCAN": {
+      "name": "SCAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SEARCH": {
+      "name": "SEARCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SEARCHB": {
+      "name": "SEARCHB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SEC": {
+      "name": "SEC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SECH": {
+      "name": "SECH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SECOND": {
+      "name": "SECOND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SEQUENCE": {
+      "name": "SEQUENCE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SERIESSUM": {
+      "name": "SERIESSUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SHEET": {
+      "name": "SHEET",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SHEETS": {
+      "name": "SHEETS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SIGN": {
+      "name": "SIGN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SIN": {
+      "name": "SIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SINGLE": {
+      "name": "SINGLE",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SINH": {
+      "name": "SINH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SKEW": {
+      "name": "SKEW",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SKEW.P": {
+      "name": "SKEW.P",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SLN": {
+      "name": "SLN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SLOPE": {
+      "name": "SLOPE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SMALL": {
+      "name": "SMALL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SORT": {
+      "name": "SORT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SORTBY": {
+      "name": "SORTBY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SPARKLINE": {
+      "name": "SPARKLINE",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SQL.REQUEST": {
+      "name": "SQL.REQUEST",
+      "inExcel": false,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SQRT": {
+      "name": "SQRT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SQRTPI": {
+      "name": "SQRTPI",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STANDARDIZE": {
+      "name": "STANDARDIZE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STDEV": {
+      "name": "STDEV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "STDEV.P": {
+      "name": "STDEV.P",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STDEV.S": {
+      "name": "STDEV.S",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STDEVA": {
+      "name": "STDEVA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STDEVP": {
+      "name": "STDEVP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "STDEVPA": {
+      "name": "STDEVPA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STEYX": {
+      "name": "STEYX",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "STOCKHISTORY": {
+      "name": "STOCKHISTORY",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUBSTITUTE": {
+      "name": "SUBSTITUTE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUBTOTAL": {
+      "name": "SUBTOTAL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUM": {
+      "name": "SUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMIF": {
+      "name": "SUMIF",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMIFS": {
+      "name": "SUMIFS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMPRODUCT": {
+      "name": "SUMPRODUCT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMSQ": {
+      "name": "SUMSQ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMX2MY2": {
+      "name": "SUMX2MY2",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMX2PY2": {
+      "name": "SUMX2PY2",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SUMXMY2": {
+      "name": "SUMXMY2",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SWITCH": {
+      "name": "SWITCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "SYD": {
+      "name": "SYD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T": {
+      "name": "T",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.DIST": {
+      "name": "T.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.DIST.2T": {
+      "name": "T.DIST.2T",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.DIST.RT": {
+      "name": "T.DIST.RT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.INV": {
+      "name": "T.INV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.INV.2T": {
+      "name": "T.INV.2T",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "T.TEST": {
+      "name": "T.TEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TAKE": {
+      "name": "TAKE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TAN": {
+      "name": "TAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TANH": {
+      "name": "TANH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TBILLEQ": {
+      "name": "TBILLEQ",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TBILLPRICE": {
+      "name": "TBILLPRICE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TBILLYIELD": {
+      "name": "TBILLYIELD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TDIST": {
+      "name": "TDIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "TEXT": {
+      "name": "TEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TEXTAFTER": {
+      "name": "TEXTAFTER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TEXTBEFORE": {
+      "name": "TEXTBEFORE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TEXTJOIN": {
+      "name": "TEXTJOIN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TEXTSPLIT": {
+      "name": "TEXTSPLIT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TIME": {
+      "name": "TIME",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TIMEVALUE": {
+      "name": "TIMEVALUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TINV": {
+      "name": "TINV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "TOCOL": {
+      "name": "TOCOL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TODAY": {
+      "name": "TODAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": true
+    },
+    "TOROW": {
+      "name": "TOROW",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRANSPOSE": {
+      "name": "TRANSPOSE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TREND": {
+      "name": "TREND",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRIM": {
+      "name": "TRIM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRIMMEAN": {
+      "name": "TRIMMEAN",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRIMRANGE": {
+      "name": "TRIMRANGE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRUE": {
+      "name": "TRUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TRUNC": {
+      "name": "TRUNC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "TTEST": {
+      "name": "TTEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "TYPE": {
+      "name": "TYPE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "UNICHAR": {
+      "name": "UNICHAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "UNICODE": {
+      "name": "UNICODE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "UNIQUE": {
+      "name": "UNIQUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "UPPER": {
+      "name": "UPPER",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "USDOLLAR": {
+      "name": "USDOLLAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VALUE": {
+      "name": "VALUE",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VALUETOTEXT": {
+      "name": "VALUETOTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VAR": {
+      "name": "VAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "VAR.P": {
+      "name": "VAR.P",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VAR.S": {
+      "name": "VAR.S",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VARA": {
+      "name": "VARA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VARP": {
+      "name": "VARP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "VARPA": {
+      "name": "VARPA",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VDB": {
+      "name": "VDB",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VLOOKUP": {
+      "name": "VLOOKUP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "VSTACK": {
+      "name": "VSTACK",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WEBSERVICE": {
+      "name": "WEBSERVICE",
+      "inExcel": true,
+      "apiary": "never",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WEEKDAY": {
+      "name": "WEEKDAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WEEKNUM": {
+      "name": "WEEKNUM",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WEIBULL": {
+      "name": "WEIBULL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "WEIBULL.DIST": {
+      "name": "WEIBULL.DIST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WORKDAY": {
+      "name": "WORKDAY",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WORKDAY.INTL": {
+      "name": "WORKDAY.INTL",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WRAPCOLS": {
+      "name": "WRAPCOLS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "WRAPROWS": {
+      "name": "WRAPROWS",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "XIRR": {
+      "name": "XIRR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "XLOOKUP": {
+      "name": "XLOOKUP",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "XMATCH": {
+      "name": "XMATCH",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "XNPV": {
+      "name": "XNPV",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "XOR": {
+      "name": "XOR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "YEAR": {
+      "name": "YEAR",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "YEARFRAC": {
+      "name": "YEARFRAC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "YIELD": {
+      "name": "YIELD",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "YIELDDISC": {
+      "name": "YIELDDISC",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "YIELDMAT": {
+      "name": "YIELDMAT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "Z.TEST": {
+      "name": "Z.TEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "ZTEST": {
+      "name": "ZTEST",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": true,
+      "nondeterministic": false
+    },
+    "_LONGTEXT": {
+      "name": "_LONGTEXT",
+      "inExcel": true,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO.ALL": {
+      "name": "_TRO.ALL",
+      "inExcel": true,
+      "apiary": "unsupported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO.LEADING": {
+      "name": "_TRO.LEADING",
+      "inExcel": true,
+      "apiary": "unsupported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO.TRAILING": {
+      "name": "_TRO.TRAILING",
+      "inExcel": true,
+      "apiary": "unsupported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO_ALL": {
+      "name": "_TRO_ALL",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO_LEADING": {
+      "name": "_TRO_LEADING",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    },
+    "_TRO_TRAILING": {
+      "name": "_TRO_TRAILING",
+      "inExcel": false,
+      "apiary": "supported",
+      "legacy": false,
+      "nondeterministic": false
+    }
+  }
+}

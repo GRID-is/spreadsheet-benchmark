@@ -1,0 +1,32 @@
+{
+  "source": "GRID-is/apiary data/never_supported.json",
+  "apiaryCommit": "a758ed2bd",
+  "names": [
+    "CALL",
+    "EUROCONVERT",
+    "REGISTER.ID",
+    "SQL.REQUEST",
+    "CUBEKPIMEMBER",
+    "CUBEMEMBER",
+    "CUBEMEMBERPROPERTY",
+    "CUBERANKEDMEMBER",
+    "CUBESET",
+    "CUBESETCOUNT",
+    "CUBEVALUE",
+    "ARRAY_CONSTRAIN",
+    "DETECTLANGUAGE",
+    "GOOGLEFINANCE",
+    "GOOGLETRANSLATE",
+    "IMAGE",
+    "IMPORTDATA",
+    "IMPORTFEED",
+    "IMPORTHTML",
+    "IMPORTRANGE",
+    "IMPORTXML",
+    "SPARKLINE",
+    "RTD",
+    "FILTERXML",
+    "WEBSERVICE",
+    "STOCKHISTORY"
+  ]
+}

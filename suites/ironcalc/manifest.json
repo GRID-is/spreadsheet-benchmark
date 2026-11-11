@@ -1,0 +1,1132 @@
+{
+  "suite": "ironcalc",
+  "upstream": "https://github.com/ironcalc/IronCalc.git",
+  "commit": "2128db12ab30b77fdebde9cba994273a26438ae3",
+  "commitDate": "2026-10-30T17:40:20+01:00",
+  "subdir": "xlsx/tests/calc_tests",
+  "license": "MIT OR Apache-2.0",
+  "shape": "cached-value workbook",
+  "importedAt": "2026-11-01T00:11:49.494Z",
+  "files": [
+    {
+      "file": "DATABASE/DAVERAGE.xlsx",
+      "category": "DATABASE",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "DATABASE/DCOUNT_DCOUNTA_DGET_DPRODUCT.xlsx",
+      "category": "DATABASE",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATABASE/DMIN_DMAX_DAVERAGE_DSUM.xlsx",
+      "category": "DATABASE",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATABASE/DVAR_DVARP_DSTDEV_DSTDEVP.xlsx",
+      "category": "DATABASE",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DATE.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DATEVALUE.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DATEVALUE_issue_1379.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DATEVALUE_issue_1380.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DATE_DAY_MONTH_YEAR.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "DATE_AND_TIME/DAYS_DAYS360.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/DAY_MONTH_YEAR.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/EDATE.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/EOMONTH.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/EOMONTH_issue_1388.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/NETWORKDAYS_NETWORKDAYS.INTL.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/NOW_TODAY.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/TIMEVALUE.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/TIMEVALUE_issue_1402.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/TIME_HOUR_MINUTE_SECOND.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/WEEKDAY_WEEKNUM_ISOWEEKNUM.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/WEEKDAY_WEEKNUM_ISOWEEKNUM_issue_1502.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/WORKDAY_WORKDAY.INTL.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "DATE_AND_TIME/YEARFRAC_DATEDIF.xlsx",
+      "category": "DATE_AND_TIME",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "ENGINEERING/BESSEL.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/BITs.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/COMPLEXs.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/CONVERT.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/ERFs.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/GESTEP_DELTA.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "ENGINEERING/NUMBER_SYSTEMS.xlsx",
+      "category": "ENGINEERING",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/ACCRINT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "FINANCIAL/ACCRINTM.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "FINANCIAL/ACCRINT_ACCRINTM.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "FINANCIAL/ACCRINT_extended.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/COUPDAYS.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/CUMPRINC_CUMIPMT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/DB_DDB.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/DISC.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/FV.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/FVSCHEDULE.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/INTRATE.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/IPMT_PPMT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/IRR.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "FINANCIAL/ISPMT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/MIRR.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/NOMINAL_EFFECT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/NPER.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/NPV.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/PDURATION.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/PMT.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/PRICE_YIELD.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/PV.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/RATE.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/RRI.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/SLN_SYD.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/TBILLs.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/XIRR.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/XNPV.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "FINANCIAL/accrint_cases.xlsx",
+      "category": "FINANCIAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/CELL.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "INFORMATION/ERROR.TYPE.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/FORMULATEXT.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/ISOMITTED.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/ISREF.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/ISREF_ISFORMULA_ISODD_ISEVEN.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/IS_INFORMATION.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "INFORMATION/N.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "INFORMATION/SHEET_SHEETS.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "INFORMATION/TYPE.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "INFORMATION/error_broadcast.xlsx",
+      "category": "INFORMATION",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/AND_OR_XOR.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "LOGICAL/BYCOL_BYROW.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/IFERROR.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/IFNA.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "LOGICAL/IFS.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "LOGICAL/IF_ARRAY.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/LAMBDA.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/LET.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/MAKEARRAY.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/MAP_REDUCE.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/NOT.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOGICAL/SCAN.xlsx",
+      "category": "LOGICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/ADDRESS.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/CHOOSE.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/CHOOSECOLS_CHOOSEROWS.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/DROP_TAKE.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/EXPAND.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/FILTER_ERRORS.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/HSTACK_VSTACK.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/HVLOOKUP.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/INDEX.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/INDIRECT.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/MATCH.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/MATCH_LOOKUP_arrays.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/ROW_COLUM.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/SORT.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/TOCOL.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/TRANSPOSE.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/TRIMRANGE.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/WRAPCOLS_ROWS.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/XLOOKUP.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/XMATCH.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "LOOKUP_AND_REFERENCE/XMATCH_arrays.xlsx",
+      "category": "LOOKUP_AND_REFERENCE",
+      "savedBy": "IronCalc Sheets"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/ABS.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/ARABIC_ROMAN.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/ATAN2_POWER.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/BASE_DECIMAL.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/COMBIN_COMBINA.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/DEGREES_RADIANS.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/EVEN_ODD.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/EXP_SIGN.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/FACT_DOUBLEFACT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/FLOOR_CEILING.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/GCD_LCM.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/LCM_GCD.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/LOG_LOG10_LN.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MAX_MIN.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MIN_MAX_extras.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MMULT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MOD_QUOTIENT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MROUND_TRUNC_INT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MULTINOMIAL.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/MUNIT_MDETERM_MINVERSE.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/POWER.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/PRODUCT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/PRODUCT_SUM.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/ROUND_ROUNDUP_ROUNDDOWN.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SEQUENCE.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SERIESSUM.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SQRT_SQRTPI.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMIFS.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMIF_AVERAGE_IF.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMIF_array.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMPRODUCT.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMSQ.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/SUMX2MY2_SUMX2PY2_SUMXMY2.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "MATH_AND_TRIGONOMETRY/TRIGONOMETRIC.xlsx",
+      "category": "MATH_AND_TRIGONOMETRY",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/AVEDEV.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/AVERAGE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/BETADIST_BETAINV.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/BETA_GAMMA.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "STATISTICAL/BINOM.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/CHISQ.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/CHISQ_TEST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/CONFIDENCE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/CORREL_SLOPE_INTERCEPT_RSQ_STEYX.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/COUNT.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/COUNTIF.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/COUNTIFS.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/COVARIANCE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/DEVSQ.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/EXPONDIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/EXPON_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/FISHER.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/FISHER_FISHERINV.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/FREQUENCY.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/F_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/F_TEST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/GAMMA.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/GAMMALN_GAMMALNPRECISE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/GAUSS.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/GEOMEAN.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": ""
+    },
+    {
+      "file": "STATISTICAL/HYPERGEOM_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/LINEST_LOGEST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/LOGNORM.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/MEADIAN_KURT_SKEW_HARMEAN.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "STATISTICAL/MINA_MAXA.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "STATISTICAL/MIN_MAX.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/MODE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/NORM_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/PEARSON.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/PERCENTIL_QUARTIL.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/PERMUT_PERMUTATIONA.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/PHI.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/POISSON.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/PROB.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/RANK_EQ_RANK_AVG.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "STATISTICAL/SMALL_LARGE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "STATISTICAL/STANDARIZE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/STDEV.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/TREND_GROWTH.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/TRIMMEAN.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/T_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "STATISTICAL/T_TEST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/VARIANCE.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/WEIBULL_DIST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "STATISTICAL/Z_TEST.xlsx",
+      "category": "STATISTICAL",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/ARRAYTOTEXT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/CHAR.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/CONCAT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/CONCATENATE.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/DOLLARs.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/ENCODEURL.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/EXACT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/FIND_SEARCH.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/MID_LEFT_RIGHT_arrays.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/MINUS_MINUS.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/PROPER.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/REGEX.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/REPT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/STRING_HANDLING.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/SUBSTITUTE.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/TEXT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/TEXTBEFORE_TEXTAFTER.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/TEXTJOIN.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/TEXTSPLIT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "TEXT/T_VALUE_VALUETOTEXT.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel Online"
+    },
+    {
+      "file": "TEXT/UNICODE.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "TEXT/UPPER_LOWER.xlsx",
+      "category": "TEXT",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "arithmetic.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "array_in_scalar_repro.xlsx",
+      "category": "(root)",
+      "savedBy": ""
+    },
+    {
+      "file": "consume_string.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "defined_names.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "defined_names_for_unit_test.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "escape_strings.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "issue_341.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "logical.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "named_ranges.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "percentage.xlsx",
+      "category": "(root)",
+      "savedBy": "Excel Android"
+    },
+    {
+      "file": "quotes.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "range_operator.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "simple_arrays.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    },
+    {
+      "file": "simple_functions.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Excel"
+    },
+    {
+      "file": "spill_operator.xlsx",
+      "category": "(root)",
+      "savedBy": "Microsoft Macintosh Excel"
+    }
+  ]
+}
